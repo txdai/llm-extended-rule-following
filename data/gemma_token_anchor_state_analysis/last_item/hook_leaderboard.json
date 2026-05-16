@@ -1,0 +1,74 @@
+[
+  {
+    "label": "attn_out.layer40",
+    "stream": "attn_out",
+    "layer": 40,
+    "best_feature_id": 1519,
+    "best_feature_pearson": 0.9658657312393188,
+    "best_feature_mean_activation": 5.222785472869873,
+    "best_feature_active_rate": 0.95
+  },
+  {
+    "label": "resid_post.layer16",
+    "stream": "resid_post",
+    "layer": 16,
+    "best_feature_id": 2337,
+    "best_feature_pearson": 0.9612497687339783,
+    "best_feature_mean_activation": 73.01148986816406,
+    "best_feature_active_rate": 0.9625
+  },
+  {
+    "label": "attn_out.layer31",
+    "stream": "attn_out",
+    "layer": 31,
+    "best_feature_id": 5147,
+    "best_feature_pearson": 0.9469560384750366,
+    "best_feature_mean_activation": 3.1291680335998535,
+    "best_feature_active_rate": 0.9375
+  },
+  {
+    "label": "resid_post.layer53",
+    "stream": "resid_post",
+    "layer": 53,
+    "best_feature_id": 41196,
+    "best_feature_pearson": 0.9433431625366211,
+    "best_feature_mean_activation": 2048.99658203125,
+    "best_feature_active_rate": 0.95
+  },
+  {
+    "label": "mlp_out.layer31",
+    "stream": "mlp_out",
+    "layer": 31,
+    "best_feature_id": 7482,
+    "best_feature_pearson": -0.9188936352729797,
+    "best_feature_mean_activation": 16.34389877319336,
+    "best_feature_active_rate": 0.1
+  },
+  {
+    "label": "resid_post.layer31",
+    "stream": "resid_post",
+    "layer": 31,
+    "best_feature_id": 24879,
+    "best_feature_pearson": 0.915506899356842,
+    "best_feature_mean_activation": 897.4700927734375,
+    "best_feature_active_rate": 0.9375
+  },
+  {
+    "label": "resid_post.layer40",
+    "stream": "resid_post",
+    "layer": 40,
+    "best_feature_id": 117,
+    "best_feature_pearson": 0.9060941338539124,
+    "best_feature_mean_activation": 2395.52734375,
+    "best_feature_active_rate": 0.975
+  },
+  {
+    "label": "mlp_out.layer40",
+    "stream": "mlp_out",
+    "layer": 40,
+    "best_feature_id": 9963,
+    "best_feature_pearson": 0.7941482663154602,
+    "best_feature_mean_activation": 81.54727935791016,
+    "best_feature_active_rate": 0.9
+  }
+]

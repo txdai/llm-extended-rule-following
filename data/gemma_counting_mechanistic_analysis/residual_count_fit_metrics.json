@@ -1,0 +1,62 @@
+[
+  {
+    "label": "resid_post.layer16",
+    "stream": "resid_post",
+    "layer": 16,
+    "rho": 0.72861248254776,
+    "delta": 5.4642229080200195,
+    "projection_count_corr": 0.7549830079078674,
+    "projection_monotonicity": 1.0,
+    "adjacent_delta_mean": 1.0,
+    "adjacent_delta_std": 1.0982791991409613e-06,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": 0.554497241973877,
+    "eta_projection_threshold": 1.7191762924194336,
+    "exact_prefix_projection_std": 29.042573928833008
+  },
+  {
+    "label": "resid_post.layer31",
+    "stream": "resid_post",
+    "layer": 31,
+    "rho": 0.4351722002029419,
+    "delta": 5.330662250518799,
+    "projection_count_corr": 0.3990546464920044,
+    "projection_monotonicity": 1.0,
+    "adjacent_delta_mean": 0.9999999403953552,
+    "adjacent_delta_std": 4.5627734834852163e-07,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": -0.10270580649375916,
+    "eta_projection_threshold": 4.436483383178711,
+    "exact_prefix_projection_std": 659.381591796875
+  },
+  {
+    "label": "resid_post.layer40",
+    "stream": "resid_post",
+    "layer": 40,
+    "rho": 0.612229585647583,
+    "delta": 2.5083370208740234,
+    "projection_count_corr": 0.20793436467647552,
+    "projection_monotonicity": 1.0,
+    "adjacent_delta_mean": 1.0,
+    "adjacent_delta_std": 4.708389838015137e-07,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": -0.39462313055992126,
+    "eta_projection_threshold": 2.634916305541992,
+    "exact_prefix_projection_std": 1630.11767578125
+  },
+  {
+    "label": "resid_post.layer53",
+    "stream": "resid_post",
+    "layer": 53,
+    "rho": 0.6191839575767517,
+    "delta": 1.5018510818481445,
+    "projection_count_corr": 0.10624164342880249,
+    "projection_monotonicity": 1.0,
+    "adjacent_delta_mean": 1.0,
+    "adjacent_delta_std": 6.564092700500623e-07,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": -0.43309327960014343,
+    "eta_projection_threshold": 3.8348827362060547,
+    "exact_prefix_projection_std": 3016.687744140625
+  }
+]

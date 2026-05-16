@@ -1,0 +1,8 @@
+model,condition,category,n,count_accuracy,mean_abs_count_error,secondary_accuracy,task_accuracy,parse_rate,avg_matched_prompt_tokens,avg_prompt_estimated_tokens,avg_input_tokens
+gpt-5.4-mini,dual_counting,pooled_control,390,0.589744,0.735897,0.610256,,1.000000,130.305128,306.851282,352.851282
+gpt-5.4-mini,irrelevant_code,pooled_control,390,0.592308,0.797436,,,1.000000,123.323077,309.266667,356.492308
+gpt-5.4-mini,plain_count,plain_count,390,0.653846,0.502564,,,1.000000,0.000000,152.000000,198.000000
+gpt-5.4-mini,real_task,bbh_reasoning,390,0.556410,1.025641,,0.312821,1.000000,133.807692,303.807692,349.051282
+gpt-5.4-mini,real_task,cruxeval_o,390,0.561538,1.351282,,0.707692,1.000000,75.425641,244.466667,290.658974
+gpt-5.4-mini,real_task,math500,390,0.676923,0.523077,,0.312821,1.000000,88.802564,257.984615,303.112821
+gpt-5.4-mini,real_task,mmlu_pro,390,0.600000,0.869231,,0.605128,1.000000,205.387179,375.130769,420.369231

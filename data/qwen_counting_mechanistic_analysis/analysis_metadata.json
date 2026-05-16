@@ -1,0 +1,73 @@
+{
+  "model_label": "Qwen3.5-35B-A3B",
+  "hook_order": [
+    "resid_post.layer15",
+    "resid_post.layer23",
+    "resid_post.layer31",
+    "resid_post.layer39",
+    "attn_out.layer31",
+    "attn_out.layer39",
+    "mlp_out.layer31",
+    "mlp_out.layer39"
+  ],
+  "residual_hooks": [
+    "resid_post.layer15",
+    "resid_post.layer23",
+    "resid_post.layer31",
+    "resid_post.layer39"
+  ],
+  "attention_layers": [
+    31,
+    39
+  ],
+  "full_attention_layers": [
+    3,
+    7,
+    11,
+    15,
+    19,
+    23,
+    27,
+    31,
+    35,
+    39
+  ],
+  "attention_counts": [
+    8,
+    32,
+    42,
+    43,
+    64,
+    96,
+    128,
+    160
+  ],
+  "attention_bins": 48,
+  "feature_rank_max": 26,
+  "position_offsets": [
+    -7,
+    -6,
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    0
+  ],
+  "attention_main_layer": 39,
+  "steering_counts": [
+    32,
+    48,
+    64,
+    96,
+    128,
+    160
+  ],
+  "steering_alpha_stds": [
+    -1.0,
+    -0.5,
+    0.5,
+    1.0
+  ],
+  "sae_available": false
+}

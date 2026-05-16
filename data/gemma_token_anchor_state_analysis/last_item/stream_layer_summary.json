@@ -1,0 +1,74 @@
+[
+  {
+    "label": "resid_post.layer16",
+    "stream": "resid_post",
+    "layer": 16,
+    "best_feature_corr": 0.9612497687339783,
+    "top5_mean_abs_corr": 0.9344277262687684,
+    "counter_projection_corr": -0.22381392121315002,
+    "exact_vs_failed_separation": -44.756919860839844
+  },
+  {
+    "label": "resid_post.layer31",
+    "stream": "resid_post",
+    "layer": 31,
+    "best_feature_corr": 0.915506899356842,
+    "top5_mean_abs_corr": 0.8692298173904419,
+    "counter_projection_corr": 0.39347031712532043,
+    "exact_vs_failed_separation": -767.0851440429688
+  },
+  {
+    "label": "resid_post.layer40",
+    "stream": "resid_post",
+    "layer": 40,
+    "best_feature_corr": 0.9060941338539124,
+    "top5_mean_abs_corr": 0.870295250415802,
+    "counter_projection_corr": -0.6075690388679504,
+    "exact_vs_failed_separation": -752.701171875
+  },
+  {
+    "label": "resid_post.layer53",
+    "stream": "resid_post",
+    "layer": 53,
+    "best_feature_corr": 0.9433431625366211,
+    "top5_mean_abs_corr": 0.8593240141868591,
+    "counter_projection_corr": -0.0005396477645263076,
+    "exact_vs_failed_separation": -1107.388916015625
+  },
+  {
+    "label": "attn_out.layer31",
+    "stream": "attn_out",
+    "layer": 31,
+    "best_feature_corr": 0.9469560384750366,
+    "top5_mean_abs_corr": 0.9177169799804688,
+    "counter_projection_corr": null,
+    "exact_vs_failed_separation": -1.7580739259719849
+  },
+  {
+    "label": "attn_out.layer40",
+    "stream": "attn_out",
+    "layer": 40,
+    "best_feature_corr": 0.9658657312393188,
+    "top5_mean_abs_corr": 0.9449636578559876,
+    "counter_projection_corr": null,
+    "exact_vs_failed_separation": -3.318411350250244
+  },
+  {
+    "label": "mlp_out.layer31",
+    "stream": "mlp_out",
+    "layer": 31,
+    "best_feature_corr": -0.9188936352729797,
+    "top5_mean_abs_corr": 0.854996657371521,
+    "counter_projection_corr": null,
+    "exact_vs_failed_separation": 100.57783508300781
+  },
+  {
+    "label": "mlp_out.layer40",
+    "stream": "mlp_out",
+    "layer": 40,
+    "best_feature_corr": 0.7941482663154602,
+    "top5_mean_abs_corr": 0.7233156561851501,
+    "counter_projection_corr": null,
+    "exact_vs_failed_separation": -28.249500274658203
+  }
+]

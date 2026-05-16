@@ -1,0 +1,62 @@
+[
+  {
+    "label": "resid_post.layer15",
+    "stream": "resid_post",
+    "layer": 15,
+    "rho": 0.9822078347206116,
+    "delta": 0.8979739546775818,
+    "projection_count_corr": 0.9367756247520447,
+    "projection_monotonicity": 1.0,
+    "adjacent_delta_mean": 1.0,
+    "adjacent_delta_std": 5.266608127385553e-07,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": 0.9759874939918518,
+    "eta_projection_threshold": 1.2715206146240234,
+    "exact_prefix_projection_std": 0.06027274951338768
+  },
+  {
+    "label": "resid_post.layer23",
+    "stream": "resid_post",
+    "layer": 23,
+    "rho": 0.973318874835968,
+    "delta": 0.8950503468513489,
+    "projection_count_corr": 0.853508472442627,
+    "projection_monotonicity": 1.0,
+    "adjacent_delta_mean": 1.0,
+    "adjacent_delta_std": 3.72347273014384e-08,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": 0.8808375000953674,
+    "eta_projection_threshold": 0.5517692565917969,
+    "exact_prefix_projection_std": 0.22835399210453033
+  },
+  {
+    "label": "resid_post.layer31",
+    "stream": "resid_post",
+    "layer": 31,
+    "rho": 0.9718136191368103,
+    "delta": 0.8241085410118103,
+    "projection_count_corr": 0.828159511089325,
+    "projection_monotonicity": 1.0,
+    "adjacent_delta_mean": 1.0,
+    "adjacent_delta_std": 3.160842254601448e-07,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": 0.9659057259559631,
+    "eta_projection_threshold": 0.2914924621582031,
+    "exact_prefix_projection_std": 0.850969135761261
+  },
+  {
+    "label": "resid_post.layer39",
+    "stream": "resid_post",
+    "layer": 39,
+    "rho": 0.9674983620643616,
+    "delta": 0.24890011548995972,
+    "projection_count_corr": -0.024463817477226257,
+    "projection_monotonicity": 1.0,
+    "adjacent_delta_mean": 1.0,
+    "adjacent_delta_std": 3.224621991648746e-07,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": -0.927245020866394,
+    "eta_projection_threshold": 0.5072784423828125,
+    "exact_prefix_projection_std": 3.897611618041992
+  }
+]

@@ -1,0 +1,530 @@
+{
+  "anthropic/claude-3.5-haiku": {
+    "active_params_billion": null,
+    "cc": 144,
+    "cc_error_bar": {
+      "lower": 14,
+      "upper": 16
+    },
+    "cc_lower_bound": 144,
+    "cc_upper_bound": 160,
+    "parameter_source": "unavailable",
+    "total_params_billion": null
+  },
+  "anthropic/claude-3.7-sonnet": {
+    "active_params_billion": null,
+    "cc": 352,
+    "cc_error_bar": {
+      "lower": 35,
+      "upper": 32
+    },
+    "cc_lower_bound": 352,
+    "cc_upper_bound": 384,
+    "parameter_source": "unavailable",
+    "total_params_billion": null
+  },
+  "anthropic/claude-3.7-sonnet:thinking": {
+    "active_params_billion": null,
+    "cc": 352,
+    "cc_error_bar": {
+      "lower": 35,
+      "upper": 32
+    },
+    "cc_lower_bound": 352,
+    "cc_upper_bound": 384,
+    "parameter_source": "unavailable",
+    "total_params_billion": null
+  },
+  "claude-3-haiku-20240307": {
+    "active_params_billion": null,
+    "cc": 56,
+    "cc_error_bar": {
+      "lower": 5,
+      "upper": 4
+    },
+    "cc_lower_bound": 56,
+    "cc_upper_bound": 60,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-haiku-4-5-20251001": {
+    "active_params_billion": null,
+    "cc": 176,
+    "cc_error_bar": {
+      "lower": 17,
+      "upper": 16
+    },
+    "cc_lower_bound": 176,
+    "cc_upper_bound": 192,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-opus-4-1-20250805": {
+    "active_params_billion": null,
+    "cc": 1920,
+    "cc_error_bar": {
+      "lower": 192,
+      "upper": 128
+    },
+    "cc_lower_bound": 1920,
+    "cc_upper_bound": 2048,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-opus-4-20250514": {
+    "active_params_billion": null,
+    "cc": 2176,
+    "cc_error_bar": {
+      "lower": 217,
+      "upper": 128
+    },
+    "cc_lower_bound": 2176,
+    "cc_upper_bound": 2304,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-opus-4-5-20251101": {
+    "active_params_billion": null,
+    "cc": 1536,
+    "cc_error_bar": {
+      "lower": 153,
+      "upper": 128
+    },
+    "cc_lower_bound": 1536,
+    "cc_upper_bound": 1664,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-opus-4-6": {
+    "active_params_billion": null,
+    "cc": 768,
+    "cc_error_bar": {
+      "lower": 76,
+      "upper": 64
+    },
+    "cc_lower_bound": 768,
+    "cc_upper_bound": 832,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-20250514": {
+    "active_params_billion": null,
+    "cc": 544,
+    "cc_error_bar": {
+      "lower": 54,
+      "upper": 32
+    },
+    "cc_lower_bound": 544,
+    "cc_upper_bound": 576,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-5-20250929": {
+    "active_params_billion": null,
+    "cc": 896,
+    "cc_error_bar": {
+      "lower": 89,
+      "upper": 64
+    },
+    "cc_lower_bound": 896,
+    "cc_upper_bound": 960,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6": {
+    "active_params_billion": null,
+    "cc": 512,
+    "cc_error_bar": {
+      "lower": 51,
+      "upper": 32
+    },
+    "cc_lower_bound": 512,
+    "cc_upper_bound": 544,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-2.5-flash": {
+    "active_params_billion": null,
+    "cc": 72,
+    "cc_error_bar": {
+      "lower": 7,
+      "upper": 8
+    },
+    "cc_lower_bound": 72,
+    "cc_upper_bound": 80,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-2.5-flash-lite": {
+    "active_params_billion": null,
+    "cc": 56,
+    "cc_error_bar": {
+      "lower": 5,
+      "upper": 4
+    },
+    "cc_lower_bound": 56,
+    "cc_upper_bound": 60,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-2.5-pro": {
+    "active_params_billion": null,
+    "cc": 136,
+    "cc_error_bar": {
+      "lower": 13,
+      "upper": 8
+    },
+    "cc_lower_bound": 136,
+    "cc_upper_bound": 144,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview": {
+    "active_params_billion": null,
+    "cc": 304,
+    "cc_error_bar": {
+      "lower": 30,
+      "upper": 16
+    },
+    "cc_lower_bound": 304,
+    "cc_upper_bound": 320,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-pro-preview": {
+    "active_params_billion": null,
+    "cc": 352,
+    "cc_error_bar": {
+      "lower": 35,
+      "upper": 32
+    },
+    "cc_lower_bound": 352,
+    "cc_upper_bound": 384,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3.1-flash-lite-preview": {
+    "active_params_billion": null,
+    "cc": 128,
+    "cc_error_bar": {
+      "lower": 12,
+      "upper": 8
+    },
+    "cc_lower_bound": 128,
+    "cc_upper_bound": 136,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3.1-pro-preview": {
+    "active_params_billion": null,
+    "cc": 352,
+    "cc_error_bar": {
+      "lower": 35,
+      "upper": 32
+    },
+    "cc_lower_bound": 352,
+    "cc_upper_bound": 384,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "google/gemini-2.0-flash-001": {
+    "active_params_billion": null,
+    "cc": 88,
+    "cc_error_bar": {
+      "lower": 8,
+      "upper": 8
+    },
+    "cc_lower_bound": 88,
+    "cc_upper_bound": 96,
+    "parameter_source": "unavailable",
+    "total_params_billion": null
+  },
+  "google/gemini-2.0-flash-lite-001": {
+    "active_params_billion": null,
+    "cc": 72,
+    "cc_error_bar": {
+      "lower": 7,
+      "upper": 8
+    },
+    "cc_lower_bound": 72,
+    "cc_upper_bound": 80,
+    "parameter_source": "unavailable",
+    "total_params_billion": null
+  },
+  "gpt-3.5-turbo": {
+    "active_params_billion": null,
+    "cc": 32,
+    "cc_error_bar": {
+      "lower": 3,
+      "upper": 4
+    },
+    "cc_lower_bound": 32,
+    "cc_upper_bound": 36,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4": {
+    "active_params_billion": null,
+    "cc": 40,
+    "cc_error_bar": {
+      "lower": 4,
+      "upper": 4
+    },
+    "cc_lower_bound": 40,
+    "cc_upper_bound": 44,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4-turbo": {
+    "active_params_billion": null,
+    "cc": 36,
+    "cc_error_bar": {
+      "lower": 3,
+      "upper": 4
+    },
+    "cc_lower_bound": 36,
+    "cc_upper_bound": 40,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4.1": {
+    "active_params_billion": null,
+    "cc": 96,
+    "cc_error_bar": {
+      "lower": 9,
+      "upper": 8
+    },
+    "cc_lower_bound": 96,
+    "cc_upper_bound": 104,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4.1-mini": {
+    "active_params_billion": null,
+    "cc": 72,
+    "cc_error_bar": {
+      "lower": 7,
+      "upper": 8
+    },
+    "cc_lower_bound": 72,
+    "cc_upper_bound": 80,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4.1-nano": {
+    "active_params_billion": null,
+    "cc": 52,
+    "cc_error_bar": {
+      "lower": 5,
+      "upper": 4
+    },
+    "cc_lower_bound": 52,
+    "cc_upper_bound": 56,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4o": {
+    "active_params_billion": null,
+    "cc": 88,
+    "cc_error_bar": {
+      "lower": 8,
+      "upper": 8
+    },
+    "cc_lower_bound": 88,
+    "cc_upper_bound": 96,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4o-mini": {
+    "active_params_billion": null,
+    "cc": 36,
+    "cc_error_bar": {
+      "lower": 3,
+      "upper": 4
+    },
+    "cc_lower_bound": 36,
+    "cc_upper_bound": 40,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5": {
+    "active_params_billion": null,
+    "cc": 112,
+    "cc_error_bar": {
+      "lower": 11,
+      "upper": 8
+    },
+    "cc_lower_bound": 112,
+    "cc_upper_bound": 120,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5-mini": {
+    "active_params_billion": null,
+    "cc": 64,
+    "cc_error_bar": {
+      "lower": 6,
+      "upper": 4
+    },
+    "cc_lower_bound": 64,
+    "cc_upper_bound": 68,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5-nano": {
+    "active_params_billion": null,
+    "cc": 48,
+    "cc_error_bar": {
+      "lower": 4,
+      "upper": 4
+    },
+    "cc_lower_bound": 48,
+    "cc_upper_bound": 52,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.1": {
+    "active_params_billion": null,
+    "cc": 120,
+    "cc_error_bar": {
+      "lower": 12,
+      "upper": 8
+    },
+    "cc_lower_bound": 120,
+    "cc_upper_bound": 128,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.1-codex-max": {
+    "active_params_billion": null,
+    "cc": 44,
+    "cc_error_bar": {
+      "lower": 4,
+      "upper": 4
+    },
+    "cc_lower_bound": 44,
+    "cc_upper_bound": 48,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.1-codex-mini": {
+    "active_params_billion": null,
+    "cc": 40,
+    "cc_error_bar": {
+      "lower": 4,
+      "upper": 4
+    },
+    "cc_lower_bound": 40,
+    "cc_upper_bound": 44,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.2": {
+    "active_params_billion": null,
+    "cc": 176,
+    "cc_error_bar": {
+      "lower": 17,
+      "upper": 16
+    },
+    "cc_lower_bound": 176,
+    "cc_upper_bound": 192,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.2-codex": {
+    "active_params_billion": null,
+    "cc": 128,
+    "cc_error_bar": {
+      "lower": 12,
+      "upper": 8
+    },
+    "cc_lower_bound": 128,
+    "cc_upper_bound": 136,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.3-codex": {
+    "active_params_billion": null,
+    "cc": 272,
+    "cc_error_bar": {
+      "lower": 27,
+      "upper": 16
+    },
+    "cc_lower_bound": 272,
+    "cc_upper_bound": 288,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4": {
+    "active_params_billion": null,
+    "cc": 608,
+    "cc_error_bar": {
+      "lower": 60,
+      "upper": 32
+    },
+    "cc_lower_bound": 608,
+    "cc_upper_bound": 640,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4-mini": {
+    "active_params_billion": null,
+    "cc": 144,
+    "cc_error_bar": {
+      "lower": 14,
+      "upper": 16
+    },
+    "cc_lower_bound": 144,
+    "cc_upper_bound": 160,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4-nano": {
+    "active_params_billion": null,
+    "cc": 48,
+    "cc_error_bar": {
+      "lower": 4,
+      "upper": 4
+    },
+    "cc_lower_bound": 48,
+    "cc_upper_bound": 52,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "o1": {
+    "active_params_billion": null,
+    "cc": 80,
+    "cc_error_bar": {
+      "lower": 8,
+      "upper": 8
+    },
+    "cc_lower_bound": 80,
+    "cc_upper_bound": 88,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "o3": {
+    "active_params_billion": null,
+    "cc": 88,
+    "cc_error_bar": {
+      "lower": 8,
+      "upper": 8
+    },
+    "cc_lower_bound": 88,
+    "cc_upper_bound": 96,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "o3-mini": {
+    "active_params_billion": null,
+    "cc": 48,
+    "cc_error_bar": {
+      "lower": 4,
+      "upper": 4
+    },
+    "cc_lower_bound": 48,
+    "cc_upper_bound": 52,
+    "parameter_source": null,
+    "total_params_billion": null
+  }
+}

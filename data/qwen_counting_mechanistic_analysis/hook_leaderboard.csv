@@ -1,0 +1,9 @@
+label,stream,layer,best_feature_id,best_feature_pearson,best_feature_mean_activation,best_feature_active_rate,projection_count_corr,exact_prefix_projection_corr,post_failure_projection_corr
+resid_post.layer15,resid_post,15,,,,,0.9367756247520447,1.0,0.9759874939918518
+mlp_out.layer31,mlp_out,31,,,,,0.8635072708129883,1.0,0.9507213830947876
+resid_post.layer23,resid_post,23,,,,,0.853508472442627,1.0,0.8808375000953674
+resid_post.layer31,resid_post,31,,,,,0.828159511089325,1.0,0.9659057259559631
+attn_out.layer31,attn_out,31,,,,,0.6144351959228516,1.0,-0.5217939615249634
+mlp_out.layer39,mlp_out,39,,,,,0.16576926410198212,1.0,-0.9392215609550476
+resid_post.layer39,resid_post,39,,,,,-0.024463817477226257,1.0,-0.927245020866394
+attn_out.layer39,attn_out,39,,,,,-0.0060045840218663216,1.0,-0.9007907509803772

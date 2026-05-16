@@ -1,0 +1,98 @@
+[
+  {
+    "label": "resid_post.layer15",
+    "stream": "resid_post",
+    "layer": 15,
+    "best_feature_id": null,
+    "best_feature_pearson": null,
+    "best_feature_mean_activation": null,
+    "best_feature_active_rate": null,
+    "projection_count_corr": 0.9367756247520447,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": 0.9759874939918518
+  },
+  {
+    "label": "mlp_out.layer31",
+    "stream": "mlp_out",
+    "layer": 31,
+    "best_feature_id": null,
+    "best_feature_pearson": null,
+    "best_feature_mean_activation": null,
+    "best_feature_active_rate": null,
+    "projection_count_corr": 0.8635072708129883,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": 0.9507213830947876
+  },
+  {
+    "label": "resid_post.layer23",
+    "stream": "resid_post",
+    "layer": 23,
+    "best_feature_id": null,
+    "best_feature_pearson": null,
+    "best_feature_mean_activation": null,
+    "best_feature_active_rate": null,
+    "projection_count_corr": 0.853508472442627,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": 0.8808375000953674
+  },
+  {
+    "label": "resid_post.layer31",
+    "stream": "resid_post",
+    "layer": 31,
+    "best_feature_id": null,
+    "best_feature_pearson": null,
+    "best_feature_mean_activation": null,
+    "best_feature_active_rate": null,
+    "projection_count_corr": 0.828159511089325,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": 0.9659057259559631
+  },
+  {
+    "label": "attn_out.layer31",
+    "stream": "attn_out",
+    "layer": 31,
+    "best_feature_id": null,
+    "best_feature_pearson": null,
+    "best_feature_mean_activation": null,
+    "best_feature_active_rate": null,
+    "projection_count_corr": 0.6144351959228516,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": -0.5217939615249634
+  },
+  {
+    "label": "mlp_out.layer39",
+    "stream": "mlp_out",
+    "layer": 39,
+    "best_feature_id": null,
+    "best_feature_pearson": null,
+    "best_feature_mean_activation": null,
+    "best_feature_active_rate": null,
+    "projection_count_corr": 0.16576926410198212,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": -0.9392215609550476
+  },
+  {
+    "label": "resid_post.layer39",
+    "stream": "resid_post",
+    "layer": 39,
+    "best_feature_id": null,
+    "best_feature_pearson": null,
+    "best_feature_mean_activation": null,
+    "best_feature_active_rate": null,
+    "projection_count_corr": -0.024463817477226257,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": -0.927245020866394
+  },
+  {
+    "label": "attn_out.layer39",
+    "stream": "attn_out",
+    "layer": 39,
+    "best_feature_id": null,
+    "best_feature_pearson": null,
+    "best_feature_mean_activation": null,
+    "best_feature_active_rate": null,
+    "projection_count_corr": -0.0060045840218663216,
+    "exact_prefix_projection_corr": 1.0,
+    "post_failure_projection_corr": -0.9007907509803772
+  }
+]

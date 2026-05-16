@@ -1,0 +1,21 @@
+{
+  "api": "anthropic",
+  "seed": 7,
+  "max_output_tokens": 4096,
+  "retry_max_output_tokens": 32768,
+  "google_unavailable_retries": 20,
+  "google_unavailable_retry_delay_seconds": 2.0,
+  "anthropic_transient_retries": 8,
+  "anthropic_transient_retry_delay_seconds": 2.0,
+  "model_list_path": "../model_lists/anthropic_models.json",
+  "preflight_length": 8,
+  "search": {
+    "initial_length": 32,
+    "max_length": 20000,
+    "samples_per_length": 16,
+    "parallel_trials_per_batch": 15,
+    "jitter_fraction": 0.2,
+    "tolerance_fraction": 0.05,
+    "step_fraction": 0.1
+  }
+}

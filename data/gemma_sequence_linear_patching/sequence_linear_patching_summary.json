@@ -1,0 +1,112 @@
+{
+  "base_count": 10,
+  "baseline_prediction": 10,
+  "baseline_text": "10",
+  "fit_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "layer_summaries": [
+    {
+      "label": "resid_post.layer16",
+      "mean_abs_patch_delta": 2.4919419838831973,
+      "target_hits": 1,
+      "target_vs_prediction_correlation": NaN,
+      "trial_count": 26,
+      "unique_predictions": [
+        12
+      ]
+    },
+    {
+      "label": "resid_post.layer31",
+      "mean_abs_patch_delta": 34.51973643669715,
+      "target_hits": 2,
+      "target_vs_prediction_correlation": 0.898831788015369,
+      "trial_count": 26,
+      "unique_predictions": [
+        10,
+        12,
+        14,
+        20
+      ]
+    },
+    {
+      "label": "resid_post.layer40",
+      "mean_abs_patch_delta": 68.8035636314979,
+      "target_hits": 1,
+      "target_vs_prediction_correlation": NaN,
+      "trial_count": 26,
+      "unique_predictions": [
+        10
+      ]
+    },
+    {
+      "label": "resid_post.layer53",
+      "mean_abs_patch_delta": 120.00962594839243,
+      "target_hits": 1,
+      "target_vs_prediction_correlation": NaN,
+      "trial_count": 26,
+      "unique_predictions": [
+        10
+      ]
+    }
+  ],
+  "residual_hooks": [
+    "resid_post.layer16",
+    "resid_post.layer31",
+    "resid_post.layer40",
+    "resid_post.layer53"
+  ],
+  "target_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "source_dir": "/Users/dtx/Documents/Research-2026/Counting/results/agent",
+  "source_files": [
+    "benchmark_agent_count_disruption.py",
+    "benchmark_agent_count_disruption_config.json",
+    "count-error-tables.md",
+    "report.md"
+  ],
+  "derived_files": [
+    "agent_count_error_by_level.csv",
+    "agent_count_condition_summary.csv"
+  ],
+  "note": "The source snapshot did not contain the original raw agent_count_disruption run directory. These CSVs were derived from the released markdown tables in results/agent."
+}

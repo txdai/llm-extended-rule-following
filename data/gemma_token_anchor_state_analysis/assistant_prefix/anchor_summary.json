@@ -1,0 +1,303 @@
+{
+  "anchor": "assistant_prefix",
+  "anchor_title": "Assistant Prefix Token",
+  "best_hook": {
+    "best_feature_active_rate": 0.2,
+    "best_feature_id": 22272,
+    "best_feature_mean_activation": 0.3849984407424927,
+    "best_feature_pearson": 0.6525876522064209,
+    "label": "attn_out.layer31",
+    "layer": 31,
+    "stream": "attn_out"
+  },
+  "best_residual": {
+    "adjacent_delta_mean": 1.0,
+    "adjacent_delta_std": 1.0982791991409613e-06,
+    "delta": 5.4642229080200195,
+    "eta_projection_threshold": 1.7191762924194336,
+    "exact_prefix_projection_corr": 1.0,
+    "exact_prefix_projection_std": 29.042573928833008,
+    "label": "resid_post.layer16",
+    "layer": 16,
+    "post_failure_projection_corr": 0.554497241973877,
+    "projection_count_corr": 0.7549830079078674,
+    "projection_monotonicity": 1.0,
+    "rho": 0.72861248254776,
+    "stream": "resid_post",
+    "successful_holdout_eval_counts": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "successful_holdout_projection_corr": 0.667518138885498,
+    "successful_holdout_train_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  "count_span": [
+    1,
+    160
+  ],
+  "count_total": 160,
+  "residual_counter_metrics": [
+    {
+      "adjacent_delta_mean": 1.0,
+      "adjacent_delta_std": 1.0982791991409613e-06,
+      "delta": 5.4642229080200195,
+      "eta_projection_threshold": 1.7191762924194336,
+      "exact_prefix_projection_corr": 1.0,
+      "exact_prefix_projection_std": 29.042573928833008,
+      "label": "resid_post.layer16",
+      "layer": 16,
+      "post_failure_projection_corr": 0.554497241973877,
+      "projection_count_corr": 0.7549830079078674,
+      "projection_monotonicity": 1.0,
+      "rho": 0.72861248254776,
+      "stream": "resid_post",
+      "successful_holdout_eval_counts": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "successful_holdout_projection_corr": 0.667518138885498,
+      "successful_holdout_train_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "adjacent_delta_mean": 0.9999999403953552,
+      "adjacent_delta_std": 4.5627734834852163e-07,
+      "delta": 5.330662250518799,
+      "eta_projection_threshold": 4.436483383178711,
+      "exact_prefix_projection_corr": 1.0,
+      "exact_prefix_projection_std": 659.381591796875,
+      "label": "resid_post.layer31",
+      "layer": 31,
+      "post_failure_projection_corr": -0.10270580649375916,
+      "projection_count_corr": 0.3990546464920044,
+      "projection_monotonicity": 1.0,
+      "rho": 0.4351722002029419,
+      "stream": "resid_post",
+      "successful_holdout_eval_counts": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "successful_holdout_projection_corr": 0.2707541286945343,
+      "successful_holdout_train_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "adjacent_delta_mean": 1.0,
+      "adjacent_delta_std": 4.708389838015137e-07,
+      "delta": 2.5083370208740234,
+      "eta_projection_threshold": 2.634916305541992,
+      "exact_prefix_projection_corr": 1.0,
+      "exact_prefix_projection_std": 1630.11767578125,
+      "label": "resid_post.layer40",
+      "layer": 40,
+      "post_failure_projection_corr": -0.39462313055992126,
+      "projection_count_corr": 0.20793436467647552,
+      "projection_monotonicity": 1.0,
+      "rho": 0.612229585647583,
+      "stream": "resid_post",
+      "successful_holdout_eval_counts": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "successful_holdout_projection_corr": 0.013785790652036667,
+      "successful_holdout_train_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "adjacent_delta_mean": 1.0,
+      "adjacent_delta_std": 6.564092700500623e-07,
+      "delta": 1.5018510818481445,
+      "eta_projection_threshold": 3.8348827362060547,
+      "exact_prefix_projection_corr": 1.0,
+      "exact_prefix_projection_std": 3016.687744140625,
+      "label": "resid_post.layer53",
+      "layer": 53,
+      "post_failure_projection_corr": -0.43309327960014343,
+      "projection_count_corr": 0.10624164342880249,
+      "projection_monotonicity": 1.0,
+      "rho": 0.6191839575767517,
+      "stream": "resid_post",
+      "successful_holdout_eval_counts": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "successful_holdout_projection_corr": -0.05987076461315155,
+      "successful_holdout_train_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  ],
+  "run_summary": {
+    "accuracy": 0.23125,
+    "first_failure": 27,
+    "initial_exact_prefix": 26,
+    "late_exact_pockets": [
+      28,
+      29,
+      30,
+      32,
+      35,
+      36,
+      39,
+      46,
+      50,
+      60,
+      100
+    ],
+    "max_exact_count": 100,
+    "top_failed_attractors": [
+      [
+        100,
+        56
+      ],
+      [
+        60,
+        36
+      ],
+      [
+        70,
+        9
+      ],
+      [
+        50,
+        6
+      ],
+      [
+        40,
+        4
+      ],
+      [
+        43,
+        3
+      ],
+      [
+        30,
+        2
+      ],
+      [
+        36,
+        2
+      ]
+    ]
+  }
+}

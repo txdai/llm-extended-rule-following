@@ -1,0 +1,54 @@
+{
+  "run_subdir": "count_scatter_control_runs",
+  "seed": 23,
+  "sample_size_per_category": 50,
+  "count_start": 32,
+  "count_end": 96,
+  "samples_per_count_per_category": 6,
+  "control_samples_per_count_per_type": 6,
+  "pool_controls_across_categories": true,
+  "max_output_tokens": 2048,
+  "retry_max_output_tokens": 8192,
+  "parallel_requests": 4,
+  "google_unavailable_retries": 12,
+  "google_unavailable_retry_delay_seconds": 2.0,
+  "anthropic_transient_retries": 8,
+  "anthropic_transient_retry_delay_seconds": 2.0,
+  "openrouter_transient_retries": 8,
+  "openrouter_transient_retry_delay_seconds": 2.0,
+  "control_types": [
+    "irrelevant_code",
+    "dual_counting"
+  ],
+  "cases": [
+    {
+      "api": "responses",
+      "model": "gpt-5.4-mini"
+    }
+  ],
+  "datasets": {
+    "mmlu_pro": {
+      "path": "TIGER-Lab/MMLU-Pro",
+      "split": "test",
+      "exclude_categories": ["math", "computer science"]
+    },
+    "math500": {
+      "path": "HuggingFaceH4/MATH-500",
+      "split": "test"
+    },
+    "cruxeval_o": {
+      "path": "cruxeval-org/cruxeval",
+      "split": "test"
+    },
+    "bbh_reasoning": {
+      "path": "lukaemon/bbh",
+      "split": "test",
+      "tasks": [
+        "date_understanding",
+        "logical_deduction_three_objects",
+        "tracking_shuffled_objects_three_objects",
+        "temporal_sequences"
+      ]
+    }
+  }
+}

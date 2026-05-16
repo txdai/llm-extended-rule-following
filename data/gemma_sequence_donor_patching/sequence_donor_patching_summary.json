@@ -1,0 +1,102 @@
+{
+  "base_count": 10,
+  "baseline_prediction": 10,
+  "baseline_text": "10",
+  "fake_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "layer_summaries": [
+    {
+      "label": "resid_post.layer16",
+      "mean_abs_patch_delta": 3.0451733424113345,
+      "target_hits": 1,
+      "target_vs_prediction_correlation": 0.782026095993487,
+      "trial_count": 26,
+      "unique_predictions": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "label": "resid_post.layer31",
+      "mean_abs_patch_delta": 44.73600475604717,
+      "target_hits": 12,
+      "target_vs_prediction_correlation": 0.8914000890076613,
+      "trial_count": 26,
+      "unique_predictions": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        20,
+        25
+      ]
+    },
+    {
+      "label": "resid_post.layer40",
+      "mean_abs_patch_delta": 88.74217693622296,
+      "target_hits": 1,
+      "target_vs_prediction_correlation": NaN,
+      "trial_count": 26,
+      "unique_predictions": [
+        10
+      ]
+    },
+    {
+      "label": "resid_post.layer53",
+      "mean_abs_patch_delta": 154.62377724280725,
+      "target_hits": 1,
+      "target_vs_prediction_correlation": NaN,
+      "trial_count": 26,
+      "unique_predictions": [
+        10
+      ]
+    }
+  ],
+  "residual_hooks": [
+    "resid_post.layer16",
+    "resid_post.layer31",
+    "resid_post.layer40",
+    "resid_post.layer53"
+  ]
+}

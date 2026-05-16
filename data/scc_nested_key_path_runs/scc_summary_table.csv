@@ -1,0 +1,9 @@
+model,cc,cc_lower_bound,cc_upper_bound,error_bar_lower,error_bar_upper,total_params_billion,active_params_billion,avg_output_tokens_at_cc,notes
+gpt-4.1-mini__heterogeneous-nested-key-path-match,0,0,32,0,32,,,,
+gpt-4.1__heterogeneous-nested-key-path-match,0,0,32,0,32,,,,
+gpt-4o-mini__heterogeneous-nested-key-path-match,0,0,32,0,32,,,,
+gpt-4o__heterogeneous-nested-key-path-match,0,0,32,0,32,,,,
+gpt-5.4-mini__heterogeneous-nested-key-path-match,0,0,32,0,32,,,,
+gpt-5.4__heterogeneous-nested-key-path-match,416,416,448,41,32,,,5.0000,
+gpt-5.2__heterogeneous-nested-key-path-match,0,0,32,0,32,,,,
+gpt-5.1__heterogeneous-nested-key-path-match,0,0,32,0,32,,,,

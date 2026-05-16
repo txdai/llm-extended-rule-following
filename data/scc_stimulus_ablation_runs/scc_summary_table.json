@@ -1,0 +1,398 @@
+{
+  "claude-sonnet-4-6__baseline-a-comma": {
+    "active_params_billion": null,
+    "cc": 480,
+    "cc_error_bar": {
+      "lower": 48,
+      "upper": 32
+    },
+    "cc_lower_bound": 480,
+    "cc_upper_bound": 512,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__chinese-han-comma": {
+    "active_params_billion": null,
+    "cc": 320,
+    "cc_error_bar": {
+      "lower": 32,
+      "upper": 32
+    },
+    "cc_lower_bound": 320,
+    "cc_upper_bound": 352,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__chinese-zhong-comma": {
+    "active_params_billion": null,
+    "cc": 352,
+    "cc_error_bar": {
+      "lower": 35,
+      "upper": 32
+    },
+    "cc_lower_bound": 352,
+    "cc_upper_bound": 384,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__double-aa-comma": {
+    "active_params_billion": null,
+    "cc": 544,
+    "cc_error_bar": {
+      "lower": 54,
+      "upper": 32
+    },
+    "cc_lower_bound": 544,
+    "cc_upper_bound": 576,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__greek-alpha-comma": {
+    "active_params_billion": null,
+    "cc": 384,
+    "cc_error_bar": {
+      "lower": 38,
+      "upper": 32
+    },
+    "cc_lower_bound": 384,
+    "cc_upper_bound": 416,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__greek-beta-comma": {
+    "active_params_billion": null,
+    "cc": 512,
+    "cc_error_bar": {
+      "lower": 51,
+      "upper": 32
+    },
+    "cc_lower_bound": 512,
+    "cc_upper_bound": 544,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__letter-a-pipe": {
+    "active_params_billion": null,
+    "cc": 352,
+    "cc_error_bar": {
+      "lower": 35,
+      "upper": 32
+    },
+    "cc_lower_bound": 352,
+    "cc_upper_bound": 384,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__letter-a-section": {
+    "active_params_billion": null,
+    "cc": 36,
+    "cc_error_bar": {
+      "lower": 3,
+      "upper": 4
+    },
+    "cc_lower_bound": 36,
+    "cc_upper_bound": 40,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__letter-a-space": {
+    "active_params_billion": null,
+    "cc": 104,
+    "cc_error_bar": {
+      "lower": 10,
+      "upper": 8
+    },
+    "cc_lower_bound": 104,
+    "cc_upper_bound": 112,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__letter-b-comma": {
+    "active_params_billion": null,
+    "cc": 416,
+    "cc_error_bar": {
+      "lower": 41,
+      "upper": 32
+    },
+    "cc_lower_bound": 416,
+    "cc_upper_bound": 448,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "claude-sonnet-4-6__letter-x-comma": {
+    "active_params_billion": null,
+    "cc": 480,
+    "cc_error_bar": {
+      "lower": 48,
+      "upper": 32
+    },
+    "cc_lower_bound": 480,
+    "cc_upper_bound": 512,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__baseline-a-comma": {
+    "active_params_billion": null,
+    "cc": 256,
+    "cc_error_bar": {
+      "lower": 25,
+      "upper": 16
+    },
+    "cc_lower_bound": 256,
+    "cc_upper_bound": 272,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__chinese-han-comma": {
+    "active_params_billion": null,
+    "cc": 240,
+    "cc_error_bar": {
+      "lower": 24,
+      "upper": 16
+    },
+    "cc_lower_bound": 240,
+    "cc_upper_bound": 256,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__chinese-zhong-comma": {
+    "active_params_billion": null,
+    "cc": 224,
+    "cc_error_bar": {
+      "lower": 22,
+      "upper": 16
+    },
+    "cc_lower_bound": 224,
+    "cc_upper_bound": 240,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__double-aa-comma": {
+    "active_params_billion": null,
+    "cc": 320,
+    "cc_error_bar": {
+      "lower": 32,
+      "upper": 32
+    },
+    "cc_lower_bound": 320,
+    "cc_upper_bound": 352,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__greek-alpha-comma": {
+    "active_params_billion": null,
+    "cc": 240,
+    "cc_error_bar": {
+      "lower": 24,
+      "upper": 16
+    },
+    "cc_lower_bound": 240,
+    "cc_upper_bound": 256,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__greek-beta-comma": {
+    "active_params_billion": null,
+    "cc": 352,
+    "cc_error_bar": {
+      "lower": 35,
+      "upper": 32
+    },
+    "cc_lower_bound": 352,
+    "cc_upper_bound": 384,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__letter-a-pipe": {
+    "active_params_billion": null,
+    "cc": 240,
+    "cc_error_bar": {
+      "lower": 24,
+      "upper": 16
+    },
+    "cc_lower_bound": 240,
+    "cc_upper_bound": 256,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__letter-a-section": {
+    "active_params_billion": null,
+    "cc": 120,
+    "cc_error_bar": {
+      "lower": 12,
+      "upper": 8
+    },
+    "cc_lower_bound": 120,
+    "cc_upper_bound": 128,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__letter-a-space": {
+    "active_params_billion": null,
+    "cc": 384,
+    "cc_error_bar": {
+      "lower": 38,
+      "upper": 32
+    },
+    "cc_lower_bound": 384,
+    "cc_upper_bound": 416,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__letter-b-comma": {
+    "active_params_billion": null,
+    "cc": 240,
+    "cc_error_bar": {
+      "lower": 24,
+      "upper": 16
+    },
+    "cc_lower_bound": 240,
+    "cc_upper_bound": 256,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gemini-3-flash-preview__letter-x-comma": {
+    "active_params_billion": null,
+    "cc": 208,
+    "cc_error_bar": {
+      "lower": 20,
+      "upper": 16
+    },
+    "cc_lower_bound": 208,
+    "cc_upper_bound": 224,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__baseline-a-comma": {
+    "active_params_billion": null,
+    "cc": 512,
+    "cc_error_bar": {
+      "lower": 51,
+      "upper": 32
+    },
+    "cc_lower_bound": 512,
+    "cc_upper_bound": 544,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__chinese-han-comma": {
+    "active_params_billion": null,
+    "cc": 640,
+    "cc_error_bar": {
+      "lower": 64,
+      "upper": 64
+    },
+    "cc_lower_bound": 640,
+    "cc_upper_bound": 704,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__chinese-zhong-comma": {
+    "active_params_billion": null,
+    "cc": 240,
+    "cc_error_bar": {
+      "lower": 24,
+      "upper": 16
+    },
+    "cc_lower_bound": 240,
+    "cc_upper_bound": 256,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__double-aa-comma": {
+    "active_params_billion": null,
+    "cc": 208,
+    "cc_error_bar": {
+      "lower": 20,
+      "upper": 16
+    },
+    "cc_lower_bound": 208,
+    "cc_upper_bound": 224,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__greek-alpha-comma": {
+    "active_params_billion": null,
+    "cc": 480,
+    "cc_error_bar": {
+      "lower": 48,
+      "upper": 32
+    },
+    "cc_lower_bound": 480,
+    "cc_upper_bound": 512,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__greek-beta-comma": {
+    "active_params_billion": null,
+    "cc": 544,
+    "cc_error_bar": {
+      "lower": 54,
+      "upper": 32
+    },
+    "cc_lower_bound": 544,
+    "cc_upper_bound": 576,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__letter-a-pipe": {
+    "active_params_billion": null,
+    "cc": 224,
+    "cc_error_bar": {
+      "lower": 22,
+      "upper": 16
+    },
+    "cc_lower_bound": 224,
+    "cc_upper_bound": 240,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__letter-a-section": {
+    "active_params_billion": null,
+    "cc": 104,
+    "cc_error_bar": {
+      "lower": 10,
+      "upper": 8
+    },
+    "cc_lower_bound": 104,
+    "cc_upper_bound": 112,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__letter-a-space": {
+    "active_params_billion": null,
+    "cc": 176,
+    "cc_error_bar": {
+      "lower": 17,
+      "upper": 16
+    },
+    "cc_lower_bound": 176,
+    "cc_upper_bound": 192,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__letter-b-comma": {
+    "active_params_billion": null,
+    "cc": 480,
+    "cc_error_bar": {
+      "lower": 48,
+      "upper": 32
+    },
+    "cc_lower_bound": 480,
+    "cc_upper_bound": 512,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__letter-x-comma": {
+    "active_params_billion": null,
+    "cc": 576,
+    "cc_error_bar": {
+      "lower": 57,
+      "upper": 32
+    },
+    "cc_lower_bound": 576,
+    "cc_upper_bound": 608,
+    "parameter_source": null,
+    "total_params_billion": null
+  }
+}

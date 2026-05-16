@@ -1,0 +1,9 @@
+openai>=1.30.0
+google-genai>=1.16.0
+huggingface-hub>=0.23.0
+numpy>=1.26.0
+torch>=2.2.0
+transformers>=4.50.0
+safetensors>=0.4.3
+datasets>=2.19.0
+tiktoken>=0.7.0

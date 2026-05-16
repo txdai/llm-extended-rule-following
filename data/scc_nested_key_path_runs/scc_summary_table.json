@@ -1,0 +1,98 @@
+{
+  "gpt-4.1-mini__heterogeneous-nested-key-path-match": {
+    "active_params_billion": null,
+    "cc": 0,
+    "cc_error_bar": {
+      "lower": 0,
+      "upper": 32
+    },
+    "cc_lower_bound": 0,
+    "cc_upper_bound": 32,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4.1__heterogeneous-nested-key-path-match": {
+    "active_params_billion": null,
+    "cc": 0,
+    "cc_error_bar": {
+      "lower": 0,
+      "upper": 32
+    },
+    "cc_lower_bound": 0,
+    "cc_upper_bound": 32,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4o-mini__heterogeneous-nested-key-path-match": {
+    "active_params_billion": null,
+    "cc": 0,
+    "cc_error_bar": {
+      "lower": 0,
+      "upper": 32
+    },
+    "cc_lower_bound": 0,
+    "cc_upper_bound": 32,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-4o__heterogeneous-nested-key-path-match": {
+    "active_params_billion": null,
+    "cc": 0,
+    "cc_error_bar": {
+      "lower": 0,
+      "upper": 32
+    },
+    "cc_lower_bound": 0,
+    "cc_upper_bound": 32,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.1__heterogeneous-nested-key-path-match": {
+    "active_params_billion": null,
+    "cc": 0,
+    "cc_error_bar": {
+      "lower": 0,
+      "upper": 32
+    },
+    "cc_lower_bound": 0,
+    "cc_upper_bound": 32,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.2__heterogeneous-nested-key-path-match": {
+    "active_params_billion": null,
+    "cc": 0,
+    "cc_error_bar": {
+      "lower": 0,
+      "upper": 32
+    },
+    "cc_lower_bound": 0,
+    "cc_upper_bound": 32,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4-mini__heterogeneous-nested-key-path-match": {
+    "active_params_billion": null,
+    "cc": 0,
+    "cc_error_bar": {
+      "lower": 0,
+      "upper": 32
+    },
+    "cc_lower_bound": 0,
+    "cc_upper_bound": 32,
+    "parameter_source": null,
+    "total_params_billion": null
+  },
+  "gpt-5.4__heterogeneous-nested-key-path-match": {
+    "active_params_billion": null,
+    "cc": 416,
+    "cc_error_bar": {
+      "lower": 41,
+      "upper": 32
+    },
+    "cc_lower_bound": 416,
+    "cc_upper_bound": 448,
+    "parameter_source": null,
+    "total_params_billion": null
+  }
+}

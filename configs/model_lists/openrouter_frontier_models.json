@@ -1,0 +1,237 @@
+{
+  "generated_at_utc": "20260415T190732Z",
+  "mode": "frontier_enrichment",
+  "model_metadata": {
+    "anthropic/claude-3.5-haiku": {
+      "architecture": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "instruct_type": null,
+        "modality": "text+image->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude"
+      },
+      "canonical_slug": "anthropic/claude-3-5-haiku",
+      "context_length": 200000,
+      "description": "Claude 3.5 Haiku features offers enhanced capabilities in speed, coding accuracy, and tool use. Engineered to excel in real-time applications, it delivers quick response times that are essential for dynamic...",
+      "hugging_face_id": null,
+      "id": "anthropic/claude-3.5-haiku",
+      "name": "Anthropic: Claude 3.5 Haiku",
+      "pricing": {
+        "completion": "0.000004",
+        "input_cache_read": "0.00000008",
+        "input_cache_write": "0.000001",
+        "prompt": "0.0000008",
+        "web_search": "0.01"
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 200000,
+        "is_moderated": true,
+        "max_completion_tokens": 8192
+      }
+    },
+    "anthropic/claude-3.7-sonnet": {
+      "architecture": {
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "instruct_type": null,
+        "modality": "text+image+file->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude"
+      },
+      "canonical_slug": "anthropic/claude-3-7-sonnet-20250219",
+      "context_length": 200000,
+      "description": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rapid responses and...",
+      "hugging_face_id": "",
+      "id": "anthropic/claude-3.7-sonnet",
+      "name": "Anthropic: Claude 3.7 Sonnet",
+      "pricing": {
+        "completion": "0.000015",
+        "input_cache_read": "0.0000003",
+        "input_cache_write": "0.00000375",
+        "prompt": "0.000003",
+        "web_search": "0.01"
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 200000,
+        "is_moderated": true,
+        "max_completion_tokens": 128000
+      }
+    },
+    "anthropic/claude-3.7-sonnet:thinking": {
+      "architecture": {
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "instruct_type": null,
+        "modality": "text+image+file->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude"
+      },
+      "canonical_slug": "anthropic/claude-3-7-sonnet-20250219",
+      "context_length": 200000,
+      "description": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rapid responses and...",
+      "hugging_face_id": "",
+      "id": "anthropic/claude-3.7-sonnet:thinking",
+      "name": "Anthropic: Claude 3.7 Sonnet (thinking)",
+      "pricing": {
+        "completion": "0.000015",
+        "input_cache_read": "0.0000003",
+        "input_cache_write": "0.00000375",
+        "prompt": "0.000003",
+        "web_search": "0.01"
+      },
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 200000,
+        "is_moderated": false,
+        "max_completion_tokens": 64000
+      }
+    },
+    "google/gemini-2.0-flash-001": {
+      "architecture": {
+        "input_modalities": [
+          "text",
+          "image",
+          "file",
+          "audio",
+          "video"
+        ],
+        "instruct_type": null,
+        "modality": "text+image+file+audio+video->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini"
+      },
+      "canonical_slug": "google/gemini-2.0-flash-001",
+      "context_length": 1048576,
+      "description": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5). It...",
+      "hugging_face_id": "",
+      "id": "google/gemini-2.0-flash-001",
+      "name": "Google: Gemini 2.0 Flash",
+      "pricing": {
+        "audio": "0.0000007",
+        "completion": "0.0000004",
+        "image": "0.0000001",
+        "input_cache_read": "0.000000025",
+        "input_cache_write": "0.00000008333333333333334",
+        "internal_reasoning": "0.0000004",
+        "prompt": "0.0000001"
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 1048576,
+        "is_moderated": false,
+        "max_completion_tokens": 8192
+      }
+    },
+    "google/gemini-2.0-flash-lite-001": {
+      "architecture": {
+        "input_modalities": [
+          "text",
+          "image",
+          "file",
+          "audio",
+          "video"
+        ],
+        "instruct_type": null,
+        "modality": "text+image+file+audio+video->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini"
+      },
+      "canonical_slug": "google/gemini-2.0-flash-lite-001",
+      "context_length": 1048576,
+      "description": "Gemini 2.0 Flash Lite offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5),...",
+      "hugging_face_id": "",
+      "id": "google/gemini-2.0-flash-lite-001",
+      "name": "Google: Gemini 2.0 Flash Lite",
+      "pricing": {
+        "audio": "0.000000075",
+        "completion": "0.0000003",
+        "image": "0.000000075",
+        "internal_reasoning": "0.0000003",
+        "prompt": "0.000000075"
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 1048576,
+        "is_moderated": false,
+        "max_completion_tokens": 8192
+      }
+    }
+  },
+  "models": [
+    "anthropic/claude-3.5-haiku",
+    "anthropic/claude-3.7-sonnet",
+    "anthropic/claude-3.7-sonnet:thinking",
+    "google/gemini-2.0-flash-001",
+    "google/gemini-2.0-flash-lite-001"
+  ],
+  "provider": "openrouter",
+  "source": "GET /api/v1/model_runs"
+}

@@ -1,0 +1,121 @@
+model,condition,level,n,parseable,exact_count,mean_error,median_error,mean_abs_error,reported_errors,copied_errors
+claude-sonnet-4-6,agent_count_insert,56,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+claude-sonnet-4-6,agent_count_insert,96,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+claude-sonnet-4-6,agent_count_insert,148,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+claude-sonnet-4-6,agent_count_insert,207,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+claude-sonnet-4-6,agent_count_insert,241,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+claude-sonnet-4-6,agent_count_insert,310,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+claude-sonnet-4-6,agent_count_insert,354,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+claude-sonnet-4-6,agent_count_insert,391,6,6,0,-1.00,-1.00,1.00,"[-1, -1, -1, -1, -1, -1]",-
+claude-sonnet-4-6,agent_count_insert,446,6,6,0,-1.00,-1.00,1.00,"[-1, -1, -1, -1, -1, -1]",-
+claude-sonnet-4-6,agent_count_insert,508,6,6,0,-35.33,-2.00,35.33,"[-2, -202, -2, -2, -2, -2]",-
+claude-sonnet-4-6,agent_count_insert,555,6,6,0,-7.17,-12.00,9.83,"[-12, -2, -12, -13, -12, 8]",-
+claude-sonnet-4-6,agent_count_insert,608,6,6,0,7.00,7.00,7.00,"[7, 12, 2, 7, 7, 7]",-
+claude-sonnet-4-6,agent_count_insert,658,6,6,0,10.17,3.50,24.50,"[92, 2, 5, -20, 5, -23]",-
+claude-sonnet-4-6,agent_count_insert,697,6,6,0,78.00,73.00,78.00,"[73, 103, 73, 73, 73, 73]",-
+claude-sonnet-4-6,agent_count_insert,746,6,6,0,-38.67,74.00,144.33,"[-325, 95, 74, 74, 74, -224]",-
+claude-sonnet-4-6,agent_count_insert,790,6,6,0,41.67,20.00,62.67,"[63, 30, -33, 210, 10, -30]",-
+claude-sonnet-4-6,agent_count_insert,855,6,6,0,143.33,160.00,151.67,"[175, 245, 145, -25, 145, 175]",-
+claude-sonnet-4-6,agent_count_insert,908,6,6,0,108.67,92.00,108.67,"[92, 92, 92, 192, 92, 92]",-
+claude-sonnet-4-6,agent_count_insert,957,6,6,0,43.00,43.00,43.00,"[43, 43, 43, 43, 43, 43]",-
+claude-sonnet-4-6,agent_count_insert,999,6,6,0,17.67,1.00,17.67,"[1, 1, 1, 101, 1, 1]",-
+claude-sonnet-4-6,copy_externalize,51,1,1,1,0.00,0.00,0.00,[0],[0]
+claude-sonnet-4-6,copy_externalize,91,1,1,1,0.00,0.00,0.00,[0],[0]
+claude-sonnet-4-6,copy_externalize,144,1,1,1,0.00,0.00,0.00,[0],[0]
+claude-sonnet-4-6,copy_externalize,196,1,1,1,0.00,0.00,0.00,[0],[0]
+claude-sonnet-4-6,copy_externalize,251,1,1,1,0.00,0.00,0.00,[0],[0]
+claude-sonnet-4-6,copy_externalize,303,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,354,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,396,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,458,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,499,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,545,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,606,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,654,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,696,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,753,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,791,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,851,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,895,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,947,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_externalize,996,1,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,51,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]","[0, 0, 0, 0, 0, 0]"
+claude-sonnet-4-6,copy_then_agent,91,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]","[0, 0, 0, 0, 0, 0]"
+claude-sonnet-4-6,copy_then_agent,144,6,4,4,0.00,0.00,0.00,"[0, 0, 0, 0]","[0, 0, 0, 0]"
+claude-sonnet-4-6,copy_then_agent,196,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,251,6,1,1,0.00,0.00,0.00,[0],[0]
+claude-sonnet-4-6,copy_then_agent,303,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,354,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,396,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,458,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,499,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,545,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,606,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,654,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,696,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,753,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,791,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,851,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,895,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,947,6,0,0,-,-,-,-,-
+claude-sonnet-4-6,copy_then_agent,996,6,0,0,-,-,-,-,-
+gpt-5.4,agent_count_insert,51,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+gpt-5.4,agent_count_insert,109,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]",-
+gpt-5.4,agent_count_insert,141,6,6,5,-1.50,0.00,1.50,"[0, 0, 0, -9, 0, 0]",-
+gpt-5.4,agent_count_insert,201,6,6,2,-2.17,-1.00,2.17,"[0, -1, -6, 0, -5, -1]",-
+gpt-5.4,agent_count_insert,245,6,6,0,0.17,1.00,10.50,"[16, 9, -11, -15, -5, 7]",-
+gpt-5.4,agent_count_insert,308,6,6,0,15.33,-2.50,28.33,"[-8, 3, -8, 25, 103, -23]",-
+gpt-5.4,agent_count_insert,355,6,6,0,-3.00,-4.50,45.33,"[-46, -46, 37, 45, -53, 45]",-
+gpt-5.4,agent_count_insert,392,6,6,0,24.83,8.00,24.83,"[8, 8, 88, 8, 29, 8]",-
+gpt-5.4,agent_count_insert,449,6,6,0,57.00,57.00,57.00,"[51, 51, 51, 63, 63, 63]",-
+gpt-5.4,agent_count_insert,501,6,6,0,11.00,11.00,11.00,"[11, 11, 11, 11, 11, 11]",-
+gpt-5.4,agent_count_insert,542,6,6,0,-0.67,-30.00,39.33,"[-30, 58, -30, 58, -30, -30]",-
+gpt-5.4,agent_count_insert,606,6,6,0,200.67,162.00,200.67,"[162, 162, 394, 162, 162, 162]",-
+gpt-5.4,agent_count_insert,649,6,6,0,39.00,-9.00,176.00,"[375, -137, 119, -137, -137, 151]",-
+gpt-5.4,agent_count_insert,701,6,6,0,299.00,299.00,299.00,"[299, 299, 299, 299, 299, 299]",-
+gpt-5.4,agent_count_insert,758,6,6,0,246.00,242.00,246.00,"[242, 242, 242, 242, 242, 266]",-
+gpt-5.4,agent_count_insert,799,6,6,0,201.00,201.00,201.00,"[201, 201, 201, 201, 201, 201]",-
+gpt-5.4,agent_count_insert,851,6,6,0,153.00,149.00,153.00,"[149, 149, 149, 149, 173, 149]",-
+gpt-5.4,agent_count_insert,895,6,6,0,206.33,129.00,206.33,"[129, 105, 129, 641, 129, 105]",-
+gpt-5.4,agent_count_insert,940,6,6,0,76.00,84.00,76.00,"[60, 84, 84, 60, 84, 84]",-
+gpt-5.4,agent_count_insert,999,6,6,0,21.00,25.00,21.00,"[25, 25, 25, 25, 25, 1]",-
+gpt-5.4,copy_externalize,51,1,1,1,0.00,0.00,0.00,[0],[0]
+gpt-5.4,copy_externalize,91,1,1,1,0.00,0.00,0.00,[0],[0]
+gpt-5.4,copy_externalize,159,1,1,0,-1.00,-1.00,1.00,[-1],[-1]
+gpt-5.4,copy_externalize,199,1,1,1,0.00,0.00,0.00,[0],[0]
+gpt-5.4,copy_externalize,245,1,1,0,5.00,5.00,5.00,[5],[5]
+gpt-5.4,copy_externalize,301,1,1,0,19.00,19.00,19.00,[19],[1]
+gpt-5.4,copy_externalize,356,1,1,0,44.00,44.00,44.00,[44],[-5]
+gpt-5.4,copy_externalize,393,1,1,0,-123.00,-123.00,123.00,[-123],[-139]
+gpt-5.4,copy_externalize,460,1,1,0,52.00,52.00,52.00,[52],[-11]
+gpt-5.4,copy_externalize,505,1,1,0,95.00,95.00,95.00,[95],[5]
+gpt-5.4,copy_externalize,551,1,1,0,449.00,449.00,449.00,[449],[357]
+gpt-5.4,copy_externalize,597,1,1,0,403.00,403.00,403.00,[403],[193]
+gpt-5.4,copy_externalize,645,1,1,0,379.00,379.00,379.00,[379],[174]
+gpt-5.4,copy_externalize,709,1,1,0,315.00,315.00,315.00,[315],[59]
+gpt-5.4,copy_externalize,752,1,1,0,272.00,272.00,272.00,[272],[52]
+gpt-5.4,copy_externalize,807,1,1,0,217.00,217.00,217.00,[217],[182]
+gpt-5.4,copy_externalize,855,1,1,0,169.00,169.00,169.00,[169],[244]
+gpt-5.4,copy_externalize,906,1,1,0,118.00,118.00,118.00,[118],[26]
+gpt-5.4,copy_externalize,960,1,1,0,64.00,64.00,64.00,[64],[-67]
+gpt-5.4,copy_externalize,999,1,1,0,25.00,25.00,25.00,[25],[-54]
+gpt-5.4,copy_then_agent,51,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]","[0, 0, 0, 0, 0, 0]"
+gpt-5.4,copy_then_agent,91,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]","[0, 0, 0, 0, 0, 0]"
+gpt-5.4,copy_then_agent,159,6,6,6,0.00,0.00,0.00,"[0, 0, 0, 0, 0, 0]","[0, 0, 0, 0, 0, 0]"
+gpt-5.4,copy_then_agent,199,6,6,2,0.00,0.00,0.67,"[1, 0, -1, 0, -1, 1]","[1, 0, -1, 0, -1, 0]"
+gpt-5.4,copy_then_agent,245,6,6,0,3.50,11.00,23.50,"[11, 11, 20, -1, -59, 39]","[-10, -10, 29, -11, -59, -10]"
+gpt-5.4,copy_then_agent,301,6,6,0,-2.17,-1.00,8.50,"[-1, -28, -1, 19, -1, -1]","[-3, 66, -6, -20, -5, -6]"
+gpt-5.4,copy_then_agent,356,6,6,0,33.67,38.50,38.33,"[44, 44, 33, 28, -14, 67]","[-45, 5, -5, 8, 47, 36]"
+gpt-5.4,copy_then_agent,393,6,6,0,84.00,107.00,84.00,"[107, 57, 7, 119, 107, 107]","[47, -26, -15, 35, -48, 38]"
+gpt-5.4,copy_then_agent,460,6,6,0,52.00,52.00,52.00,"[52, 52, 52, 52, 52, 52]","[8, 36, -2, 89, 41, 41]"
+gpt-5.4,copy_then_agent,505,6,6,0,64.33,7.00,64.33,"[263, 7, 7, 95, 7, 7]","[2, -24, -28, 50, -6, 9]"
+gpt-5.4,copy_then_agent,551,6,6,0,257.00,349.00,283.00,"[449, 449, 249, -39, -39, 473]","[249, 220, 338, -38, -53, 210]"
+gpt-5.4,copy_then_agent,597,6,6,0,407.00,403.00,407.00,"[403, 403, 427, 403, 403, 403]","[219, 184, 414, 299, 311, 240]"
+gpt-5.4,copy_then_agent,645,6,6,0,277.67,355.00,322.00,"[355, 355, 379, 355, -133, 355]","[88, 76, 241, 162, -116, 152]"
+gpt-5.4,copy_then_agent,709,6,6,0,303.00,303.00,303.00,"[315, 291, 315, 291, 291, 315]","[244, 160, 259, 41, 404, 201]"
+gpt-5.4,copy_then_agent,752,6,6,0,264.00,272.00,264.00,"[272, 272, 272, 272, 248, 248]","[343, 84, 23, 220, 51, 87]"
+gpt-5.4,copy_then_agent,807,6,6,0,205.00,205.00,205.00,"[217, 193, 193, 217, 217, 193]","[144, 215, -52, 122, 285, 159]"
+gpt-5.4,copy_then_agent,855,6,6,0,165.00,169.00,165.00,"[169, 169, 169, 169, 169, 145]","[-353, -67, 315, -79, 307, 42]"
+gpt-5.4,copy_then_agent,906,6,6,0,203.33,118.00,203.33,"[118, 118, 630, 118, 118, 118]","[183, 146, 362, 127, 1, 254]"
+gpt-5.4,copy_then_agent,960,6,6,0,64.00,64.00,64.00,"[64, 64, 64, 64, 64, 64]","[-12, 119, 69, 67, 33, -14]"
+gpt-5.4,copy_then_agent,999,6,6,0,362.33,25.00,362.33,"[25, 1049, 25, 1, 25, 1049]","[235, 801, 591, -36, 411, 631]"

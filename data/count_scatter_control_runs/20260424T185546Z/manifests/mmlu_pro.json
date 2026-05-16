@@ -1,0 +1,702 @@
+[
+  {
+    "answer": "C",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:1003",
+    "metadata": {
+      "option_count": 4,
+      "question_id": 1003,
+      "src": "ori_mmlu-professional_law",
+      "subcategory": "law"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Osgood is the record owner of Desertacre, a 100- acre tract of farmland in California's Coachella Valley. Osgood inherited the property from his father and farmed the land until 2006, when he reached the age of 70. He then decided to retire and move to Scottsdale, Arizona. At that time, Osgood conveyed Desertacre to Cutler \"for his use during his natural life. \"After taking possession of the property, Cutler executed a mortgage on Desertacre in the amount of $100,000. In 2009, Osgood died and in his will, the testator devised Desertacre to his son, Desmond, with remainder to Deirdre. The will provided that Desmond and Deirdre took Desertacre \"subject to Cutler's mortgage. \"At the time of Osgood's death, Desertacre had a market value of $300,000. When Desmond learned of the devise, he was hesitant about taking title to Desertacre because he did not want to incur any indebtedness. Assume that Culter is still alive and in possession of the tract. With respect to the mortgage, Desmond will be\n\nOptions:\nA. liable for the mortgage, because he is the devisee under the terms of Osgood's will.\nB. liable for the mortgage, because the property was devised subject to the mortgage.\nC. not liable, because there was no assumption of the mortgage.\nD. not liable, because he did not personally grant the mortgage.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "B",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:10326",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 10326,
+      "src": "ori_mmlu-high_school_physics",
+      "subcategory": "physics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Two objects, a sphere and a block of the same mass, are released from rest at the top of an inclined plane. The sphere rolls down the inclined plane without slipping. The block slides down the plane without friction. Which object reaches the bottom of the ramp first?\n\nOptions:\nA. The block, because it slides down faster due to its shape\nB. The block, because it does not gain rotational kinetic energy, but the sphere does\nC. The sphere, because it has less surface area in contact with the ramp\nD. Both reach at the same time, as gravity acts equally on both objects\nE. The block, because it has more surface area in contact with the ramp\nF. The sphere, because its shape allows it to roll faster\nG. The sphere, because it gains mechanical energy due to the torque exerted on it, but the block does not\nH. The sphere, because it gains rotational kinetic energy, but the block does not\nI. Both reach at the same time, as they both have the same mass\nJ. The block, because it does not lose mechanical energy due to friction, but the sphere does",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "E",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:11008",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 11008,
+      "src": "ori_mmlu-world_religions",
+      "subcategory": "philosophy"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Which are the synoptic Gospels?\n\nOptions:\nA. Luke, John, Paul\nB. John, Luke, Mark\nC. Peter, John, Mark\nD. Matthew, Mark, John\nE. Matthew, Mark, Luke\nF. Mark, Luke, Paul\nG. Matthew, Mark, Peter\nH. Peter, Mark, Luke\nI. John, Matthew, Paul\nJ. Matthew, Peter, Luke",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "D",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:11344",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 11344,
+      "src": "stemez-TransportPhenomena",
+      "subcategory": "engineering"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: The bulk temperature of water is to be raised from 50\u00b0F (283.3\u00b0K) to 80\u00b0F (300\u00b0K) by passing it through a 2 in. I.D. (0.0508m) smooth piping, which has a constant wall temperature of 210\u00b0F (372.2\u00b0K). If the average fluid velocity is 10 ft/sec, determine the length of piping needed.\n\nOptions:\nA. 14.02 ft\nB. 10.56 ft\nC. 18.34 ft\nD. 12.76 ft\nE. 15.24 ft\nF. 9.84 ft\nG. 8.92 ft\nH. 20.48 ft\nI. 22.63 ft\nJ. 16.40 ft",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "J",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:11954",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 11954,
+      "src": "stemez-ElectronicCommunications",
+      "subcategory": "engineering"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: An amplifier of power gain 20 db has an input consisting of 100\\muWsignal power and 1\\muWnoise power.If the amplifier contributesan additional 100\\muWof noise, determine (a)theoutput signal to noise ratio, (b)thenoise factor and (c)thenoise figure.\n\nOptions:\nA. Output S/N ratio: 100, Noise factor: 2, Noise Figure: 3dB\nB. Output S/N ratio: 50, Noise factor: 2, Noise Figure: 2dB\nC. Output S/N ratio: 80, Noise factor: 2.5, Noise Figure: 4dB\nD. Output S/N ratio: 20, Noise factor: 2, Noise Figure: 6dB\nE. Output S/N ratio: 25, Noise factor: 4, Noise Figure: 6dB\nF. Output S/N ratio: 50, Noise factor: 1, Noise Figure: 3dB\nG. Output S/N ratio: 50, Noise factor: 1.5, Noise Figure: 1.76dB\nH. Output S/N ratio: 40, Noise factor: 3, Noise Figure: 4.77dB\nI. Output S/N ratio: 100, Noise factor: 1, Noise Figure: 0dB\nJ. Output S/N ratio: 50, Noise factor: 2, Noise Figure: 3dB",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:12100",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 12100,
+      "src": "stemez-MachineDesign",
+      "subcategory": "engineering"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A plate cam causes a reciprocating roller follower to execute asimple harmonic motion with a maximum displacement of 2 in.The motion comprises of a rise for 140\u00b0 and a fall for 160\u00b0 of the cam rotation.The follower's roller is 1 in. in radiusand the pressure angle should not exceed 35\u00b0. Evaluate: (1)theperpendicular distance between the follower axis and thecamshaft axis. (2)thesmallest possible size of the cam for noiseless and efficientfunctioning of the cam.\n\nOptions:\nA. Perpendicular distance: 1.75 in, Base circle radius: 1.65 in\nB. Perpendicular distance: 1.35 in, Base circle radius: 1.24 in\nC. Perpendicular distance: 1.5 in, Base circle radius: 1.3 in\nD. Perpendicular distance: 1.2 in, Base circle radius: 1.24 in\nE. Perpendicular distance: 1.4 in, Base circle radius: 1.35 in\nF. Perpendicular distance: 1.286 in, Base circle radius: 1.5 in\nG. Perpendicular distance: 1.1 in, Base circle radius: 1.2 in\nH. Perpendicular distance: 1.286 in, Base circle radius: 1.45 in\nI. Perpendicular distance: 1.286 in, Base circle radius: 1.24 in\nJ. Perpendicular distance: 1.286 in, Base circle radius: 1.75 in",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:12121",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 12121,
+      "src": "stemez-TransportPhenomena",
+      "subcategory": "engineering"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A flat plate is maintained at a constant temperature of 225\u00b0F (107.6\u00b0C). Air at 1 atm. and a temperature, T_\\infty, of 140\u00b0F (60.3\u00b0C) moves across this plate at a velocity, U_\\infty, of 2.5 ft/sec (0.762 m/sec). Calculate the local heat transfer coefficient,h_x, at 3 ft (0.91m) from the leading edge of the plate. Also determine the average heat transfer coefficient, h, from x = 0 to x = 3 ft. Ob-tain the total heat transfer rate from the plate to the air for the first 3 ft. of the plate per foot (\\cong 0.3m) width of plate.\n\nOptions:\nA. h_x= 2.1 W/m^2-sec, h= 4.2 W/m^2-sec, Q = 52 W\nB. h_x= 1.65 W/m^2-sec, h= 3.3 W/m^2-sec, Q = 41.5 W\nC. h_x= 1.8 W/m^2-sec, h= 3.6 W/m^2-sec, Q = 46 W\nD. h_x= 2.0 W/m^2-sec, h= 4.0 W/m^2-sec, Q = 48 W\nE. h_x= 1.5 W/m^2-sec, h= 3.0 W/m^2-sec, Q = 40 W\nF. h_x= 2.2 W/m^2-sec, h= 4.5 W/m^2-sec, Q = 50 W\nG. h_x= 2.3 W/m^2-sec, h= 4.6 W/m^2-sec, Q = 55 W\nH. h_x= 1.9 W/m^2-sec, h= 3.8 W/m^2-sec, Q = 47 W\nI. h_x= 1.77 W/m^2-sec, h= 3.54 W/m^2-sec, Q = 45.7 W\nJ. h_x= 1.6 W/m^2-sec, h= 3.2 W/m^2-sec, Q = 42 W",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "H",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:12151",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 12151,
+      "src": "stemez-ElectricalMachines",
+      "subcategory": "engineering"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A three-wire circuit supplies 500 lamps each taking 1/2 ampere; 275 lamps being on one side of the neutral and 225 on the other side, all at a distance of 1,000 feet from a 231- volt three-wire generator. The voltage between the neutral and either outside main is maintained at 115.5 volts at the generator. The outside wires are of No. 0000A.w.g. copper wire and the neutral consists of No. 0 wire. Find the voltage across each set of lamps.\n\nOptions:\nA. 116 volts across 275 lamps and 122 volts across 225 lamps\nB. 102.5 volts across 275 lamps and 117.5 volts across 225 lamps\nC. 100 volts across 275 lamps and 110 volts across 225 lamps\nD. 137.5 volts across 275 lamps and 112.5 volts across 225 lamps\nE. 108 volts across 275 lamps and 114 volts across 225 lamps\nF. 113 volts across 275 lamps and 117 volts across 225 lamps\nG. 115.5 volts across both sets of lamps\nH. 106.125 volts across 275 lamps and 112.375 volts across 225 lamps\nI. 110 volts across 275 lamps and 120 volts across 225 lamps\nJ. 120 volts across both sets of lamps",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:12238",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 12238,
+      "src": "stemez-TransportPhenomena",
+      "subcategory": "engineering"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Approximate the rate at which water diffuses into dry air at 1atmand 25\u00b0C from the bottom of a test tube 12 mm in diameter and 16 cm in length.\n\nOptions:\nA. 2.184 \u00d7 10^-10 kg/sec\nB. 4.184 \u00d7 10^-11 kg/sec\nC. 5.184 \u00d7 10^-10 kg/sec\nD. 5.184 \u00d7 10^-11 kg/sec\nE. 3.984 \u00d7 10^-11 kg/sec\nF. 6.184 \u00d7 10^-10 kg/sec\nG. 3.184 \u00d7 10^-10 kg/sec\nH. 4.984 \u00d7 10^-10 kg/sec\nI. 4.184 \u00d7 10^-10 kg/sec\nJ. 2.984 \u00d7 10^-11 kg/sec",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "E",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:1614",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 1614,
+      "src": "ori_mmlu-professional_law",
+      "subcategory": "law"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A plaintiff files suit in federal district court against a lawnmower manufacturer, alleging strict liability, negligent manufacture, and breach of warranty. The suit is to recover damages for injuries. suffered by the plaintiff when his gasoline-powered lawnmower exploded, while the plaintiff was mowing his front lawn. At trial, the plaintiff calls a man who witnessed the explosion to testify as an eyewitness. The witness suffers from a mental illness that affects his perception of reality. Which of the following is true regarding the witness's mental condition?\n\nOptions:\nA. It automatically makes his testimony unreliable\nB. It requires special permission from the judge for him to testify\nC. It enhances his credibility as a witness\nD. It must not be referred to because it is unfairly prejudicial.\nE. It maybe proved to impeach him as a witness\nF. It can be used by the defense to dismiss the case.\nG. It has no bearing on either his competence or his credibility.\nH. It needs to be assessed by a medical professional before he can testify\nI. It prevents him from being cross-examined\nJ. It disqualifies him from testifying",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "G",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:169",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 169,
+      "src": "stemez-Business",
+      "subcategory": "business"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A tomato cannery has 5000 pounds of grade A tomatoes and 10,000 pounds of grade B tomatoes, from which they will, make whole canned tomatoes and tomato paste. Whole tomatoes must be composed of at least 80 percent grade A tomatoes, whereas tomato paste must be made with at least 10 percent grade A tomatoes. Whole tomatoes sell for $0.08 per pound and paste sells for $0.05 per pound. Formulate a linear program to solve for how much of each product to make, if the company wants to maximize revenue. (Hint: Let x_WA = pounds of A grade tomatoes used in whole tomatoes, x_WB = pounds of B grade tomatoes used in whole tomatoes; the amount of whole tomatoes produced can be found as x_WA + x_WB after x_WA and x_WB are chosen.)\n\nOptions:\nA. the revenue is $.10 (X_WA + X_WB) + $.05 (X_PA + X_PB)\nB. the revenue is $.05 (X_WA + X_WB) + $.08 (X_PA + X_PB)\nC. the revenue is $.08 (X_WA + X_WB) + $.10 (X_PA + X_PB)\nD. the revenue is $.08 (X_PA + X_PB) + $.05 (X_WA + X_WB)\nE. the revenue is $.08 (X_WA) + $.05 (X_WB) + $.05 (X_PA) + $.05 (X_PB)\nF. the revenue is $.07 (X_WA + X_WB) + $.04 (X_PA + X_PB)\nG. the revenue is $.08 (X_WA + X_WB) + $.05 (X_PA + X_PB)\nH. the revenue is $.08 (X_WA) + $.05 (X_PB)\nI. the revenue is $.08 (5000 - X_WA) + $.05 (10000 - X_PB)\nJ. the revenue is $.09 (X_WA + X_WB) + $.06 (X_PA + X_PB)",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "J",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:194",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 194,
+      "src": "ori_mmlu-marketing",
+      "subcategory": "business"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion:  There are three main types of buying situations in an organization, referred to by Robinson, Faris, and Wind (1967) as _____________.\n\nOptions:\nA. Buygroups.\nB. Buyphases.\nC. Purchase categories.\nD. Buyorders.\nE. Repeat purchases.\nF. Buysets.\nG. Spend classes.\nH. Procurements.\nI. Tenders.\nJ. Buyclasses.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "D",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:2069",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 2069,
+      "src": "ori_mmlu-professional_psychology",
+      "subcategory": "psychology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Dr. Carl Carlson is a licensed psychologist and professor in the psychology department at a large university. He is approached by a graduate student, Marla M., age 36, who asks him if he\u2019d like to attend a baseball game on Friday night. Dr. Carlson is divorced and finds Marla to be a very attractive woman. In terms of ethical guidelines, if Dr. Carlson accepts Marla\u2019s invitation, he will be:\n\nOptions:\nA. acting ethically as long as he discloses the relationship to his colleagues in the psychology department.\nB. clearly violating ethical guidelines.\nC. acting unethically only if their relationship affects Marla's academic performance.\nD. acting ethically as long as Marla is a student in a department other than the psychology department and will not be taking any classes in the psychology department.\nE. acting ethically as long as he does not become sexually involved with Marla until she is no longer affiliated with the university.\nF. acting ethically since he is not the one who initiated a potential relationship.\nG. clearly violating ethical guidelines, unless he has received permission from the university.\nH. acting ethically as long as he does not date any other students in the university.\nI. acting unethically only if Marla is currently enrolled in one of his classes.\nJ. acting ethically as long as he maintains a professional relationship with Marla.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "D",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:2162",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 2162,
+      "src": "ori_mmlu-high_school_psychology",
+      "subcategory": "psychology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: The scores of Brian's team on the quiz were: 8, 6, 9, 7, 10, 9, 5, 4, 9. The median of the team's scores is\n\nOptions:\nA. 10\nB. 7\nC. 9.5\nD. 8\nE. 6\nF. 9\nG. 7.5\nH. 6.5\nI. 8.5\nJ. 7.8",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "J",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:2519",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 2519,
+      "src": "ori_mmlu-professional_psychology",
+      "subcategory": "psychology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Babbling ordinarily begins at about 4 to 5 months of age and initially includes:\n\nOptions:\nA. phonemes from the child\u2019s native language only.\nB. Phonemes from the language most frequently spoken around the child.\nC. Phonetic sounds specific to the child's geographical location.\nD. Phonemes from the parents' native language only.\nE. morphemes that the child has heard most frequently.\nF. Phonetic sounds that are easiest for the child to produce.\nG. morphemes from all languages.\nH. Morphemes from the child's native language only.\nI. Words that the child has heard most frequently.\nJ. phonemes from all languages.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "A",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:2556",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 2556,
+      "src": "stemez-Psychology",
+      "subcategory": "psychology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: What is meant by catharsis? How do catharsis theorists claim aggression can be controlled?\n\nOptions:\nA. Catharsis refers to the process of releasing aggressive energy from a person's system and can be controlled by channeling it into more productive or neutral outlets.\nB. Catharsis refers to the process of increasing aggression\nC. Catharsis refers to the theory that aggression can be controlled by engaging in competitive sports without any emotional release\nD. Catharsis involves the elimination of aggressive tendencies by completely isolating individuals from potential conflicts\nE. Catharsis means avoiding situations that can trigger aggression\nF. Catharsis suggests that aggression dissipates on its own over time without the need for any intervention or release\nG. Catharsis involves redirecting aggressive behavior towards the source of provocation without any form of control\nH. Catharsis is the reinforcement of aggressive behavior through repeated exposure to aggressive stimuli\nI. Catharsis is the transformation of aggressive impulses into creative or artistic expression\nJ. Catharsis means suppressing aggressive tendencies",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "A",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:2622",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 2622,
+      "src": "ori_mmlu-professional_psychology",
+      "subcategory": "psychology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Which of the following relies on internal resources to cope with a problem?\n\nOptions:\nA. Emotion-focused coping\nB. Dissonance reduction\nC. Problem-focused coping\nD. Cognitive dissonance\nE. Problem-solving coping\nF. Semantic differential\nG. Behavioral coping\nH. Appraisal-focused coping\nI. Defense mechanisms\nJ. Cognitive restructuring",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "F",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:2640",
+    "metadata": {
+      "option_count": 7,
+      "question_id": 2640,
+      "src": "ori_mmlu-professional_psychology",
+      "subcategory": "psychology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: In which type of research there is no manipulation of research done and variables are just measured, not manipulated? From your knowledge about research designs and strategies, choose the correct answer.\n\nOptions:\nA. QUALITATIVE RESEARCH\nB. EXPLORATORY RESEARCH\nC. LONGITUDINAL RESEARCH\nD. TRUE EXPERIMENTAL RESEARCH\nE. QUASI-EXPERIMENTAL RESEARCH\nF. CORRELATIONAL RESEARCH\nG. DEVELOPMENTAL RESEARCH",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "F",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:2674",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 2674,
+      "src": "stemez-Psychology",
+      "subcategory": "psychology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Explain the term \"psychosis\" and the distinction between functionaland organic psychoses.\n\nOptions:\nA. Psychosis is characterized by persistent happiness and clarity of thought\nB. Psychosis is a minor mental disorder\nC. Organic psychosis results from voluntary substance abuse, whereas functional psychosis is always congenital\nD. Organic psychosis is typically induced by changes in the weather or climate\nE. Organic psychosis is caused by psychological trauma\nF. A psychosis is a severe mental disorder causing impaired thinking and emotion. Organic psychosis is caused by impaired brain functioning due to structural lesions or disease, while functional psychosis does not have any apparent pathological changes in the brain.\nG. Functional psychosis is a form of psychosis that only occurs in older adults\nH. Functional psychosis is caused by physical brain damage\nI. Psychosis is a mild condition that improves without treatment\nJ. Functional psychosis is caused by infectious diseases, while organic psychosis is a result of genetic factors",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "D",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:3012",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 3012,
+      "src": "stemez-Genetics",
+      "subcategory": "biology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Distinguish betweenpenetranceand expressivity.\n\nOptions:\nA. Penetrance refers to how widespread a trait is within a population, while expressivity measures the intensity of the trait.\nB. Penetrance is the physical appearance resulting from a genotype, while expressivity is the genetic makeup of an organism.\nC. Penetrance is the measure of the strength of a gene's effect, while expressivity is the measure of the stability of a gene's expression across generations.\nD. Penetrance is the percentage of individuals who carry a gene and express it phenotypically, while expressivity is the degree of effect or the extent to which a gene expresses itself in different individuals.\nE. Expressivity is the proportion of individuals in a population who show a particular trait, whereas penetrance is the range of manifestations of a gene in different tissues.\nF. Penetrance and expressivity are the same.\nG. Penetrance is the consistency of a gene's expression across different environments, while expressivity is the ability of a gene to be suppressed by other genes.\nH. Penetrance is the likelihood that a trait will appear in the offspring, whereas expressivity is the range of phenotypes resulting from a given genotype.\nI. Penetrance is the degree of effect or the extent to which a gene expresses itself in different individuals, while expressivity is the percentage of individuals who carry a gene and express it phenotypically.\nJ. Expressivity is the probability of a gene being inherited, and penetrance is the variability of a trait's expression among individuals.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "B",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:3013",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 3013,
+      "src": "stemez-Biology",
+      "subcategory": "biology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: If all the chemical components found in a living cell were to beput together in the right proportion, the mixture would not functionas living matter. What characteristics would enable usto consider something living?\n\nOptions:\nA. Living things are characterized only by their complexity and organization, without the need for energy consumption or reproduction.\nB. Living things are characterized by a specific, complex organization, the ability to consume energy, movement, response to physical or chemical changes, growth, reproduction, and adaptability.\nC. Living things are characterized only by their growth.\nD. Living things are characterized by their ability to maintain homeostasis, without the need for growth, reproduction, or adaptability.\nE. Living things are characterized by their ability to evolve over generations but not by individual growth or energy consumption.\nF. Living things are characterized by their ability to respond to changes and growth, but not by reproduction or energy consumption.\nG. Living things are characterized only by their ability to consume energy.\nH. Living things are characterized only by their movement.\nI. Living things are characterized only by their adaptability to changes.\nJ. Living things are characterized only by their ability to reproduce.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:3190",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 3190,
+      "src": "stemez-Biology",
+      "subcategory": "biology"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Define the termsAnthropoidea,Hominidaeand Hominoidea?\n\nOptions:\nA. Anthropoidea are the primitive primates. Hominoidea are the tailed anthropoids. Hominidae includes gorilla, chimpanzee, orangutan.\nB. Anthropoidea are the higher primates excluding humans. Hominoidea consists of the lesser apes and the gibbons. Hominidae includes all the great apes, including humans and their immediate ancestors.\nC. Anthropoidea include all extinct primate species. Hominoidea are the arboreal primates. Hominidae consists of the new world monkeys and humans.\nD. Anthropoidea are the suborder of primates excluding prosimians. Hominoidea includes all non-ape primates. Hominidae is restricted to the African great apes.\nE. Anthropoidea encompass all primates. Hominoidea refers to the lesser apes and tarsiers. Hominidae includes only the modern human species.\nF. Anthropoidea are the lower primates. Hominoidea are the small apes. Hominidae includes fossil apes and modern apes.\nG. Anthropoidea are the New World monkeys. Hominoidea are the Old World monkeys. Hominidae includes gibbons.\nH. Anthropoidea are the branch of primates including lemurs and lorises. Hominoidea are the large-bodied apes. Hominidae consists of all modern and extinct monkeys.\nI. Anthropoidea are the higher primates. The superfamily Hominoidea is represented by great apes and man. The family Hominidae includes fossil men and modern man.\nJ. Anthropoidea are the subgroup of primates that are neither monkeys nor apes. Hominoidea includes all bipedal primates. Hominidae is a group composed of modern humans and Neanderthals.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "A",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:3586",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 3586,
+      "src": "stemez-Chemistry",
+      "subcategory": "chemistry"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: What volume (in cc) is occupied by a block of woodof dimensions25.0 m \u00d7 10.0 cm \u00d7 300 mm. All edges are 90\u00b0 toone another.\n\nOptions:\nA. 7.50 \u00d7 10^5 cc\nB. 75000 cc\nC. 3.75 \u00d7 10^5 cc\nD. 750 cc\nE. 3.00 \u00d7 10^5 cc\nF. 2500 cc\nG. 1.00 \u00d7 10^6 cc\nH. 2.50 \u00d7 10^6 cc\nI. 7.50 \u00d7 10^4 cc\nJ. 1.50 \u00d7 10^5 cc",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "H",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:3651",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 3651,
+      "src": "scibench-atkins",
+      "subcategory": "chemistry"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Assume all gases are perfect unless stated otherwise. Unless otherwise stated, thermodynamic data are for 298.15 K.  Given the reactions (1) and (2) below, determine $\\Delta_{\\mathrm{r}} U^{\\ominus}$ for reaction (3).\n\n(1) $\\mathrm{H}_2(\\mathrm{g})+\\mathrm{Cl}_2(\\mathrm{g}) \\rightarrow 2 \\mathrm{HCl}(\\mathrm{g})$, $\\Delta_{\\mathrm{r}} H^{\\ominus}=-184.62 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$\n\n(2) $2 \\mathrm{H}_2(\\mathrm{g})+\\mathrm{O}_2(\\mathrm{g}) \\rightarrow 2 \\mathrm{H}_2 \\mathrm{O}(\\mathrm{g})$, $\\Delta_{\\mathrm{r}} H^\\ominus=-483.64 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$\n\n(3) $4 \\mathrm{HCl}(\\mathrm{g})+\\mathrm{O}_2(\\mathrm{g}) \\rightarrow 2 \\mathrm{Cl}_2(\\mathrm{g})+2 \\mathrm{H}_2 \\mathrm{O}(\\mathrm{g})$\n\nOptions:\nA. -150.72$\\mathrm{kJ} \\mathrm{mol}^{-1}$\nB. -200.36$\\mathrm{kJ} \\mathrm{mol}^{-1}$\nC. -135.50 kJ mol^{-1}\nD. -220.14 kJ mol^{-1}\nE. -162.80 kJ mol^{-1}\nF. -89.10 kJ mol^{-1}\nG. -97.66 kJ mol^{-1}\nH. -111.92$\\mathrm{kJ} \\mathrm{mol}^{-1}$\nI. -175.88 kJ mol^{-1}\nJ. -125.48$\\mathrm{kJ} \\mathrm{mol}^{-1}$",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "G",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:4213",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 4213,
+      "src": "stemez-PhysicalChemistry",
+      "subcategory": "chemistry"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: The Russell-Saunders coupling of the angularmomenta of two atomicorbitalsgives rise to a quantum number L in which all the angular quantum numbers,l_i, are combined vectorially. That is, L = l_1 + l_2 , l_1 + l2- 1, ... , \\vertl1- l_2\\vert What will be the values of L when a p and a d electron in-teract?\n\nOptions:\nA. 3, 2, 0\nB. 4, 2, 1\nC. 2, 1, 0\nD. 2, 1, 1\nE. 5, 3, 1\nF. 1, 0, -1\nG. 3, 2, 1\nH. 3, 1, 0\nI. 4, 3, 2\nJ. 2, 1, -1",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "D",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:4215",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 4215,
+      "src": "stemez-PhysicalChemistry",
+      "subcategory": "chemistry"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: The following equation is given for 1 mole of a gas V = f (P, T)(1) Derive the ideal gas equation.\n\nOptions:\nA. (PV) / (RT) = 1\nB. (V/T) = (P/R)\nC. (VT) / (P) = R\nD. (VP) / (T) = R\nE. (PT) / (V) = R\nF. P = (RT) / V\nG. V = PT/R\nH. (VP) / (T) = k\nI. V = (RP) / T\nJ. (P + V) / (T + R) = constant",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "A",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:4275",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 4275,
+      "src": "scibench-atkins",
+      "subcategory": "chemistry"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: In an industrial process, nitrogen is heated to $500 \\mathrm{~K}$ at a constant volume of $1.000 \\mathrm{~m}^3$. The gas enters the container at $300 \\mathrm{~K}$ and $100 \\mathrm{~atm}$. The mass of the gas is $92.4 \\mathrm{~kg}$. Use the van der Waals equation to determine the approximate pressure of the gas at its working temperature of $500 \\mathrm{~K}$. For nitrogen, $a=1.352 \\mathrm{dm}^6 \\mathrm{~atm} \\mathrm{~mol}^{-2}, b=0.0387 \\mathrm{dm}^3 \\mathrm{~mol}^{-1}$.\n\nOptions:\nA. 140$\\text{atm}$\nB. 130$\\text{atm}$\nC. 120$\\text{atm}$\nD. 150$\\text{atm}$\nE. 180$\\text{atm}$\nF. 110$\\text{atm}$\nG. 170$\\text{atm}$\nH. 220$\\text{atm}$\nI. 160$\\text{atm}$\nJ. 200$\\text{atm}$",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "E",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:4440",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 4440,
+      "src": "ori_mmlu-college_chemistry",
+      "subcategory": "chemistry"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: During a delay, spins with an offset frequency \u03a9 = 250 rad s-1 precess through an angle of 60\u00b0. How long is the delay?\n\nOptions:\nA. 1.8 seconds\nB. 400 ms\nC. 32.7 ms\nD. 2 seconds\nE. 4.19 ms\nF. 26.3 ms\nG. 500 ms\nH. 240 ms\nI. 1510 ms\nJ. 8.5 ms",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:4529",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 4529,
+      "src": "scibench-atkins",
+      "subcategory": "chemistry"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Use the van der Waals parameters for chlorine to calculate approximate values of the radius of a $\\mathrm{Cl}_2$ molecule regarded as a sphere.\n\nOptions:\nA. 0.185 $\\mathrm{nm}$\nB. 0.110 $\\mathrm{nm}$\nC. 0.125 $\\mathrm{nm}$\nD. 0.200 $\\mathrm{nm}$\nE. 0.095 $\\mathrm{nm}$\nF. 0.220 $\\mathrm{nm}$\nG. 0.175 $\\mathrm{nm}$\nH. 0.150 $\\mathrm{nm}$\nI. 0.139$\\mathrm{nm}$ \nJ. 0.160 $\\mathrm{nm}$",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:4534",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 4534,
+      "src": "stemez-Chemistry",
+      "subcategory": "chemistry"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A chemist dissolves methyl alcohol in n-octane. He adds this to excessmethylmagnesiumiodide, which is dissolved in the high-boiling solvent, n-butyl ether. A gas is evolved, which is collected at STP. It occupies a volume of 1.04 cc. What is the gas and how many grams of methyl alcohol were present?\n\nOptions:\nA. Hydrogen, 1.48 x 10^-3 grams of methyl alcohol\nB. Methane, 0.74 x 10^-3 grams of methyl alcohol\nC. Hydrogen, 2.96 x 10^-3 grams of methyl alcohol\nD. Methane, 3.00 x 10^-3 grams of methyl alcohol\nE. Methanol, 2.96 x 10^-3 grams of methyl alcohol\nF. Ethane, 2.96 x 10^-3 grams of methyl alcohol\nG. Propane, 1.48 x 10^-3 grams of methyl alcohol\nH. Methanol, 1.48 x 10^-3 grams of methyl alcohol\nI. Methane, 1.48 x 10^-3 grams of methyl alcohol\nJ. Ethane, 1.48 x 10^-3 grams of methyl alcohol",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "H",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:4787",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 4787,
+      "src": "ori_mmlu-prehistory",
+      "subcategory": "history"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: The native peoples of the northwest coast of North America were:\n\nOptions:\nA. simple foragers.\nB. maize agriculturalists.\nC. conquered by the Aztec.\nD. dependent on hunting large game.\nE. primarily seafaring traders.\nF. primarily desert dwellers.\nG. known for their pottery skills.\nH. affluent foragers.\nI. nomadic herders.\nJ. early industrialists.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:5011",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 5011,
+      "src": "ori_mmlu-prehistory",
+      "subcategory": "history"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: On which continent are most of the Venus figurines found?\n\nOptions:\nA. Antarctica\nB. Africa\nC. Middle East\nD. Asia\nE. Australia\nF. Oceania\nG. South America\nH. Central America\nI. Europe\nJ. North America",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "D",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:505",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 505,
+      "src": "ori_mmlu-marketing",
+      "subcategory": "business"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Conflict between sequential members in a distribution network, such as producers, distributor, and retailers, over such matters as carrying a particular range or price increases is referred to as:\n\nOptions:\nA. Sequential conflict.\nB. Range conflict.\nC. Producer conflict.\nD. Vertical conflict.\nE. Supply chain conflict.\nF. Channel conflict.\nG. Price conflict.\nH. Distributor conflict.\nI. Network conflict.\nJ. Horizontal conflict.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "C",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:518",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 518,
+      "src": "stemez-Business",
+      "subcategory": "business"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Mr. Griffin, age 22 and single, uses his car strictly for pleasure. His insurance coverage includes 25-and-50 bodily injury liability and $10,000 property damage insurance. If Mr. Griffin lives in 04 territory and has had no accidents, what is the cost of his coverage?\n\nOptions:\nA. $167.45\nB. $99.99\nC. $183.30\nD. $37\nE. $210.75\nF. $125.50\nG. $58.60\nH. $78\nI. $41\nJ. $150.20",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "H",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:5964",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 5964,
+      "src": "ori_mmlu-global_facts",
+      "subcategory": "other"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: As of 2019, about what percentage of French people say God plays an important role in their life?\n\nOptions:\nA. 51%\nB. 11%\nC. 44%\nD. 71%\nE. 80%\nF. 25%\nG. 60%\nH. 31%\nI. 91%\nJ. 15%",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "E",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:6022",
+    "metadata": {
+      "option_count": 5,
+      "question_id": 6022,
+      "src": "ori_mmlu-human_aging",
+      "subcategory": "health"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Which of the following is NOT among the top 10 causes of death in the U. S.?\n\nOptions:\nA. Skin cancer\nB. Kidney diseases\nC. Accidents\nD. Septicemia\nE. AIDS",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "A",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:6576",
+    "metadata": {
+      "option_count": 4,
+      "question_id": 6576,
+      "src": "ori_mmlu-nutrition",
+      "subcategory": "health"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Which statement about protein digestion and absorption is most correct?\n\n\nOptions:\nA. The products of protein digestion may be absorbed as free amino acids or as di- or tripeptides\nB. Gastric digestion of all proteins is equally efficient because of the grinding action of the antrum\nC. Gastric zymogenic (chief) cells produce and secrete chymotrypsin, elastase and carboxypeptidase A and this initiates the process of protein digestion\nD. The products of digestion of dietary protein by luminal and brush-border enzymes are only absorbed by one of the 14 different amino acid transporters",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "F",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:6732",
+    "metadata": {
+      "option_count": 7,
+      "question_id": 6732,
+      "src": "ori_mmlu-human_aging",
+      "subcategory": "health"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Those more likely to experience depression after a loss are those who\n\nOptions:\nA. Have a strong social support network\nB. Have no previous history of mental health issues\nC. Have not previously experienced depression\nD. Have a high income\nE. Have been married less than a year\nF. Are young survivors\nG. Are in good health",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "E",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:6774",
+    "metadata": {
+      "option_count": 9,
+      "question_id": 6774,
+      "src": "ori_mmlu-virology",
+      "subcategory": "health"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: What is the morphology of the Dane particle?\n\nOptions:\nA. Spherical with a lipid membrane\nB. Numerous small particles\nC. Lipid membrane free icosahedron\nD. Double shelled icosahedron\nE. Flexuous and filamentous morphology\nF. Double shelled dodecahedron\nG. Amorphous and irregular morphology\nH. Numerous large particles\nI. Cylindrical and filamentous morphology",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:6905",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 6905,
+      "src": "ori_mmlu-high_school_microeconomics",
+      "subcategory": "economics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: When a perfectly competitive labor market is in equilibrium,\n\nOptions:\nA. individual firms face upward sloping labor demand curves\nB. individual firms face horizontal labor demand curves\nC. there is a shortage of jobs and a surplus of workers\nD. wages are dictated by the government\nE. individual firms face downward sloping labor supply curves\nF. unemployment rate is at 0 percent\nG. there is a surplus of jobs and a shortage of workers\nH. individual firms face downward sloping labor demand curves\nI. everyone who wants to work has the opportunity to do so\nJ. unemployment can reach as high as 10-15 percent",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "I",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:697",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 697,
+      "src": "theoremQA-Finance",
+      "subcategory": "business"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: For a one-period binomial model for the price of a stock, you are given: (i) The period is one year. (ii) The stock pays no dividends. (iii) u =1.433, where u is one plus the rate of capital gain on the stock if the price goes up.  (iv) d = 0.756 , where d is one plus the rate of capital loss on the stock if the price goes down. (v) The continuously compounded annual expected return on the stock is 10%. What is the true probability of the stock price going up.\n\nOptions:\nA. 0.58\nB. 0.75\nC. 0.55\nD. 0.30\nE. 0.40\nF. 0.60\nG. 0.65\nH. 0.70\nI. 0.52\nJ. 0.45",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "F",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:7210",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 7210,
+      "src": "stemez-Economics",
+      "subcategory": "economics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: If productivity is increasing by a uniform 2 percent in all industries, what should the wage guideline be if the inflation is to be held at 6 percent?\n\nOptions:\nA. 14%\nB. 12%\nC. 11%\nD. 9%\nE. 2%\nF. 8%\nG. 10%\nH. 4%\nI. 6%\nJ. 7%",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "F",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:7398",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 7398,
+      "src": "stemez-Economics",
+      "subcategory": "economics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Contrast the way in which economic information is utilized anddisseminated in capitalist and socialist economies, respectively.\n\nOptions:\nA. In capitalism, information flows through social networks and informal channels, while in socialism, it is strictly regulated by the state.\nB. In socialism, information is freely available to all, while in capitalism, it is a commodity bought and sold in the market.\nC. In socialism, information is disseminated via market prices, while in capitalism, it is distributed through a network of state-owned enterprises.\nD. In capitalism, information is collected centrally, while in socialism, it's disseminated via market prices.\nE. In both capitalism and socialism, information is disseminated via market prices.\nF. In capitalism, information is disseminated via market prices, while in socialism, information is collected centrally due to the absence of market prices.\nG. In capitalism, information is shared publicly by the government, while in socialism, it is kept secret and only used by the state planners.\nH. In capitalism, information dissemination is not necessary due to the self-regulating market, while in socialism, information is disseminated through public forums.\nI. In both systems, information is primarily disseminated through government planning agencies.\nJ. In capitalism, information is controlled by the government, while in socialism, it's controlled by entrepreneurs.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "G",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:7501",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 7501,
+      "src": "ori_mmlu-high_school_microeconomics",
+      "subcategory": "economics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Marginal cost always intersects average variable cost at\n\nOptions:\nA. the minimum of average total cost\nB. the point where average variable cost is equal to marginal cost\nC. the profit-maximizing quantity\nD. the maximum of average variable cost\nE. the point of equilibrium between supply and demand\nF. the point where marginal cost equals average total cost\nG. the minimum of average variable cost\nH. the point where average variable cost is less than marginal cost\nI. the minimum of marginal cost\nJ. the maximum of marginal cost",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "F",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:9117",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 9117,
+      "src": "ori_mmlu-conceptual_physics",
+      "subcategory": "physics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A heavy rock and a light rock in free fall (zero air resistance) have the same acceleration. The heavy rock doesn't have a greater acceleration because the\n\nOptions:\nA. air resistance is always zero in free fall.\nB. volume of both rocks is the same.\nC. force due to gravity is the same on each.\nD. gravitational constant is the same for both rocks.\nE. force due to gravity is zero in free fall.\nF. ratio of force to mass is the same.\nG. inertia of both rocks is the same.\nH. weight of both rocks is the same.\nI. density of both rocks is the same.\nJ. mass of both rocks is the same.",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "C",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:9276",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 9276,
+      "src": "stemez-Mechanics",
+      "subcategory": "physics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: What is the fractional increase of mass for a 600-mi/hr jetliner?\n\nOptions:\nA. 1.5 \u00d7 10^-12\nB. 0.8 \u00d7 10^-12\nC. 0.5 \u00d7 10^-12\nD. 0.3 \u00d7 10^-12\nE. 2.0 \u00d7 10^-12\nF. 4.5 \u00d7 10^-12\nG. 5.0 \u00d7 10^-12\nH. 2.5 \u00d7 10^-12\nI. 3.0 \u00d7 10^-12\nJ. 1.0 \u00d7 10^-12",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "H",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:9482",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 9482,
+      "src": "ori_mmlu-college_physics",
+      "subcategory": "physics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A tube of water is traveling at 1/2 c relative to the lab frame when a beam of light traveling in the same direction as the tube enters it. What is the speed of light in the water relative to the lab frame? (The index of refraction of water is 4/3.)\n\nOptions:\nA. 9/10 c\nB. 1 c\nC. 1/2 c\nD. 5/6 c\nE. 3/4 c\nF. 1/3 c\nG. 4/5 c\nH. 10/11 c\nI. 2/3 c\nJ. 7/8 c",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "F",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:9617",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 9617,
+      "src": "stemez-Physics",
+      "subcategory": "physics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: How many Btu are required to raise the temperature of 2 pounds of water from 32\u00b0F to 212\u00b0F?\n\nOptions:\nA. 720 Btu\nB. 450 Btu\nC. 600 Btu\nD. 180 Btu\nE. 930 Btu\nF. 360 Btu\nG. 540 Btu\nH. 280 Btu\nI. 120 Btu\nJ. 800 Btu",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "A",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:9928",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 9928,
+      "src": "ori_mmlu-high_school_physics",
+      "subcategory": "physics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: Traveling at an initial speed of 1.5 \u00d7 10^6 m/s, a proton enters a region of constant magnetic field, B, of magnitude 1.0 T. If the proton's initial velocity vector makes an angle of 30\u00b0 with the direction of B, compute the proton's speed 4 s after entering the magnetic field.\n\nOptions:\nA. 1.5 \u00d7 10^6 m/s\nB. 5.0 \u00d7 10^5 m/s\nC. 2.0 \u00d7 10^6 m/s\nD. 2.5 \u00d7 10^5 m/s\nE. 3.0 \u00d7 10^6 m/s\nF. 2.25 \u00d7 10^6 m/s\nG. 2.5 \u00d7 10^6 m/s\nH. 7.5 \u00d7 10^5 m/s\nI. 1.0 \u00d7 10^6 m/s\nJ. 1.75 \u00d7 10^6 m/s",
+    "source": "TIGER-Lab/MMLU-Pro"
+  },
+  {
+    "answer": "B",
+    "answer_type": "mcq_letter",
+    "category": "mmlu_pro",
+    "item_id": "mmlu_pro:9986",
+    "metadata": {
+      "option_count": 10,
+      "question_id": 9986,
+      "src": "stemez-Optics",
+      "subcategory": "physics"
+    },
+    "prompt": "Answer the following multiple-choice question. Return the option letter only in JSON.\n\nQuestion: A crude telescope is constructed of two spectacle lenses of focal lengths 100 cm and 20 cm respectively, a) Find its angular magnification. b) Find the height of the image formed by the objective of a building 200 ft high and one mile distant.\n\nOptions:\nA. Angular magnification is 5, Image height is 2 inches\nB. Angular magnification is 5, Image height is 1.5 inches\nC. Angular magnification is 10, Image height is 1.5 inches\nD. Angular magnification is 3, Image height is 1 inch\nE. Angular magnification is 8, Image height is 2.5 inches\nF. Angular magnification is 2, Image height is 1.5 inches\nG. Angular magnification is 4, Image height is 3 inches\nH. Angular magnification is 10, Image height is 2 inches\nI. Angular magnification is 2, Image height is 2 inches\nJ. Angular magnification is 5, Image height is 0.5 inches",
+    "source": "TIGER-Lab/MMLU-Pro"
+  }
+]

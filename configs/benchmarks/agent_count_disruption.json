@@ -1,0 +1,26 @@
+{
+  "run_subdir": "agent_count_disruption_runs",
+  "seed": 17,
+  "max_output_tokens": 4096,
+  "retry_max_output_tokens": 32768,
+  "parallel_requests": 40,
+  "task_samples": 6,
+  "include_copy_then_agent": true,
+  "use_count_ladder_for_agent": true,
+  "use_count_ladder_for_copy": true,
+  "count_ladder_start": 50,
+  "count_ladder_stop": 1000,
+  "count_ladder_step": 50,
+  "count_ladder_jitter": 10,
+  "cases": [
+    {
+      "api": "responses",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium"
+    },
+    {
+      "api": "anthropic",
+      "model": "claude-sonnet-4-6"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "run_subdir": "scc_stimulus_ablation_runs",
+  "seed": 7,
+  "max_output_tokens": 4096,
+  "retry_max_output_tokens": 32768,
+  "google_unavailable_retries": 12,
+  "google_unavailable_retry_delay_seconds": 2.0,
+  "anthropic_transient_retries": 8,
+  "anthropic_transient_retry_delay_seconds": 2.0,
+  "model_list_path": "../model_lists/openai_models.json",
+  "preflight_length": 8,
+  "search": {
+    "initial_length": 32,
+    "max_length": 20000,
+    "samples_per_length": 16,
+    "parallel_trials_per_batch": 15,
+    "jitter_fraction": 0.2,
+    "tolerance_fraction": 0.05,
+    "step_fraction": 0.1
+  },
+  "cases": [
+    {
+      "api": "responses",
+      "model": "gpt-5.4"
+    },
+    {
+      "api": "google_genai",
+      "model": "gemini-3-flash-preview"
+    },
+    {
+      "api": "anthropic",
+      "model": "claude-sonnet-4-6"
+    }
+  ],
+  "stimuli": [
+    {
+      "id": "baseline-a-comma",
+      "item": "a",
+      "delimiter": ", ",
+      "delimiter_label": "comma"
+    },
+    {
+      "id": "letter-b-comma",
+      "item": "b",
+      "delimiter": ", ",
+      "delimiter_label": "comma"
+    },
+    {
+      "id": "letter-x-comma",
+      "item": "x",
+      "delimiter": ", ",
+      "delimiter_label": "comma"
+    },
+    {
+      "id": "double-aa-comma",
+      "item": "aa",
+      "delimiter": ", ",
+      "delimiter_label": "comma"
+    },
+    {
+      "id": "greek-alpha-comma",
+      "item": "α",
+      "delimiter": ", ",
+      "delimiter_label": "comma"
+    },
+    {
+      "id": "greek-beta-comma",
+      "item": "β",
+      "delimiter": ", ",
+      "delimiter_label": "comma"
+    },
+    {
+      "id": "chinese-han-comma",
+      "item": "汉",
+      "delimiter": ", ",
+      "delimiter_label": "comma"
+    },
+    {
+      "id": "chinese-zhong-comma",
+      "item": "中",
+      "delimiter": ", ",
+      "delimiter_label": "comma"
+    },
+    {
+      "id": "letter-a-space",
+      "item": "a",
+      "delimiter": " ",
+      "delimiter_label": "space"
+    },
+    {
+      "id": "letter-a-pipe",
+      "item": "a",
+      "delimiter": " | ",
+      "delimiter_label": "pipe"
+    },
+    {
+      "id": "letter-a-section",
+      "item": "a",
+      "delimiter": " § ",
+      "delimiter_label": "section"
+    }
+  ]
+}

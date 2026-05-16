@@ -1,0 +1,74 @@
+[
+  {
+    "label": "attn_out.layer40",
+    "stream": "attn_out",
+    "layer": 40,
+    "best_feature_id": 259,
+    "best_feature_pearson": 0.9733283519744873,
+    "best_feature_mean_activation": 2.914339542388916,
+    "best_feature_active_rate": 0.779874213836478
+  },
+  {
+    "label": "resid_post.layer40",
+    "stream": "resid_post",
+    "layer": 40,
+    "best_feature_id": 117,
+    "best_feature_pearson": 0.9504491090774536,
+    "best_feature_mean_activation": 1354.2777099609375,
+    "best_feature_active_rate": 0.8616352201257862
+  },
+  {
+    "label": "resid_post.layer16",
+    "stream": "resid_post",
+    "layer": 16,
+    "best_feature_id": 1921,
+    "best_feature_pearson": 0.950415313243866,
+    "best_feature_mean_activation": 114.73028564453125,
+    "best_feature_active_rate": 0.9559748427672956
+  },
+  {
+    "label": "attn_out.layer31",
+    "stream": "attn_out",
+    "layer": 31,
+    "best_feature_id": 55671,
+    "best_feature_pearson": 0.9393252730369568,
+    "best_feature_mean_activation": 5.558507919311523,
+    "best_feature_active_rate": 0.8050314465408805
+  },
+  {
+    "label": "resid_post.layer31",
+    "stream": "resid_post",
+    "layer": 31,
+    "best_feature_id": 56904,
+    "best_feature_pearson": 0.9368823170661926,
+    "best_feature_mean_activation": 521.2594604492188,
+    "best_feature_active_rate": 0.6540880503144654
+  },
+  {
+    "label": "resid_post.layer53",
+    "stream": "resid_post",
+    "layer": 53,
+    "best_feature_id": 383,
+    "best_feature_pearson": 0.9257016777992249,
+    "best_feature_mean_activation": 4704.0556640625,
+    "best_feature_active_rate": 0.9559748427672956
+  },
+  {
+    "label": "mlp_out.layer31",
+    "stream": "mlp_out",
+    "layer": 31,
+    "best_feature_id": 21282,
+    "best_feature_pearson": 0.8722584247589111,
+    "best_feature_mean_activation": 86.13182830810547,
+    "best_feature_active_rate": 0.5849056603773585
+  },
+  {
+    "label": "mlp_out.layer40",
+    "stream": "mlp_out",
+    "layer": 40,
+    "best_feature_id": 527,
+    "best_feature_pearson": 0.8182128667831421,
+    "best_feature_mean_activation": 127.15113830566406,
+    "best_feature_active_rate": 0.5157232704402516
+  }
+]

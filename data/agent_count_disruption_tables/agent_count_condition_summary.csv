@@ -1,0 +1,9 @@
+model,condition,parse_rate,strict_json_rate,count_or_externalization_rate,task_success_rate
+gpt-5.4,agent_baseline,1.000,1.000,-,1.000
+gpt-5.4,agent_count_insert,1.000,1.000,0.158,1.000
+gpt-5.4,copy_externalize,1.000,1.000,0.150 externalization,-
+gpt-5.4,copy_then_agent,1.000,1.000,0.167 externalization,1.000
+claude-sonnet-4-6,agent_baseline,1.000,0.000,-,1.000
+claude-sonnet-4-6,agent_count_insert,1.000,0.000,0.350,0.975
+claude-sonnet-4-6,copy_externalize,0.250,0.000,0.250 externalization,-
+claude-sonnet-4-6,copy_then_agent,0.142,0.000,0.142 externalization,0.125

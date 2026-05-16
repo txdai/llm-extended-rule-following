@@ -1,0 +1,29 @@
+{
+  "anchors": [
+    "assistant_prefix",
+    "last_item",
+    "last_separator"
+  ],
+  "anchor_titles": {
+    "assistant_prefix": "Assistant Prefix Token",
+    "last_item": "Last Repeated Item Token",
+    "last_separator": "Last Separator Token"
+  },
+  "feature_rank_max": 26,
+  "hook_order": [
+    "resid_post.layer16",
+    "resid_post.layer31",
+    "resid_post.layer40",
+    "resid_post.layer53",
+    "attn_out.layer31",
+    "attn_out.layer40",
+    "mlp_out.layer31",
+    "mlp_out.layer40"
+  ],
+  "residual_hooks": [
+    "resid_post.layer16",
+    "resid_post.layer31",
+    "resid_post.layer40",
+    "resid_post.layer53"
+  ]
+}

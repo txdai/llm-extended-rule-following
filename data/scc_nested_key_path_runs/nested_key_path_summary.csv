@@ -1,0 +1,9 @@
+case_id,model,api,assay_id,variant_id,reasoning_effort,assay_type,negative_fraction,negative_bias,cc,cc_lower_bound,cc_upper_bound,avg_output_tokens_at_cc,avg_total_tokens_at_cc
+gpt-4.1__heterogeneous-nested-key-path-match,gpt-4.1,responses,heterogeneous-nested-key-path-match,,,key_path_match,0.5,2,0,0,32,,
+gpt-4.1-mini__heterogeneous-nested-key-path-match,gpt-4.1-mini,responses,heterogeneous-nested-key-path-match,,,key_path_match,0.5,2,0,0,32,,
+gpt-4o__heterogeneous-nested-key-path-match,gpt-4o,responses,heterogeneous-nested-key-path-match,,,key_path_match,0.5,2,0,0,32,,
+gpt-4o-mini__heterogeneous-nested-key-path-match,gpt-4o-mini,responses,heterogeneous-nested-key-path-match,,,key_path_match,0.5,2,0,0,32,,
+gpt-5.1__heterogeneous-nested-key-path-match,gpt-5.1,responses,heterogeneous-nested-key-path-match,,,key_path_match,0.5,2,0,0,32,,
+gpt-5.2__heterogeneous-nested-key-path-match,gpt-5.2,responses,heterogeneous-nested-key-path-match,,,key_path_match,0.5,2,0,0,32,,
+gpt-5.4__heterogeneous-nested-key-path-match,gpt-5.4,responses,heterogeneous-nested-key-path-match,,,key_path_match,0.5,2,416,416,448,5.0000,14084.5000
+gpt-5.4-mini__heterogeneous-nested-key-path-match,gpt-5.4-mini,responses,heterogeneous-nested-key-path-match,,,key_path_match,0.5,2,0,0,32,,

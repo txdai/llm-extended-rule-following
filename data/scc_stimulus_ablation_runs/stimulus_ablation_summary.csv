@@ -1,0 +1,34 @@
+case_id,model,api,stimulus_id,item,delimiter,delimiter_label,cc,cc_lower_bound,cc_upper_bound,avg_output_tokens_at_cc,avg_total_tokens_at_cc
+claude-sonnet-4-6__baseline-a-comma,claude-sonnet-4-6,anthropic,baseline-a-comma,a,", ",comma,480,480,512,1118.5625,2083.3125
+claude-sonnet-4-6__chinese-han-comma,claude-sonnet-4-6,anthropic,chinese-han-comma,汉,", ",comma,320,320,352,1401.7500,2709.2500
+claude-sonnet-4-6__chinese-zhong-comma,claude-sonnet-4-6,anthropic,chinese-zhong-comma,中,", ",comma,352,352,384,1167.3750,2258.8750
+claude-sonnet-4-6__double-aa-comma,claude-sonnet-4-6,anthropic,double-aa-comma,aa,", ",comma,544,544,576,1351.5625,2488.8125
+claude-sonnet-4-6__greek-alpha-comma,claude-sonnet-4-6,anthropic,greek-alpha-comma,α,", ",comma,384,384,416,935.2500,1731.5000
+claude-sonnet-4-6__greek-beta-comma,claude-sonnet-4-6,anthropic,greek-beta-comma,β,", ",comma,512,512,544,1252.9375,2344.9375
+claude-sonnet-4-6__letter-a-pipe,claude-sonnet-4-6,anthropic,letter-a-pipe,a, | ,pipe,352,352,384,894.3750,1628.1250
+claude-sonnet-4-6__letter-a-section,claude-sonnet-4-6,anthropic,letter-a-section,a, § ,section,36,36,40,178.0000,291.7500
+claude-sonnet-4-6__letter-a-space,claude-sonnet-4-6,anthropic,letter-a-space,a, ,space,104,104,112,98.2500,244.2500
+claude-sonnet-4-6__letter-b-comma,claude-sonnet-4-6,anthropic,letter-b-comma,b,", ",comma,416,416,448,977.6875,1842.1875
+claude-sonnet-4-6__letter-x-comma,claude-sonnet-4-6,anthropic,letter-x-comma,x,", ",comma,480,480,512,1123.6875,2101.3125
+gemini-3-flash-preview__baseline-a-comma,gemini-3-flash-preview,google_genai,baseline-a-comma,a,", ",comma,256,256,272,12.7500,4502.7500
+gemini-3-flash-preview__chinese-han-comma,gemini-3-flash-preview,google_genai,chinese-han-comma,汉,", ",comma,240,240,256,2.5625,8588.9375
+gemini-3-flash-preview__chinese-zhong-comma,gemini-3-flash-preview,google_genai,chinese-zhong-comma,中,", ",comma,224,224,240,2.8125,4404.2500
+gemini-3-flash-preview__double-aa-comma,gemini-3-flash-preview,google_genai,double-aa-comma,aa,", ",comma,320,320,352,2.9375,8257.2500
+gemini-3-flash-preview__greek-alpha-comma,gemini-3-flash-preview,google_genai,greek-alpha-comma,α,", ",comma,240,240,256,2.7500,8346.4375
+gemini-3-flash-preview__greek-beta-comma,gemini-3-flash-preview,google_genai,greek-beta-comma,β,", ",comma,352,352,384,5.5000,8476.7500
+gemini-3-flash-preview__letter-a-pipe,gemini-3-flash-preview,google_genai,letter-a-pipe,a, | ,pipe,240,240,256,2.7500,8385.4375
+gemini-3-flash-preview__letter-a-section,gemini-3-flash-preview,google_genai,letter-a-section,a, § ,section,120,120,128,2.8125,14804.8125
+gemini-3-flash-preview__letter-a-space,gemini-3-flash-preview,google_genai,letter-a-space,a, ,space,384,384,416,22.8125,8083.3125
+gemini-3-flash-preview__letter-b-comma,gemini-3-flash-preview,google_genai,letter-b-comma,b,", ",comma,240,240,256,2.8125,8168.5000
+gemini-3-flash-preview__letter-x-comma,gemini-3-flash-preview,google_genai,letter-x-comma,x,", ",comma,208,208,224,3.6250,8299.4375
+gpt-5.4__baseline-a-comma,gpt-5.4,responses,baseline-a-comma,a,", ",comma,512,512,544,5.0000,1099.2500
+gpt-5.4__chinese-han-comma,gpt-5.4,responses,chinese-han-comma,汉,", ",comma,640,640,704,5.0000,1331.0000
+gpt-5.4__chinese-zhong-comma,gpt-5.4,responses,chinese-zhong-comma,中,", ",comma,240,240,256,5.0000,526.7500
+gpt-5.4__double-aa-comma,gpt-5.4,responses,double-aa-comma,aa,", ",comma,208,208,224,5.0000,463.7500
+gpt-5.4__greek-alpha-comma,gpt-5.4,responses,greek-alpha-comma,α,", ",comma,480,480,512,5.0000,1009.2500
+gpt-5.4__greek-beta-comma,gpt-5.4,responses,greek-beta-comma,β,", ",comma,544,544,576,5.0000,1115.8750
+gpt-5.4__letter-a-pipe,gpt-5.4,responses,letter-a-pipe,a, | ,pipe,224,224,240,5.0000,496.5000
+gpt-5.4__letter-a-section,gpt-5.4,responses,letter-a-section,a, § ,section,104,104,112,5.0000,253.7500
+gpt-5.4__letter-a-space,gpt-5.4,responses,letter-a-space,a, ,space,176,176,192,5.0000,214.0625
+gpt-5.4__letter-b-comma,gpt-5.4,responses,letter-b-comma,b,", ",comma,480,480,512,5.0000,948.5000
+gpt-5.4__letter-x-comma,gpt-5.4,responses,letter-x-comma,x,", ",comma,576,576,608,5.0000,1137.8750

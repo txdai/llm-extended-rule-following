@@ -1,0 +1,497 @@
+[
+  {
+    "variant": "a_comma",
+    "variant_label": "a + comma",
+    "item": "a",
+    "delimiter": ", ",
+    "initial_exact_prefix": 26,
+    "first_failure": 27,
+    "max_exact_count": 60,
+    "accuracy": 0.45,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        22
+      ],
+      [
+        50,
+        6
+      ],
+      [
+        40,
+        4
+      ],
+      [
+        43,
+        3
+      ],
+      [
+        30,
+        2
+      ],
+      [
+        36,
+        2
+      ],
+      [
+        46,
+        2
+      ],
+      [
+        26,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "a_pipe",
+    "variant_label": "a + pipe",
+    "item": "a",
+    "delimiter": " | ",
+    "initial_exact_prefix": 16,
+    "first_failure": 17,
+    "max_exact_count": 60,
+    "accuracy": 0.4125,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        27
+      ],
+      [
+        30,
+        5
+      ],
+      [
+        43,
+        4
+      ],
+      [
+        45,
+        4
+      ],
+      [
+        40,
+        2
+      ],
+      [
+        16,
+        1
+      ],
+      [
+        26,
+        1
+      ],
+      [
+        32,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "a_section",
+    "variant_label": "a + section",
+    "item": "a",
+    "delimiter": " \u00a7 ",
+    "initial_exact_prefix": 18,
+    "first_failure": 19,
+    "max_exact_count": 60,
+    "accuracy": 0.3125,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        26
+      ],
+      [
+        40,
+        14
+      ],
+      [
+        30,
+        7
+      ],
+      [
+        26,
+        3
+      ],
+      [
+        70,
+        2
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        21,
+        1
+      ],
+      [
+        22,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "a_space",
+    "variant_label": "a + space",
+    "item": "a",
+    "delimiter": " ",
+    "initial_exact_prefix": 11,
+    "first_failure": 12,
+    "max_exact_count": 60,
+    "accuracy": 0.25,
+    "mean_prompt_tokens": 79.5,
+    "top_failed_attractors": [
+      [
+        60,
+        28
+      ],
+      [
+        30,
+        10
+      ],
+      [
+        70,
+        5
+      ],
+      [
+        40,
+        3
+      ],
+      [
+        20,
+        2
+      ],
+      [
+        25,
+        2
+      ],
+      [
+        50,
+        2
+      ],
+      [
+        13,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "aa_comma",
+    "variant_label": "aa + comma",
+    "item": "aa",
+    "delimiter": ", ",
+    "initial_exact_prefix": 26,
+    "first_failure": 27,
+    "max_exact_count": 60,
+    "accuracy": 0.4625,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        15
+      ],
+      [
+        50,
+        13
+      ],
+      [
+        40,
+        4
+      ],
+      [
+        30,
+        2
+      ],
+      [
+        36,
+        2
+      ],
+      [
+        43,
+        2
+      ],
+      [
+        26,
+        1
+      ],
+      [
+        32,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "alpha_comma",
+    "variant_label": "alpha + comma",
+    "item": "\u03b1",
+    "delimiter": ", ",
+    "initial_exact_prefix": 26,
+    "first_failure": 27,
+    "max_exact_count": 39,
+    "accuracy": 0.4125,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        17
+      ],
+      [
+        50,
+        10
+      ],
+      [
+        43,
+        6
+      ],
+      [
+        42,
+        3
+      ],
+      [
+        36,
+        2
+      ],
+      [
+        40,
+        2
+      ],
+      [
+        26,
+        1
+      ],
+      [
+        30,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "b_comma",
+    "variant_label": "b + comma",
+    "item": "b",
+    "delimiter": ", ",
+    "initial_exact_prefix": 26,
+    "first_failure": 27,
+    "max_exact_count": 60,
+    "accuracy": 0.4125,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        22
+      ],
+      [
+        40,
+        7
+      ],
+      [
+        50,
+        5
+      ],
+      [
+        36,
+        3
+      ],
+      [
+        30,
+        2
+      ],
+      [
+        42,
+        2
+      ],
+      [
+        43,
+        2
+      ],
+      [
+        26,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "beta_comma",
+    "variant_label": "beta + comma",
+    "item": "\u03b2",
+    "delimiter": ", ",
+    "initial_exact_prefix": 26,
+    "first_failure": 27,
+    "max_exact_count": 60,
+    "accuracy": 0.4125,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        21
+      ],
+      [
+        42,
+        5
+      ],
+      [
+        43,
+        4
+      ],
+      [
+        50,
+        4
+      ],
+      [
+        36,
+        3
+      ],
+      [
+        32,
+        2
+      ],
+      [
+        40,
+        2
+      ],
+      [
+        26,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "han_comma",
+    "variant_label": "han + comma",
+    "item": "\u6c49",
+    "delimiter": ", ",
+    "initial_exact_prefix": 36,
+    "first_failure": 37,
+    "max_exact_count": 60,
+    "accuracy": 0.5125,
+    "mean_prompt_tokens": 158.5,
+    "top_failed_attractors": [
+      [
+        60,
+        17
+      ],
+      [
+        50,
+        11
+      ],
+      [
+        42,
+        2
+      ],
+      [
+        45,
+        2
+      ],
+      [
+        48,
+        2
+      ],
+      [
+        36,
+        1
+      ],
+      [
+        37,
+        1
+      ],
+      [
+        40,
+        1
+      ]
+    ]
+  },
+  {
+    "variant": "x_comma",
+    "variant_label": "x + comma",
+    "item": "x",
+    "delimiter": ", ",
+    "initial_exact_prefix": 26,
+    "first_failure": 27,
+    "max_exact_count": 60,
+    "accuracy": 0.4,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        22
+      ],
+      [
+        50,
+        4
+      ],
+      [
+        43,
+        3
+      ],
+      [
+        46,
+        3
+      ],
+      [
+        36,
+        2
+      ],
+      [
+        39,
+        2
+      ],
+      [
+        40,
+        2
+      ],
+      [
+        45,
+        2
+      ]
+    ]
+  },
+  {
+    "variant": "zhong_comma",
+    "variant_label": "zhong + comma",
+    "item": "\u4e2d",
+    "delimiter": ", ",
+    "initial_exact_prefix": 26,
+    "first_failure": 27,
+    "max_exact_count": 32,
+    "accuracy": 0.375,
+    "mean_prompt_tokens": 119.0,
+    "top_failed_attractors": [
+      [
+        60,
+        15
+      ],
+      [
+        50,
+        6
+      ],
+      [
+        45,
+        5
+      ],
+      [
+        43,
+        4
+      ],
+      [
+        42,
+        3
+      ],
+      [
+        47,
+        3
+      ],
+      [
+        36,
+        2
+      ],
+      [
+        39,
+        2
+      ]
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "target_counts": [
+    27,
+    31,
+    34,
+    37,
+    48,
+    64,
+    80,
+    96,
+    128,
+    160
+  ],
+  "intervention_count": 40,
+  "exact_generation_rescues": 0,
+  "mean_min_gap_delta": -0.25625,
+  "mean_layer53_error_reduction": -101.93371915760333,
+  "best_generation_margin_rescue": {
+    "patch_layer": "resid_post.layer40",
+    "count": 37,
+    "baseline_prediction": 36,
+    "patched_prediction": 36,
+    "min_gap_delta": 0.5
+  },
+  "best_layer53_state_rescue": {
+    "patch_layer": "resid_post.layer53",
+    "count": 160,
+    "baseline_prediction": 100,
+    "patched_prediction": 100,
+    "layer53_error_reduction": 0.9712383814659602
+  }
+}

@@ -1,0 +1,587 @@
+{
+  "anchor_order": [
+    "assistant_prefix",
+    "last_item",
+    "last_separator"
+  ],
+  "anchor_titles": {
+    "assistant_prefix": "Assistant Prefix Token",
+    "last_item": "Last Repeated Item Token",
+    "last_separator": "Last Separator Token"
+  },
+  "anchors": {
+    "assistant_prefix": {
+      "best_hook": {
+        "best_feature_active_rate": 0.2,
+        "best_feature_id": 22272,
+        "best_feature_mean_activation": 0.3849984407424927,
+        "best_feature_pearson": 0.6525876522064209,
+        "label": "attn_out.layer31",
+        "layer": 31,
+        "stream": "attn_out"
+      },
+      "best_residual": {
+        "adjacent_delta_mean": 1.0,
+        "adjacent_delta_std": 1.0982791991409613e-06,
+        "delta": 5.4642229080200195,
+        "eta_projection_threshold": 1.7191762924194336,
+        "exact_prefix_projection_corr": 1.0,
+        "exact_prefix_projection_std": 29.042573928833008,
+        "label": "resid_post.layer16",
+        "layer": 16,
+        "post_failure_projection_corr": 0.554497241973877,
+        "projection_count_corr": 0.7549830079078674,
+        "projection_monotonicity": 1.0,
+        "rho": 0.72861248254776,
+        "stream": "resid_post",
+        "successful_holdout_eval_counts": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "successful_holdout_projection_corr": 0.667518138885498,
+        "successful_holdout_train_counts": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "num_counts": 160,
+      "run_summary": {
+        "accuracy": 0.23125,
+        "first_failure": 27,
+        "initial_exact_prefix": 26,
+        "late_exact_pockets": [
+          28,
+          29,
+          30,
+          32,
+          35,
+          36,
+          39,
+          46,
+          50,
+          60,
+          100
+        ],
+        "max_exact_count": 100,
+        "top_failed_attractors": [
+          [
+            100,
+            56
+          ],
+          [
+            60,
+            36
+          ],
+          [
+            70,
+            9
+          ],
+          [
+            50,
+            6
+          ],
+          [
+            40,
+            4
+          ],
+          [
+            43,
+            3
+          ],
+          [
+            30,
+            2
+          ],
+          [
+            36,
+            2
+          ]
+        ]
+      },
+      "valid_span": [
+        1,
+        160
+      ]
+    },
+    "last_item": {
+      "best_hook": {
+        "best_feature_active_rate": 0.95,
+        "best_feature_id": 1519,
+        "best_feature_mean_activation": 5.222785472869873,
+        "best_feature_pearson": 0.9658657312393188,
+        "label": "attn_out.layer40",
+        "layer": 40,
+        "stream": "attn_out"
+      },
+      "best_residual": {
+        "adjacent_delta_mean": 1.0000011920928955,
+        "adjacent_delta_std": 1.3703323929803446e-05,
+        "delta": 0.40279048681259155,
+        "eta_projection_threshold": 2.726398468017578,
+        "exact_prefix_projection_corr": 1.0,
+        "exact_prefix_projection_std": 5.62219762802124,
+        "label": "resid_post.layer16",
+        "layer": 16,
+        "post_failure_projection_corr": -0.9437661170959473,
+        "projection_count_corr": -0.22381392121315002,
+        "projection_monotonicity": 1.0,
+        "rho": 0.9259743094444275,
+        "stream": "resid_post",
+        "successful_holdout_eval_counts": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "successful_holdout_projection_corr": 0.6970816850662231,
+        "successful_holdout_train_counts": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "num_counts": 160,
+      "run_summary": {
+        "accuracy": 0.23125,
+        "first_failure": 27,
+        "initial_exact_prefix": 26,
+        "late_exact_pockets": [
+          28,
+          29,
+          30,
+          32,
+          35,
+          36,
+          39,
+          46,
+          50,
+          60,
+          100
+        ],
+        "max_exact_count": 100,
+        "top_failed_attractors": [
+          [
+            100,
+            56
+          ],
+          [
+            60,
+            36
+          ],
+          [
+            70,
+            9
+          ],
+          [
+            50,
+            6
+          ],
+          [
+            40,
+            4
+          ],
+          [
+            43,
+            3
+          ],
+          [
+            30,
+            2
+          ],
+          [
+            36,
+            2
+          ]
+        ]
+      },
+      "valid_span": [
+        1,
+        160
+      ]
+    },
+    "last_separator": {
+      "best_hook": {
+        "best_feature_active_rate": 0.779874213836478,
+        "best_feature_id": 259,
+        "best_feature_mean_activation": 2.914339542388916,
+        "best_feature_pearson": 0.9733283519744873,
+        "label": "attn_out.layer40",
+        "layer": 40,
+        "stream": "attn_out"
+      },
+      "best_residual": {
+        "adjacent_delta_mean": 0.9999999403953552,
+        "adjacent_delta_std": 2.1499024569493486e-06,
+        "delta": 4.8269572257995605,
+        "eta_projection_threshold": 9.167699813842773,
+        "exact_prefix_projection_corr": 1.0,
+        "exact_prefix_projection_std": 75.47879791259766,
+        "label": "resid_post.layer31",
+        "layer": 31,
+        "post_failure_projection_corr": 0.5787785649299622,
+        "projection_count_corr": 0.7070381045341492,
+        "projection_monotonicity": 1.0,
+        "rho": 0.6449584364891052,
+        "stream": "resid_post",
+        "successful_holdout_eval_counts": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "successful_holdout_projection_corr": -0.345147967338562,
+        "successful_holdout_train_counts": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "num_counts": 159,
+      "run_summary": {
+        "accuracy": 0.22641509433962265,
+        "first_failure": 27,
+        "initial_exact_prefix": 26,
+        "late_exact_pockets": [
+          28,
+          29,
+          30,
+          32,
+          35,
+          36,
+          39,
+          46,
+          50,
+          60,
+          100
+        ],
+        "max_exact_count": 100,
+        "top_failed_attractors": [
+          [
+            100,
+            56
+          ],
+          [
+            60,
+            36
+          ],
+          [
+            70,
+            9
+          ],
+          [
+            50,
+            6
+          ],
+          [
+            40,
+            4
+          ],
+          [
+            43,
+            3
+          ],
+          [
+            30,
+            2
+          ],
+          [
+            36,
+            2
+          ]
+        ]
+      },
+      "valid_span": [
+        2,
+        160
+      ]
+    }
+  },
+  "best_residual_anchor": {
+    "best_hook": {
+      "best_feature_active_rate": 0.95,
+      "best_feature_id": 1519,
+      "best_feature_mean_activation": 5.222785472869873,
+      "best_feature_pearson": 0.9658657312393188,
+      "label": "attn_out.layer40",
+      "layer": 40,
+      "stream": "attn_out"
+    },
+    "best_residual": {
+      "adjacent_delta_mean": 1.0000011920928955,
+      "adjacent_delta_std": 1.3703323929803446e-05,
+      "delta": 0.40279048681259155,
+      "eta_projection_threshold": 2.726398468017578,
+      "exact_prefix_projection_corr": 1.0,
+      "exact_prefix_projection_std": 5.62219762802124,
+      "label": "resid_post.layer16",
+      "layer": 16,
+      "post_failure_projection_corr": -0.9437661170959473,
+      "projection_count_corr": -0.22381392121315002,
+      "projection_monotonicity": 1.0,
+      "rho": 0.9259743094444275,
+      "stream": "resid_post",
+      "successful_holdout_eval_counts": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "successful_holdout_projection_corr": 0.6970816850662231,
+      "successful_holdout_train_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    "num_counts": 160,
+    "run_summary": {
+      "accuracy": 0.23125,
+      "first_failure": 27,
+      "initial_exact_prefix": 26,
+      "late_exact_pockets": [
+        28,
+        29,
+        30,
+        32,
+        35,
+        36,
+        39,
+        46,
+        50,
+        60,
+        100
+      ],
+      "max_exact_count": 100,
+      "top_failed_attractors": [
+        [
+          100,
+          56
+        ],
+        [
+          60,
+          36
+        ],
+        [
+          70,
+          9
+        ],
+        [
+          50,
+          6
+        ],
+        [
+          40,
+          4
+        ],
+        [
+          43,
+          3
+        ],
+        [
+          30,
+          2
+        ],
+        [
+          36,
+          2
+        ]
+      ]
+    },
+    "valid_span": [
+      1,
+      160
+    ]
+  },
+  "best_sparse_feature_anchor": {
+    "best_hook": {
+      "best_feature_active_rate": 0.779874213836478,
+      "best_feature_id": 259,
+      "best_feature_mean_activation": 2.914339542388916,
+      "best_feature_pearson": 0.9733283519744873,
+      "label": "attn_out.layer40",
+      "layer": 40,
+      "stream": "attn_out"
+    },
+    "best_residual": {
+      "adjacent_delta_mean": 0.9999999403953552,
+      "adjacent_delta_std": 2.1499024569493486e-06,
+      "delta": 4.8269572257995605,
+      "eta_projection_threshold": 9.167699813842773,
+      "exact_prefix_projection_corr": 1.0,
+      "exact_prefix_projection_std": 75.47879791259766,
+      "label": "resid_post.layer31",
+      "layer": 31,
+      "post_failure_projection_corr": 0.5787785649299622,
+      "projection_count_corr": 0.7070381045341492,
+      "projection_monotonicity": 1.0,
+      "rho": 0.6449584364891052,
+      "stream": "resid_post",
+      "successful_holdout_eval_counts": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "successful_holdout_projection_corr": -0.345147967338562,
+      "successful_holdout_train_counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    "num_counts": 159,
+    "run_summary": {
+      "accuracy": 0.22641509433962265,
+      "first_failure": 27,
+      "initial_exact_prefix": 26,
+      "late_exact_pockets": [
+        28,
+        29,
+        30,
+        32,
+        35,
+        36,
+        39,
+        46,
+        50,
+        60,
+        100
+      ],
+      "max_exact_count": 100,
+      "top_failed_attractors": [
+        [
+          100,
+          56
+        ],
+        [
+          60,
+          36
+        ],
+        [
+          70,
+          9
+        ],
+        [
+          50,
+          6
+        ],
+        [
+          40,
+          4
+        ],
+        [
+          43,
+          3
+        ],
+        [
+          30,
+          2
+        ],
+        [
+          36,
+          2
+        ]
+      ]
+    },
+    "valid_span": [
+      2,
+      160
+    ]
+  }
+}

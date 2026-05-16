@@ -1,0 +1,64 @@
+{
+  "run_subdir": "scc_nested_key_path_runs",
+  "seed": 7,
+  "max_output_tokens": 4096,
+  "retry_max_output_tokens": 32768,
+  "google_unavailable_retries": 12,
+  "google_unavailable_retry_delay_seconds": 2.0,
+  "anthropic_transient_retries": 8,
+  "anthropic_transient_retry_delay_seconds": 2.0,
+  "model_list_path": "../model_lists/openai_models.json",
+  "preflight_length": 8,
+  "search": {
+    "initial_length": 32,
+    "max_length": 20000,
+    "samples_per_length": 16,
+    "parallel_trials_per_batch": 15,
+    "jitter_fraction": 0.2,
+    "tolerance_fraction": 0.05,
+    "step_fraction": 0.1
+  },
+  "cases": [
+    {
+      "api": "responses",
+      "model": "gpt-5.4"
+    },
+    {
+      "api": "responses",
+      "model": "gpt-5.4-mini"
+    },
+    {
+      "api": "responses",
+      "model": "gpt-5.2"
+    },
+    {
+      "api": "responses",
+      "model": "gpt-5.1"
+    },
+    {
+      "api": "responses",
+      "model": "gpt-4.1"
+    },
+    {
+      "api": "responses",
+      "model": "gpt-4.1-mini"
+    },
+    {
+      "api": "responses",
+      "model": "gpt-4o"
+    },
+    {
+      "api": "responses",
+      "model": "gpt-4o-mini"
+    }
+  ],
+  "assays": [
+    {
+      "id": "heterogeneous-nested-key-path-match",
+      "type": "key_path_match",
+      "negative_fraction": 0.5,
+      "negative_bias": 2,
+      "record_delimiter": " ; "
+    }
+  ]
+}

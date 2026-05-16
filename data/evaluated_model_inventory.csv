@@ -1,0 +1,127 @@
+model_id,model_name,developer_family,parameter_count,nominal_context_window,architecture,measured_cc
+claude-opus-4-20250514,claude-opus-4-20250514,Anthropic,--,--,--,2176
+claude-opus-4-1-20250805,claude-opus-4-1-20250805,Anthropic,--,--,--,1920
+claude-opus-4-5-20251101,claude-opus-4-5-20251101,Anthropic,--,--,--,1536
+claude-sonnet-4-5-20250929,claude-sonnet-4-5-20250929,Anthropic,--,--,--,896
+claude-opus-4-6,claude-opus-4-6,Anthropic,--,--,--,768
+gpt-5.4,gpt-5.4,OpenAI,--,--,--,608
+claude-sonnet-4-20250514,claude-sonnet-4-20250514,Anthropic,--,--,--,544
+claude-sonnet-4-6,claude-sonnet-4-6,Anthropic,--,--,--,512
+anthropic/claude-3.7-sonnet,anthropic/claude-3.7-sonnet,Anthropic,--,"200,000",--,352
+anthropic/claude-3.7-sonnet:thinking,anthropic/claude-3.7-sonnet:thinking,Anthropic,--,"200,000",--,352
+gemini-3-pro-preview,gemini-3-pro-preview,Google,--,--,--,352
+gemini-3.1-pro-preview,gemini-3.1-pro-preview,Google,--,--,--,352
+gemini-3-flash-preview,gemini-3-flash-preview,Google,--,--,--,304
+gpt-5.3-codex,gpt-5.3-codex,OpenAI,--,--,--,272
+claude-haiku-4-5-20251001,claude-haiku-4-5-20251001,Anthropic,--,--,--,176
+gpt-5.2,gpt-5.2,OpenAI,--,--,--,176
+anthropic/claude-3.5-haiku,anthropic/claude-3.5-haiku,Anthropic,--,"200,000",--,144
+gpt-5.4-mini,gpt-5.4-mini,OpenAI,--,--,--,144
+gemini-2.5-pro,gemini-2.5-pro,Google,--,--,--,136
+gemini-3.1-flash-lite-preview,gemini-3.1-flash-lite-preview,Google,--,--,--,128
+gpt-5.2-codex,gpt-5.2-codex,OpenAI,--,--,--,128
+gpt-5.1,gpt-5.1,OpenAI,--,--,--,120
+moonshotai/kimi-k2-0905,moonshotai/kimi-k2-0905,Moonshot,--,"262,144",MoE,112
+gpt-5,gpt-5,OpenAI,--,--,--,112
+meta-llama/llama-4-maverick,meta-llama/llama-4-maverick,Meta,17B,"1,048,576",MoE,96
+gpt-4.1,gpt-4.1,OpenAI,--,--,--,96
+google/gemini-2.0-flash-001,google/gemini-2.0-flash-001,Google,--,"1,048,576",--,88
+moonshotai/kimi-k2,moonshotai/kimi-k2,Moonshot,32B active,"131,072",MoE,88
+moonshotai/kimi-k2-thinking,moonshotai/kimi-k2-thinking,Moonshot,--,"262,144",MoE,88
+gpt-4o,gpt-4o,OpenAI,--,--,--,88
+o3,o3,OpenAI,--,--,--,88
+o1,o1,OpenAI,--,--,--,80
+qwen/qwen3.5-397b-a17b,qwen/qwen3.5-397b-a17b,Qwen,397B total / 17B active,"262,144",MoE,80
+deepseek/deepseek-r1-0528,deepseek/deepseek-r1-0528,DeepSeek,671B total / 37B active,"163,840",MoE,72
+gemini-2.5-flash,gemini-2.5-flash,Google,--,--,--,72
+google/gemini-2.0-flash-lite-001,google/gemini-2.0-flash-lite-001,Google,--,"1,048,576",--,72
+gpt-4.1-mini,gpt-4.1-mini,OpenAI,--,--,--,72
+qwen/qwen3-235b-a22b-2507,qwen/qwen3-235b-a22b-2507,Qwen,235B total / 22B active,"262,144",MoE,68
+gemma-4-31b-it,gemma-4-31b-it,Google,31B,--,Dense,64
+gpt-5-mini,gpt-5-mini,OpenAI,--,--,--,64
+z-ai/glm-5.1,z-ai/glm-5.1,Z.ai,--,"202,752",--,64
+z-ai/glm-4.5,z-ai/glm-4.5,Z.ai,--,"131,072",MoE,60
+claude-3-haiku-20240307,claude-3-haiku-20240307,Anthropic,--,--,--,56
+deepseek/deepseek-chat-v3-0324,deepseek/deepseek-chat-v3-0324,DeepSeek,685B,"163,840",MoE,56
+gemini-2.5-flash-lite,gemini-2.5-flash-lite,Google,--,--,--,56
+gemma-4-26b-a4b-it,gemma-4-26b-a4b-it,Google,26B total / 4B active,--,MoE,56
+minimax/minimax-01,minimax/minimax-01,MiniMax,456B,"1,000,192",Dense,56
+minimax/minimax-m2.1,minimax/minimax-m2.1,MiniMax,10B active,"196,608",Dense,52
+mistralai/mistral-small-2603,mistralai/mistral-small-2603,Mistral,119B,"262,144",Dense,52
+mistralai/mixtral-8x22b-instruct,mistralai/mixtral-8x22b-instruct,Mistral,176B total / 39B active,"65,536",MoE,52
+moonshotai/kimi-k2.5,moonshotai/kimi-k2.5,Moonshot,--,"262,144",--,52
+gpt-4.1-nano,gpt-4.1-nano,OpenAI,--,--,--,52
+qwen/qwen3-235b-a22b-thinking-2507,qwen/qwen3-235b-a22b-thinking-2507,Qwen,235B total / 22B active,"131,072",MoE,52
+qwen/qwen3-next-80b-a3b-thinking,qwen/qwen3-next-80b-a3b-thinking,Qwen,80B total / 3B active,"131,072",MoE,52
+qwen/qwen3.5-122b-a10b,qwen/qwen3.5-122b-a10b,Qwen,122B total / 10B active,"262,144",MoE,52
+gpt-5-nano,gpt-5-nano,OpenAI,--,--,--,48
+gpt-5.4-nano,gpt-5.4-nano,OpenAI,--,--,--,48
+o3-mini,o3-mini,OpenAI,--,--,--,48
+qwen/qwen3-30b-a3b-instruct-2507,qwen/qwen3-30b-a3b-instruct-2507,Qwen,30B total / 3B active,"262,144",MoE,48
+qwen/qwen3-next-80b-a3b-instruct,qwen/qwen3-next-80b-a3b-instruct,Qwen,80B total / 3B active,"262,144",MoE,48
+z-ai/glm-4.7,z-ai/glm-4.7,Z.ai,--,"202,752",--,48
+gpt-5.1-codex-max,gpt-5.1-codex-max,OpenAI,--,--,--,44
+qwen/qwen-2.5-72b-instruct,qwen/qwen-2.5-72b-instruct,Qwen,72B,"32,768",Dense,44
+qwen/qwen3-235b-a22b,qwen/qwen3-235b-a22b,Qwen,235B total / 22B active,"131,072",MoE,44
+qwen/qwen3-30b-a3b,qwen/qwen3-30b-a3b,Qwen,30B total / 3B active,"40,960",MoE,44
+z-ai/glm-4.5-air,z-ai/glm-4.5-air,Z.ai,--,"131,072",MoE,44
+minimax/minimax-m2,minimax/minimax-m2,MiniMax,10B active,"196,608",Dense,40
+mistralai/devstral-2512,mistralai/devstral-2512,Mistral,123B,"262,144",Dense,40
+gpt-4,gpt-4,OpenAI,--,--,--,40
+gpt-5.1-codex-mini,gpt-5.1-codex-mini,OpenAI,--,--,--,40
+qwen/qwen3-coder-30b-a3b-instruct,qwen/qwen3-coder-30b-a3b-instruct,Qwen,30B total / 3B active,"160,000",MoE,40
+qwen/qwen3-coder-next,qwen/qwen3-coder-next,Qwen,80B total / 3B active,"262,144",MoE,40
+qwen/qwen3.5-27b,qwen/qwen3.5-27b,Qwen,27B,"262,144",Dense,40
+gemma-3-27b-it,gemma-3-27b-it,Google,27B,--,Dense,36
+meta-llama/llama-3.1-70b-instruct,meta-llama/llama-3.1-70b-instruct,Meta,70B,"131,072",Dense,36
+minimax/minimax-m2.5,minimax/minimax-m2.5,MiniMax,--,"196,608",--,36
+mistralai/mistral-small-24b-instruct-2501,mistralai/mistral-small-24b-instruct-2501,Mistral,24B,"32,768",Dense,36
+gpt-4-turbo,gpt-4-turbo,OpenAI,--,--,--,36
+gpt-4o-mini,gpt-4o-mini,OpenAI,--,--,--,36
+z-ai/glm-4.6,z-ai/glm-4.6,Z.ai,--,"204,800",--,36
+z-ai/glm-5,z-ai/glm-5,Z.ai,--,"202,752",--,36
+deepseek/deepseek-r1,deepseek/deepseek-r1,DeepSeek,671B total / 37B active,"64,000",MoE,32
+deepseek/deepseek-r1-distill-llama-70b,deepseek/deepseek-r1-distill-llama-70b,DeepSeek,70B,"131,072",Dense,32
+deepseek/deepseek-v3.2-speciale,deepseek/deepseek-v3.2-speciale,DeepSeek,--,"163,840",--,32
+gemma-3-12b-it,gemma-3-12b-it,Google,12B,--,Dense,32
+google/gemma-3-12b-it,google/gemma-3-12b-it,Google,12B,"131,072",Dense,32
+meta-llama/llama-3.3-70b-instruct,meta-llama/llama-3.3-70b-instruct,Meta,70B,"131,072",Dense,32
+minimax/minimax-m2.7,minimax/minimax-m2.7,MiniMax,--,"196,608",--,32
+mistralai/devstral-small,mistralai/devstral-small,Mistral,24B,"131,072",Dense,32
+mistralai/ministral-14b-2512,mistralai/ministral-14b-2512,Mistral,14B,"262,144",Dense,32
+mistralai/mistral-small-3.2-24b-instruct,mistralai/mistral-small-3.2-24b-instruct,Mistral,24B,"128,000",Dense,32
+gpt-3.5-turbo,gpt-3.5-turbo,OpenAI,--,--,--,32
+qwen/qwen3-14b,qwen/qwen3-14b,Qwen,14.8B,"40,960",Dense,32
+qwen/qwen3-32b,qwen/qwen3-32b,Qwen,32.8B,"40,960",Dense,32
+qwen/qwen3.5-35b-a3b,qwen/qwen3.5-35b-a3b,Qwen,35B total / 3B active,"262,144",MoE,32
+qwen/qwq-32b,qwen/qwq-32b,Qwen,32B,"131,072",Dense,32
+deepseek/deepseek-chat,deepseek/deepseek-chat,DeepSeek,--,"163,840",--,0
+deepseek/deepseek-chat-v3.1,deepseek/deepseek-chat-v3.1,DeepSeek,671B total / 37B active,"32,768",MoE,0
+deepseek/deepseek-r1-distill-qwen-32b,deepseek/deepseek-r1-distill-qwen-32b,DeepSeek,32B,"32,768",Dense,0
+deepseek/deepseek-v3.1-terminus,deepseek/deepseek-v3.1-terminus,DeepSeek,--,"163,840",--,0
+deepseek/deepseek-v3.2,deepseek/deepseek-v3.2,DeepSeek,--,"163,840",--,0
+deepseek/deepseek-v3.2-exp,deepseek/deepseek-v3.2-exp,DeepSeek,--,"163,840",--,0
+google/gemma-2-27b-it,google/gemma-2-27b-it,Google,27B,"8,192",Dense,0
+google/gemma-3-27b-it,google/gemma-3-27b-it,Google,27B,"131,072",Dense,0
+google/gemma-3-4b-it,google/gemma-3-4b-it,Google,4B,"131,072",Dense,0
+google/gemma-3n-e4b-it,google/gemma-3n-e4b-it,Google,4B,"32,768",Dense,0
+meta-llama/llama-3-70b-instruct,meta-llama/llama-3-70b-instruct,Meta,70B,"8,192",Dense,0
+meta-llama/llama-3-8b-instruct,meta-llama/llama-3-8b-instruct,Meta,8B,"8,192",Dense,0
+meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,Meta,8B,"16,384",Dense,0
+meta-llama/llama-3.2-3b-instruct,meta-llama/llama-3.2-3b-instruct,Meta,3B,"80,000",Dense,0
+meta-llama/llama-4-scout,meta-llama/llama-4-scout,Meta,17B,"327,680",MoE,0
+microsoft/phi-4,microsoft/phi-4,Microsoft,14B,"16,384",Dense,0
+mistralai/ministral-3b-2512,mistralai/ministral-3b-2512,Mistral,3B,"131,072",Dense,0
+mistralai/ministral-8b-2512,mistralai/ministral-8b-2512,Mistral,8B,"262,144",Dense,0
+mistralai/mistral-7b-instruct-v0.1,mistralai/mistral-7b-instruct-v0.1,Mistral,7.30BB,"2,824",Dense,0
+mistralai/mistral-nemo,mistralai/mistral-nemo,Mistral,12B,"131,072",Dense,0
+mistralai/mistral-small-3.1-24b-instruct,mistralai/mistral-small-3.1-24b-instruct,Mistral,24B,"128,000",Dense,0
+mistralai/mixtral-8x7b-instruct,mistralai/mixtral-8x7b-instruct,Mistral,56B total / 14B active,"32,768",MoE,0
+mistralai/voxtral-small-24b-2507,mistralai/voxtral-small-24b-2507,Mistral,24B,"32,000",Dense,0
+qwen/qwen-2.5-7b-instruct,qwen/qwen-2.5-7b-instruct,Qwen,7B,"32,768",Dense,0
+qwen/qwen-2.5-coder-32b-instruct,qwen/qwen-2.5-coder-32b-instruct,Qwen,32B,"32,768",Dense,0
+qwen/qwen3-30b-a3b-thinking-2507,qwen/qwen3-30b-a3b-thinking-2507,Qwen,30B total / 3B active,"131,072",MoE,0
+qwen/qwen3-8b,qwen/qwen3-8b,Qwen,8.20BB,"40,960",Dense,0
+qwen/qwen3-coder,qwen/qwen3-coder,Qwen,480B total / 35B active,"262,144",MoE,0
+qwen/qwen3.5-9b,qwen/qwen3.5-9b,Qwen,9B,"256,000",Dense,0
+z-ai/glm-4.7-flash,z-ai/glm-4.7-flash,Z.ai,30B,"202,752",Dense,0

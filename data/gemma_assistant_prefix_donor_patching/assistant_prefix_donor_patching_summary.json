@@ -1,0 +1,91 @@
+{
+  "base_count": 10,
+  "baseline_prediction": 10,
+  "baseline_text": "10",
+  "fake_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "layer_summaries": [
+    {
+      "label": "resid_post.layer16",
+      "mean_abs_patch_delta": 0.41478363137978774,
+      "target_hits": 1,
+      "target_vs_prediction_correlation": NaN,
+      "trial_count": 26,
+      "unique_predictions": [
+        10
+      ]
+    },
+    {
+      "label": "resid_post.layer31",
+      "mean_abs_patch_delta": 15.257963455640352,
+      "target_hits": 1,
+      "target_vs_prediction_correlation": NaN,
+      "trial_count": 26,
+      "unique_predictions": [
+        10
+      ]
+    },
+    {
+      "label": "resid_post.layer40",
+      "mean_abs_patch_delta": 82.53174253610464,
+      "target_hits": 2,
+      "target_vs_prediction_correlation": 0.3066666666666668,
+      "trial_count": 26,
+      "unique_predictions": [
+        2,
+        10
+      ]
+    },
+    {
+      "label": "resid_post.layer53",
+      "mean_abs_patch_delta": 163.07785327617938,
+      "target_hits": 10,
+      "target_vs_prediction_correlation": 0.8658615890044145,
+      "trial_count": 26,
+      "unique_predictions": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        9,
+        10,
+        20,
+        25,
+        26
+      ]
+    }
+  ],
+  "residual_hooks": [
+    "resid_post.layer16",
+    "resid_post.layer31",
+    "resid_post.layer40",
+    "resid_post.layer53"
+  ]
+}

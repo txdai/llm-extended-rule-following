@@ -1,0 +1,552 @@
+[
+  {
+    "answer": "{}",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_116",
+    "metadata": {
+      "id": "sample_116"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(d, count):\n    for i in range(count):\n        if d == {}:\n            break\n        d.popitem()\n    return d\n\nCall:\nf({}, 200)",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'-kkxkxxfck'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_126",
+    "metadata": {
+      "id": "sample_126"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text):\n    s = text.rpartition('o')\n    div, div2 = (s[0] == '' and '-' or s[0]), (s[2] == '' and '-' or s[2])\n    return s[1] + div + s[1] + div2\n\nCall:\nf('kkxkxxfck')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'  a  \\n  bc \\n     \\n  d  \\n  ef '",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_136",
+    "metadata": {
+      "id": "sample_136"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, width):\n    lines = [line.center(width) for line in text.split('\\n')]\n    return '\\n'.join(lines)\n\nCall:\nf(\"a\\nbc\\n\\nd\\nef\", 5)",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'tflb omn rtt'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_138",
+    "metadata": {
+      "id": "sample_138"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, chars):\n    listchars = list(chars)\n    first = listchars.pop()\n    for i in listchars:\n        text = text[0:text.find(i)]+i+text[text.find(i)+1:]\n    return text\n\nCall:\nf('tflb omn rtt', 'm')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'mgItr'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_159",
+    "metadata": {
+      "id": "sample_159"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(st):\n    swapped = ''\n    for ch in reversed(st):\n        swapped += ch.swapcase()\n    return swapped\n\nCall:\nf('RTiGM')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "['3291223', 7]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_181",
+    "metadata": {
+      "id": "sample_181"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(s):\n    count = 0\n    digits = \"\"\n    for c in s:\n        if c.isdigit():\n            count += 1\n            digits += c\n    return [digits, count]\n\nCall:\nf(\"qwfasgahh329kn12a23\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "39",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_187",
+    "metadata": {
+      "id": "sample_187"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(d, index):\n    length = len(d.items())\n    idx = index % length\n    v = d.popitem()[1]\n    for _ in range(idx):\n        d.popitem()\n    return v\n\nCall:\nf({27:39}, 1)",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "2",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_216",
+    "metadata": {
+      "id": "sample_216"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(letters):\n    count = 0\n    for l in letters:\n        if l.isdigit():\n            count += 1\n    return count\n\nCall:\nf(\"dp ef1 gh2\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[45, 3, 61, 39, 27, 47]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_24",
+    "metadata": {
+      "id": "sample_24"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(nums, i):\n    nums.pop(i)\n    return nums\n\nCall:\nf([35, 45, 3, 61, 39, 27, 47], 0)",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_245",
+    "metadata": {
+      "id": "sample_245"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(alphabet, s):\n    a = [x for x in alphabet if x.upper() in s]\n    if s.upper() == s:\n        a.append('all_uppercased')\n    return a\n\nCall:\nf('abcdefghijklmnopqrstuvwxyz', \"uppercased # % ^ @ ! vz.\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'\\\\foo'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_252",
+    "metadata": {
+      "id": "sample_252"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, char):\n    if char in text:\n        if not text.startswith(char):\n            text = text.replace(char,'')\n    return text\n\nCall:\nf('\\\\foo', '\\\\')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'NET'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_273",
+    "metadata": {
+      "id": "sample_273"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(name):\n    new_name =''\n    name = name[::-1]\n    for i in range(len(name)):\n        n = name[i]\n        if n !='.' and  new_name.count('.')<2:\n            new_name=n+new_name\n        else:\n            break\n    return new_name\n\nCall:\nf('.NET')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'DST VAVF N DMV DFVM GAMCU DGCVB.'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_298",
+    "metadata": {
+      "id": "sample_298"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text):\n    new_text = list(text)\n    for i in range(len(new_text)):\n        character = new_text[i]\n        new_character = character.swapcase()\n        new_text[i] = new_character\n    return ''.join(new_text)\n\nCall:\nf('dst vavf n dmv dfvm gamcu dgcvb.')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[0, 6, 1, 2, 0]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_306",
+    "metadata": {
+      "id": "sample_306"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(nums):\n    digits = []\n    for num in nums:\n        if (isinstance(num, str) and num.isnumeric()) or isinstance(num, int):\n            digits.append(num)\n    digits = list(map(int, digits))\n    return digits\n\nCall:\nf([0, 6, '1', '2', 0])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'czywz'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_315",
+    "metadata": {
+      "id": "sample_315"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(challenge):\n    return challenge.casefold().replace('l', ',')\n\nCall:\nf('czywZ')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'tuple'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_369",
+    "metadata": {
+      "id": "sample_369"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(var):\n    if var.isdigit():\n        return \"int\"\n    elif var.replace('.', '', 1).isdigit():\n        return \"float\"\n    elif var.count(' ') == len(var) - 1:\n        return \"str\"\n    elif len(var) == 1:\n        return \"char\"\n    else:\n        return \"tuple\"\n\nCall:\nf(\" 99 777\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "['']",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_372",
+    "metadata": {
+      "id": "sample_372"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(list_, num):\n    temp = []\n    for i in list_:\n        i = num // 2 * ('%s,' % i)\n        temp.append(i)\n    return temp\n\nCall:\nf(['v'], 1)",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'2nm_28in'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_388",
+    "metadata": {
+      "id": "sample_388"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, characters):\n    character_list = list(characters) + [' ', '_']\n\n    i = 0\n    while i < len(text) and text[i] in character_list:\n        i += 1\n\n    return text[i:]\n\nCall:\nf(\"2nm_28in\", \"nm\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "0",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_390",
+    "metadata": {
+      "id": "sample_390"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text):\n    if not text.strip():\n        return len(text.strip())\n    return None\n\nCall:\nf(\" \\t \")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[(87.29, 3), ('defghi', 2), ('abc', 2), (5, 1)]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_429",
+    "metadata": {
+      "id": "sample_429"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(d):\n    result = []\n    while len(d.keys()) > 0:\n        result.append(d.popitem())\n    return result\n\nCall:\nf({5: 1, 'abc': 2, 'defghi': 2, 87.29: 3})",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[5, 1, 3, 7, 8, '', 0, -1, []]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_430",
+    "metadata": {
+      "id": "sample_430"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(arr1, arr2):\n    new_arr = arr1.copy()\n    new_arr.extend(arr2)\n    return new_arr\n\nCall:\nf([5, 1, 3, 7, 8], ['', 0, -1, []])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "{'d': None, 'o': None, 'e': None}",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_437",
+    "metadata": {
+      "id": "sample_437"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(tap_hierarchy):\n    hierarchy = {}\n    for gift in tap_hierarchy:\n        hierarchy = hierarchy.fromkeys(gift, None)\n    return hierarchy\n\nCall:\nf(['john', 'doe', 'the', 'john', 'doe'])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'Join us in Hungary'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_456",
+    "metadata": {
+      "id": "sample_456"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(s, tab):\n    return s.expandtabs(tab)\n\nCall:\nf(\"Join us in Hungary\", 4)",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'pppo4pIp'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_458",
+    "metadata": {
+      "id": "sample_458"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, search_chars, replace_chars):\n    trans_table = str.maketrans(search_chars, replace_chars)\n    return text.translate(trans_table)\n\nCall:\nf('mmm34mIm', 'mm3', ',po')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'jqjfj zm'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_501",
+    "metadata": {
+      "id": "sample_501"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, char):\n    index = text.rindex(char)\n    result = list(text)\n    while index > 0:\n        result[index] = result[index-1]\n        result[index-1] = char\n        index -= 2\n    return ''.join(result)\n\nCall:\nf('qpfi jzm', 'j')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "{2: 1, 4: 3, 3: 2, 1: 0, 5: 1}",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_524",
+    "metadata": {
+      "id": "sample_524"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(dict0):\n    new = dict0.copy()\n    for i in range(len(new)-1):\n        dict0[sorted(new)[i]] = i\n    return dict0\n\nCall:\nf({2: 5, 4: 1, 3: 5, 1: 3, 5: 1})",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[[1, 2, 3], [1, 2, 3, 1, 2, 3]]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_532",
+    "metadata": {
+      "id": "sample_532"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(n, array):\n    final = [array.copy()] \n    for i in range(n):\n        arr = array.copy()\n        arr.extend(final[-1])\n        final.append(arr)\n    return final\n\nCall:\nf(1, [1, 2, 3])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'xxxarmm ar xx'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_557",
+    "metadata": {
+      "id": "sample_557"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(str):\n    d = str.rpartition('ar')\n    return ' '.join((d[0], d[1], d[2]))\n\nCall:\nf('xxxarmmarxx')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "True",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_56",
+    "metadata": {
+      "id": "sample_56"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(sentence):\n    for c in sentence:\n        if c.isascii() is False:\n            return False\n        else:\n            continue\n    return True\n\nCall:\nf('1z1z1')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'Costanza'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_574",
+    "metadata": {
+      "id": "sample_574"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(simpons):\n    while simpons:\n        pop = simpons.pop()\n        if pop == pop.title():\n            return pop\n    return pop\n\nCall:\nf(['George', 'Michael', 'George', 'Costanza'])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "{'R': 0, 'T': -3, 'F': -6, 'K': 0}",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_578",
+    "metadata": {
+      "id": "sample_578"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(obj):\n    for k, v in obj.items():\n        if v >= 0:\n            obj[k] = -v\n    return obj\n\nCall:\nf({'R': 0, 'T': 3, 'F': -6, 'K': 0})",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[-1, 0, 0, 1, 1, -1, 0, -1, 0, -1]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_58",
+    "metadata": {
+      "id": "sample_58"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(nums):\n    count = len(nums)\n    for i in [i % 2 for i in range(count)]:\n        nums.append(nums[i])\n    return nums\n\nCall:\nf([-1, 0, 0, 1, 1])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'t\\nZA\\nA'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_583",
+    "metadata": {
+      "id": "sample_583"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, ch):\n    result = []\n    for line in text.splitlines():\n        if len(line) > 0 and line[0] == ch:\n            result.append(line.lower())\n        else:\n            result.append(line.upper())\n    return \"\\n\".join(result)\n\nCall:\nf(\"t\\nza\\na\", \"t\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "['a', ' b c', 'b c', '', 'c', '']",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_599",
+    "metadata": {
+      "id": "sample_599"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(a, b):\n    a = b.join(a)\n    lst = []\n    for i in range(1, len(a)+1, 2):\n        lst.append(a[i-1:][:i])\n        lst.append(a[i-1:][i:])\n    return lst\n\nCall:\nf([\"a\", \"b\", \"c\"], \" \")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "False",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_635",
+    "metadata": {
+      "id": "sample_635"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text):\n    valid_chars = ['-', '_', '+', '.', '/', ' ']\n    text = text.upper()\n    for char in text:\n        if char.isalnum() == False and char not in valid_chars:\n            return False\n    return True\n\nCall:\nf(\"9.twCpTf.H7 HPeaQ^ C7I6U,C:YtW\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "['/alcm@ an)t//eprw)/e!/d', 'ujv']",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_647",
+    "metadata": {
+      "id": "sample_647"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, chunks):\n    return text.splitlines(chunks)\n\nCall:\nf('/alcm@ an)t//eprw)/e!/d\\nujv', 0)",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'3 4 '",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_664",
+    "metadata": {
+      "id": "sample_664"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(tags):\n    resp = \"\"\n    for key in tags:\n        resp += key + \" \"\n    return resp\n\nCall:\nf({\"3\":\"3\",\"4\":\"5\"})",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'aCbCed'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_665",
+    "metadata": {
+      "id": "sample_665"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(chars):\n    s = \"\"\n    for ch in chars:\n        if chars.count(ch) % 2 == 0:\n            s += ch.upper()\n        else:\n            s += ch\n    return s\n\nCall:\nf(\"acbced\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[2, 2]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_670",
+    "metadata": {
+      "id": "sample_670"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(a, b):\n    d = dict(zip(a, b))\n    a.sort(key=d.get, reverse=True)\n    return [d.pop(x) for x in a]\n\nCall:\nf(['12','ab'], [2,2])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_692",
+    "metadata": {
+      "id": "sample_692"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(array):\n    a = []\n    array.reverse()\n    for i in range(len(array)):\n        if array[i] != 0:\n            a.append(array[i])\n    a.reverse()\n    return a\n\nCall:\nf([])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "False",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_715",
+    "metadata": {
+      "id": "sample_715"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(text, char):\n    return text.count(char) % 2 != 0\n\nCall:\nf('abababac', 'a')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "2",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_720",
+    "metadata": {
+      "id": "sample_720"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(items, item):\n    while items[-1] == item:\n        items.pop()\n    items.append(item)\n    return len(items)\n\nCall:\nf('bfreratrrbdbzagbretaredtroefcoiqrrneaosf'.split('-'), 'n')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[44, 34, 23, 82, 15, 24, 11, 63, 99]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_74",
+    "metadata": {
+      "id": "sample_74"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(lst, i, n):\n    lst.insert(i, n)\n    return lst\n\nCall:\nf([44, 34, 23, 82, 24, 11, 63, 99], 4, 15)",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "['2', '2', '44', '0', '7', '20257']",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_754",
+    "metadata": {
+      "id": "sample_754"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(nums):\n    nums = ['{0:{fill}>{width}}'.format(val, **{'fill': '0', 'width': nums[0]}) for val in nums[1:]]\n    return [str(val) for val in nums]\n\nCall:\nf(['1', '2', '2', '44', '0', '7', '20257'])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'ph>t#A#BiEcDefW#ON#iiNCU'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_755",
+    "metadata": {
+      "id": "sample_755"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(replace, text, hide):\n    while hide in text:\n        replace += 'ax'\n        text = text.replace(hide, replace, 1)\n    return text\n\nCall:\nf('###', \"ph>t#A#BiEcDefW#ON#iiNCU\", '.')",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "False",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_758",
+    "metadata": {
+      "id": "sample_758"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(nums):\n    if nums[::-1] == nums:\n        return True\n    return False\n\nCall:\nf([0, 3, 6, 2])",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[('a', 1), ('b', 2), ('c', 3)]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_797",
+    "metadata": {
+      "id": "sample_797"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(dct):\n    lst = []\n    for key in sorted(dct):\n        lst.append((key, dct[key]))\n    return lst\n\nCall:\nf({'a': 1, 'b': 2, 'c': 3})",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "[('Bulls', 'bulls'), ('White Sox', 45)]",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_81",
+    "metadata": {
+      "id": "sample_81"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(dic, inx):\n    try:\n        dic[list(dic)[list(dic).index(inx)]] = list(dic)[list(dic).index(inx)].lower()\n    except ValueError:\n        pass\n    return list(dic.items())\n\nCall:\nf({\"Bulls\": 23, \"White Sox\": 45}, \"Bulls\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "['1', '2', 'a', 'b', '3', 'x', 'y']",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_91",
+    "metadata": {
+      "id": "sample_91"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(s):\n    d = dict.fromkeys(s, 0)\n    return list(d.keys())\n\nCall:\nf(\"12ab23xy\")",
+    "source": "cruxeval-org/cruxeval"
+  },
+  {
+    "answer": "'iq!!!!'",
+    "answer_type": "python_literal",
+    "category": "cruxeval_o",
+    "item_id": "cruxeval_o:sample_93",
+    "metadata": {
+      "id": "sample_93"
+    },
+    "prompt": "Predict the exact Python return value for this function call. Return a Python literal as a JSON string.\n\nCode:\ndef f(n):\n    length = len(n) + 2\n    revn = list(n)\n    result = ''.join(revn)\n    revn.clear()\n    return result + ('!' * length)\n\nCall:\nf('iq')",
+    "source": "cruxeval-org/cruxeval"
+  }
+]

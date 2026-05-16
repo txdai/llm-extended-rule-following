@@ -1,0 +1,208 @@
+{
+  "config": {
+    "anthropic_transient_retries": 8,
+    "anthropic_transient_retry_delay_seconds": 2.0,
+    "api": "openrouter",
+    "google_unavailable_retries": 20,
+    "google_unavailable_retry_delay_seconds": 2.0,
+    "max_output_tokens": 4096,
+    "model_list_path": "../model_lists/openrouter_models.json",
+    "openrouter_transient_retries": 8,
+    "openrouter_transient_retry_delay_seconds": 2.0,
+    "preflight_length": 8,
+    "retry_max_output_tokens": 32768,
+    "run_subdir": "scc_open_model_runs",
+    "search": {
+      "initial_length": 32,
+      "jitter_fraction": 0.2,
+      "max_length": 20000,
+      "parallel_trials_per_batch": 15,
+      "samples_per_length": 16,
+      "step_fraction": 0.1,
+      "tolerance_fraction": 0.05
+    },
+    "seed": 7
+  },
+  "config_path": "configs/benchmarks/scc_open_openrouter.json",
+  "generated_at_utc": "20260415T194222Z",
+  "model": "qwen/qwen-2.5-coder-32b-instruct",
+  "model_metadata": {
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "instruct_type": "chatml",
+      "modality": "text->text",
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen"
+    },
+    "canonical_slug": "qwen/qwen-2.5-coder-32b-instruct",
+    "context_length": 32768,
+    "description": "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). Qwen2.5-Coder brings the following improvements upon CodeQwen1.5: - Significantly improvements in **code generation**, **code reasoning**...",
+    "hugging_face_id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "id": "qwen/qwen-2.5-coder-32b-instruct",
+    "name": "Qwen2.5 Coder 32B Instruct",
+    "pricing": {
+      "completion": "0.000001",
+      "prompt": "0.00000066"
+    },
+    "supported_parameters": [
+      "frequency_penalty",
+      "max_tokens",
+      "presence_penalty",
+      "repetition_penalty",
+      "seed",
+      "temperature",
+      "top_k",
+      "top_p"
+    ],
+    "top_provider": {
+      "context_length": 32768,
+      "is_moderated": false,
+      "max_completion_tokens": null
+    }
+  },
+  "parameter_metadata": {
+    "active_params_billion": 32.0,
+    "parameter_source": "id_pattern",
+    "total_params_billion": 32.0
+  },
+  "run_id": "scc_open_model_runs",
+  "summary": {
+    "cc": 0,
+    "cc_error_bar": {
+      "lower": 0,
+      "upper": 3
+    },
+    "cc_lower_bound": 0,
+    "cc_upper_bound": 32,
+    "evaluation_count": 0,
+    "model": "qwen/qwen-2.5-coder-32b-instruct",
+    "model_metadata": {
+      "architecture": {
+        "input_modalities": [
+          "text"
+        ],
+        "instruct_type": "chatml",
+        "modality": "text->text",
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Qwen"
+      },
+      "canonical_slug": "qwen/qwen-2.5-coder-32b-instruct",
+      "context_length": 32768,
+      "description": "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). Qwen2.5-Coder brings the following improvements upon CodeQwen1.5: - Significantly improvements in **code generation**, **code reasoning**...",
+      "hugging_face_id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+      "id": "qwen/qwen-2.5-coder-32b-instruct",
+      "name": "Qwen2.5 Coder 32B Instruct",
+      "pricing": {
+        "completion": "0.000001",
+        "prompt": "0.00000066"
+      },
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "repetition_penalty",
+        "seed",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "top_provider": {
+        "context_length": 32768,
+        "is_moderated": false,
+        "max_completion_tokens": null
+      }
+    },
+    "overall": {
+      "avg_cached_input_tokens": null,
+      "avg_input_tokens": null,
+      "avg_latency_seconds": 0.3246350751724094,
+      "avg_output_tokens": null,
+      "avg_reasoning_tokens": null,
+      "avg_total_tokens": null,
+      "mae": null,
+      "mape": null,
+      "mean_signed_error": null,
+      "mse": null,
+      "parse_rate": 0.0,
+      "success_rate": 0.0,
+      "sum_cached_input_tokens": 0,
+      "sum_input_tokens": 0,
+      "sum_output_tokens": 0,
+      "sum_reasoning_tokens": 0,
+      "sum_total_tokens": 0,
+      "trials": 1
+    },
+    "parameter_metadata": {
+      "active_params_billion": 32.0,
+      "parameter_source": "id_pattern",
+      "total_params_billion": 32.0
+    },
+    "preflight_result": {
+      "absolute_error": null,
+      "api": "openrouter",
+      "cached_input_tokens": null,
+      "center_length": 8,
+      "evaluation_index": -1,
+      "exact_match": false,
+      "expected": 8,
+      "final_max_output_tokens": 4096,
+      "input_tokens": null,
+      "latency_seconds": 0.3246350751724094,
+      "model": "qwen/qwen-2.5-coder-32b-instruct",
+      "output_tokens": null,
+      "parsed": null,
+      "phase": "preflight",
+      "raw_response": "",
+      "reasoning_tokens": null,
+      "relative_error": null,
+      "requested_max_output_tokens": 4096,
+      "response_detail": null,
+      "response_status": "completed",
+      "retry_count": 0,
+      "sample_high": 8,
+      "sample_low": 8,
+      "squared_error": null,
+      "total_tokens": null,
+      "trial_index": 0
+    },
+    "skip_reason": "preflight_failed",
+    "skipped": true,
+    "trial_count": 1
+  },
+  "trials": [
+    {
+      "absolute_error": null,
+      "api": "openrouter",
+      "cached_input_tokens": null,
+      "center_length": 8,
+      "evaluation_index": -1,
+      "exact_match": false,
+      "expected": 8,
+      "final_max_output_tokens": 4096,
+      "input_tokens": null,
+      "latency_seconds": 0.3246350751724094,
+      "model": "qwen/qwen-2.5-coder-32b-instruct",
+      "output_tokens": null,
+      "parsed": null,
+      "phase": "preflight",
+      "raw_response": "",
+      "reasoning_tokens": null,
+      "relative_error": null,
+      "requested_max_output_tokens": 4096,
+      "response_detail": null,
+      "response_status": "completed",
+      "retry_count": 0,
+      "sample_high": 8,
+      "sample_low": 8,
+      "squared_error": null,
+      "total_tokens": null,
+      "trial_index": 0
+    }
+  ]
+}

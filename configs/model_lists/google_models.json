@@ -1,0 +1,107 @@
+{
+  "generated_at_utc": "20260415T035631Z",
+  "model_metadata": {
+    "gemini-2.5-flash": {
+      "description": "Stable version of Gemini 2.5 Flash, our mid-size multimodal model that supports up to 1 million tokens, released in June of 2025.",
+      "display_name": "Gemini 2.5 Flash",
+      "input_token_limit": 1048576,
+      "name": "models/gemini-2.5-flash",
+      "output_token_limit": 65536,
+      "supported_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    "gemini-2.5-flash-lite": {
+      "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+      "display_name": "Gemini 2.5 Flash-Lite",
+      "input_token_limit": 1048576,
+      "name": "models/gemini-2.5-flash-lite",
+      "output_token_limit": 65536,
+      "supported_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    "gemini-2.5-pro": {
+      "description": "Stable release (June 17th, 2025) of Gemini 2.5 Pro",
+      "display_name": "Gemini 2.5 Pro",
+      "input_token_limit": 1048576,
+      "name": "models/gemini-2.5-pro",
+      "output_token_limit": 65536,
+      "supported_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    "gemini-3-flash-preview": {
+      "description": "Gemini 3 Flash Preview",
+      "display_name": "Gemini 3 Flash Preview",
+      "input_token_limit": 1048576,
+      "name": "models/gemini-3-flash-preview",
+      "output_token_limit": 65536,
+      "supported_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    "gemini-3-pro-preview": {
+      "description": "Gemini 3 Pro Preview",
+      "display_name": "Gemini 3 Pro Preview",
+      "input_token_limit": 1048576,
+      "name": "models/gemini-3-pro-preview",
+      "output_token_limit": 65536,
+      "supported_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    "gemini-3.1-flash-lite-preview": {
+      "description": "Gemini 3.1 Flash Lite Preview",
+      "display_name": "Gemini 3.1 Flash Lite Preview",
+      "input_token_limit": 1048576,
+      "name": "models/gemini-3.1-flash-lite-preview",
+      "output_token_limit": 65536,
+      "supported_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    "gemini-3.1-pro-preview": {
+      "description": "Gemini 3.1 Pro Preview",
+      "display_name": "Gemini 3.1 Pro Preview",
+      "input_token_limit": 1048576,
+      "name": "models/gemini-3.1-pro-preview",
+      "output_token_limit": 65536,
+      "supported_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  "models": [
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-2.5-pro",
+    "gemini-3-flash-preview",
+    "gemini-3-pro-preview",
+    "gemini-3.1-flash-lite-preview",
+    "gemini-3.1-pro-preview"
+  ],
+  "provider": "google_genai",
+  "source": "client.models.list()"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "label": "resid_post.layer15",
+    "stream": "resid_post",
+    "layer": 15,
+    "best_feature_corr": null,
+    "top5_mean_abs_corr": null,
+    "counter_projection_corr": 0.9367756247520447,
+    "exact_vs_failed_separation": -36.222496032714844
+  },
+  {
+    "label": "resid_post.layer23",
+    "stream": "resid_post",
+    "layer": 23,
+    "best_feature_corr": null,
+    "top5_mean_abs_corr": null,
+    "counter_projection_corr": 0.853508472442627,
+    "exact_vs_failed_separation": -28.72211265563965
+  },
+  {
+    "label": "resid_post.layer31",
+    "stream": "resid_post",
+    "layer": 31,
+    "best_feature_corr": null,
+    "top5_mean_abs_corr": null,
+    "counter_projection_corr": 0.828159511089325,
+    "exact_vs_failed_separation": -24.95700454711914
+  },
+  {
+    "label": "resid_post.layer39",
+    "stream": "resid_post",
+    "layer": 39,
+    "best_feature_corr": null,
+    "top5_mean_abs_corr": null,
+    "counter_projection_corr": -0.024463817477226257,
+    "exact_vs_failed_separation": -5.095311641693115
+  },
+  {
+    "label": "attn_out.layer31",
+    "stream": "attn_out",
+    "layer": 31,
+    "best_feature_corr": null,
+    "top5_mean_abs_corr": null,
+    "counter_projection_corr": 0.6144351959228516,
+    "exact_vs_failed_separation": -16.717330932617188
+  },
+  {
+    "label": "attn_out.layer39",
+    "stream": "attn_out",
+    "layer": 39,
+    "best_feature_corr": null,
+    "top5_mean_abs_corr": null,
+    "counter_projection_corr": -0.0060045840218663216,
+    "exact_vs_failed_separation": -4.537619590759277
+  },
+  {
+    "label": "mlp_out.layer31",
+    "stream": "mlp_out",
+    "layer": 31,
+    "best_feature_corr": null,
+    "top5_mean_abs_corr": null,
+    "counter_projection_corr": 0.8635072708129883,
+    "exact_vs_failed_separation": -28.70697593688965
+  },
+  {
+    "label": "mlp_out.layer39",
+    "stream": "mlp_out",
+    "layer": 39,
+    "best_feature_corr": null,
+    "top5_mean_abs_corr": null,
+    "counter_projection_corr": 0.16576926410198212,
+    "exact_vs_failed_separation": -9.646753311157227
+  }
+]
