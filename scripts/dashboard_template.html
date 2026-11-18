@@ -1,0 +1,640 @@
+<title>Counting Curves</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F2F4F7; --panel:#FFFFFF; --panel-2:#F8FAFC; --line:#DCE3EB; --line-2:#EDF1F6;
+  --ink:#101720; --ink-2:#3C4854; --muted:#68737F;
+  --accent:#0B6E75; --accent-ink:#08585E; --accent-soft:rgba(11,110,117,.10);
+  --ok:#2F8F5B; --warn:#C77A15; --err:#A63D62; --none:#B9C2CC;
+  --shadow:0 1px 2px rgba(16,23,32,.06),0 8px 24px rgba(16,23,32,.06);
+  --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1014; --panel:#141A21; --panel-2:#182028; --line:#242E39; --line-2:#1C242D;
+    --ink:#E4EAF1; --ink-2:#B6C1CD; --muted:#8A97A6;
+    --accent:#37B3BD; --accent-ink:#5FCBD3; --accent-soft:rgba(55,179,189,.14);
+    --ok:#45B57C; --warn:#E0A040; --err:#D9648E; --none:#3A4652;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.34);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1014; --panel:#141A21; --panel-2:#182028; --line:#242E39; --line-2:#1C242D;
+  --ink:#E4EAF1; --ink-2:#B6C1CD; --muted:#8A97A6;
+  --accent:#37B3BD; --accent-ink:#5FCBD3; --accent-soft:rgba(55,179,189,.14);
+  --ok:#45B57C; --warn:#E0A040; --err:#D9648E; --none:#3A4652;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.34);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1500px;margin:0 auto;padding:0 22px 64px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* header ---------------------------------------------------------------- */
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hbar{max-width:1500px;margin:0 auto;padding:18px 22px 0;display:flex;flex-wrap:wrap;
+  gap:22px;align-items:flex-end;justify-content:space-between}
+.brand h1{font-size:21px;font-weight:600;letter-spacing:-.015em}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:12.5px}
+.stats{display:flex;gap:26px;flex-wrap:wrap}
+.stat .n{font-family:var(--mono);font-size:19px;font-weight:600;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;display:block}
+.stat .l{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+.stat.flag .n{color:var(--accent)}
+nav{max-width:1500px;margin:0 auto;padding:14px 22px 0;display:flex;gap:2px}
+nav button{appearance:none;border:0;background:none;font:inherit;font-size:13px;font-weight:500;
+  color:var(--muted);padding:8px 14px 11px;cursor:pointer;border-bottom:2px solid transparent}
+nav button:hover{color:var(--ink)}
+nav button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+nav button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:4px}
+
+/* controls -------------------------------------------------------------- */
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0 14px}
+.controls label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+select,input[type=search]{font:inherit;font-size:13px;color:var(--ink);background:var(--panel);
+  border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+input[type=search]{min-width:210px;font-family:var(--mono);font-size:12.5px}
+select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+input[type=range]{accent-color:var(--accent);width:150px;vertical-align:middle}
+.spacer{flex:1}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+/* panels ---------------------------------------------------------------- */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.pad{padding:16px 18px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--ink-2)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.scroller{overflow:auto;max-height:min(74vh,900px)}
+canvas{display:block;max-width:100%}
+.hint{color:var(--muted);font-size:12px;margin:10px 2px 0}
+
+/* detail ---------------------------------------------------------------- */
+.detail-head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between}
+.detail-head h2{font-family:var(--mono);font-size:16px;font-weight:600;letter-spacing:-.01em}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:11px;font-family:var(--mono);padding:2px 8px;border-radius:999px;
+  border:1px solid var(--line);color:var(--ink-2);background:var(--panel-2)}
+.chip.a{border-color:transparent;background:var(--accent-soft);color:var(--accent-ink)}
+.chip.w{border-color:transparent;background:rgba(199,122,21,.14);color:var(--warn)}
+.chip.e{border-color:transparent;background:rgba(166,61,98,.14);color:var(--err)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:2px;
+  margin:16px 0 4px;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--line-2)}
+.kpi{background:var(--panel);padding:10px 12px}
+.kpi .n{font-family:var(--mono);font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:1px}
+.plots{display:grid;gap:14px;margin-top:16px}
+.plot h3{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+  font-weight:600;margin-bottom:7px}
+.plot p{margin:6px 2px 0;font-size:12px;color:var(--muted);max-width:74ch}
+.nav-row{display:flex;gap:8px;align-items:center}
+.nav-row button{font:inherit;font-size:12.5px;padding:5px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink-2)}
+.nav-row button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* table ----------------------------------------------------------------- */
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line-2);white-space:nowrap}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600;
+  position:sticky;top:0;background:var(--panel)}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+tbody tr:hover{background:var(--panel-2);cursor:pointer}
+.delta-up{color:var(--ok)} .delta-dn{color:var(--err)}
+
+/* tooltip --------------------------------------------------------------- */
+#tip{position:fixed;pointer-events:none;z-index:60;opacity:0;transition:opacity .1s;
+  background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);
+  padding:8px 11px;font-size:12px;font-family:var(--mono);max-width:290px}
+#tip b{font-weight:600;display:block;margin-bottom:3px}
+.view[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header>
+  <div class="hbar">
+    <div class="brand">
+      <h1>Counting Curves</h1>
+      <p id="sub"></p>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+  <nav role="tablist">
+    <button role="tab" aria-selected="true" data-view="landscape">Landscape</button>
+    <button role="tab" aria-selected="false" data-view="curve">Curve</button>
+    <button role="tab" aria-selected="false" data-view="defs">Definitions</button>
+  </nav>
+</header>
+
+<div class="wrap">
+  <!-- landscape ---------------------------------------------------------- -->
+  <section class="view" id="v-landscape">
+    <div class="controls">
+      <input type="search" id="q" placeholder="filter models…" aria-label="Filter models">
+      <label for="lab">Lab</label><select id="lab"></select>
+      <label for="var">Variant</label>
+      <select id="var"><option value="">all</option><option value="think">think</option>
+        <option value="nothink">nothink</option><option value="-">no variant</option></select>
+      <label for="sort">Sort</label>
+      <select id="sort"><option value="cc">capacity</option><option value="model">model</option>
+        <option value="lab">lab</option><option value="date">release date</option>
+        <option value="span">probed depth</option></select>
+      <label for="xs">Scale</label>
+      <select id="xs"><option value="abs">absolute length</option><option value="rel">relative to capacity</option></select>
+      <span class="spacer"></span><span class="count" id="lcount"></span>
+    </div>
+    <div class="panel pad">
+      <div class="legend">
+        <span><i class="sw" style="background:var(--ok)"></i>answered exactly</span>
+        <span><i class="sw" style="background:var(--warn)"></i>answered, wrong number</span>
+        <span><i class="sw" style="background:var(--err)"></i>no parseable answer</span>
+        <span><i class="sw" style="background:var(--none)"></i>not probed</span>
+        <span style="color:var(--muted)">│ dark rule first mistake · <b style="color:var(--accent)">teal rule</b> fitted transition</span>
+      </div>
+    </div>
+    <div class="panel scroller" style="margin-top:12px"><canvas id="land"></canvas></div>
+    <p class="hint">One row per measurement, one pixel column per length. The gap between the dark
+      rule (first mistake) and the teal rule (fitted transition) is what first-mistake capacity
+      throws away.
+      Click a row to open its curve.</p>
+  </section>
+
+  <!-- curve -------------------------------------------------------------- -->
+  <section class="view" id="v-curve" hidden>
+    <div class="controls">
+      <label for="pick">Measurement</label><select id="pick" style="min-width:330px"></select>
+      <span class="nav-row"><button id="prev">← prev</button><button id="next">next →</button></span>
+      <span class="spacer"></span><span class="count" id="ccount"></span>
+    </div>
+    <div class="panel pad">
+      <div class="detail-head"><h2 id="dk"></h2><div class="chips" id="dchips"></div></div>
+      <div class="kpis" id="dkpis"></div>
+      <div class="plots">
+        <div class="plot"><h3>Asked against answered</h3><canvas id="p1"></canvas>
+          <p>The diagonal is a correct answer. Points below it are undercounts, above are overcounts;
+             marks on the floor rail are probes that returned no number at all.</p></div>
+        <div class="plot"><h3>Signed error</h3><canvas id="p2"></canvas>
+          <p>Answered minus asked. Flat at zero is exact counting; a widening cone is drift, and a
+             single spike surrounded by zeros is the isolated slip that first-mistake capacity keys on.</p></div>
+        <div class="plot"><h3>Accuracy over a trailing 20-length window</h3><canvas id="p3"></canvas>
+          <p>Where counting actually degrades, as opposed to where it first stumbles.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- definitions -------------------------------------------------------- -->
+  <section class="view" id="v-defs" hidden>
+    <div class="controls">
+      <label for="ydef">Criterion</label>
+      <select id="ydef">
+        <option value="cp">fitted transition — nothing to tune</option>
+        <option value="win">sustained window</option>
+        <option value="run">consecutive misses</option>
+      </select>
+      <label for="thr">Accuracy floor <b class="mono" id="thrv"></b></label>
+      <input type="range" id="thr" min="50" max="100" step="5" value="90">
+      <label for="win">Window <b class="mono" id="winv"></b></label>
+      <input type="range" id="win" min="5" max="50" step="5" value="20">
+      <label for="run">Consecutive misses <b class="mono" id="runv"></b></label>
+      <input type="range" id="run" min="2" max="20" step="1" value="5">
+      <span class="spacer"></span><span class="count" id="dstat"></span>
+    </div>
+    <div class="panel pad">
+      <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">
+        First mistake against sustained accuracy</h3>
+      <canvas id="sc" style="margin-top:10px"></canvas>
+      <p class="hint" style="margin-top:12px">Each point is one measurement: horizontal is
+        <span class="mono">first mistake − 1</span>, vertical is the selected criterion — by default the fitted
+        transition: the likelihood changepoint between a mostly-exact regime and a mostly-inexact
+        one, declared by BIC, nothing to tune. Points above the diagonal are measurements
+        first-mistake understates. The sliders drive only the two knobbed criteria; the fitted
+        transition ignores them, which is the argument for it.</p>
+    </div>
+    <div class="panel" style="margin-top:14px">
+      <div class="scroller" style="max-height:460px"><table id="dtab">
+        <thead><tr><th>measurement</th><th class="n">first mistake</th>
+          <th class="n">transition</th><th class="n">95% CI</th><th class="n">p stable</th>
+          <th class="n">sustained</th><th class="n">run-based</th><th class="n">&Delta; vs first</th>
+          <th>bounded by</th></tr></thead>
+        <tbody></tbody></table></div>
+    </div>
+  </section>
+</div>
+<div id="tip" role="status" aria-live="polite"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const R = DATA.rows, META = DATA.meta;
+
+/* ---- helpers ---------------------------------------------------------- */
+const $ = s => document.querySelector(s);
+const tok = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt = n => n == null ? "—" : n.toLocaleString();
+function fit(cv, w, h){
+  const d = Math.min(window.devicePixelRatio || 1, 2);
+  cv.width = Math.max(1, Math.round(w*d)); cv.height = Math.max(1, Math.round(h*d));
+  cv.style.width = w+"px"; cv.style.height = h+"px";
+  const c = cv.getContext("2d"); c.setTransform(d,0,0,d,0,0); return c;
+}
+// -1 is an unparseable response, null a length never probed. Neither is an answer.
+const outcome = (r,i) => { const a = r.o[i];
+  return a == null ? null : a === -1 ? "error" : (a === r.s+i ? "correct" : "mistake"); };
+const lenAt = (r,i) => r.s + i;
+const span  = r => r.s + r.o.length - 1;
+
+/* capacity definitions -------------------------------------------------- */
+function ccFirst(r){
+  if (r.fm != null) return r.fm - 1;
+  // No wrong answer anywhere: the scan ended on the token budget or on errors,
+  // so capacity is the last length actually answered, not the last attempted --
+  // otherwise the trailing run of exhausted probes counts as counting ability.
+  for (let i = r.o.length-1; i >= 0; i--) if (outcome(r,i) === "correct") return lenAt(r,i);
+  return r.s - 1;
+}
+function ccWindow(r, thr, win){           // last length holding the accuracy floor
+  let best = r.s - 1, q = [], hits = 0;
+  for (let i = 0; i < r.o.length; i++){
+    const o = outcome(r,i); if (o === null) continue;
+    const v = o === "correct" ? 1 : 0; q.push(v); hits += v;
+    if (q.length > win) hits -= q.shift();
+    if (q.length === win && hits/win >= thr) best = lenAt(r,i);
+  }
+  return Math.max(best, r.s - 1);
+}
+function ccRun(r, k){                     // last correct before k straight misses
+  let miss = 0, lastOK = r.s - 1;
+  for (let i = 0; i < r.o.length; i++){
+    const o = outcome(r,i); if (o === null) continue;
+    if (o === "correct"){ miss = 0; lastOK = lenAt(r,i); }
+    else if (++miss >= k) return lastOK;
+  }
+  return lastOK;
+}
+
+/* Two-regime fit, mirrored from counting/analysis/capacity.py: the likelihood
+   changepoint between a mostly-exact regime and a mostly-inexact one, declared
+   by BIC (delta-LL > ln n), 95% profile interval. No tuned constants. */
+function fitCP(r){
+  if (r._cp) return r._cp;
+  const L = [], ok = [];
+  for (let i = 0; i < r.o.length; i++){ const a = r.o[i];
+    if (a == null) continue; L.push(r.s+i); ok.push(a === r.s+i); }
+  const n = L.length;
+  const pre = [0]; for (const v of ok) pre.push(pre[pre.length-1] + (v?1:0));
+  const tot = pre[n];
+  const bll = (k,m) => (m===0||k===0||k===m) ? 0 : k*Math.log(k/m)+(m-k)*Math.log(1-k/m);
+  let res;
+  if (tot === 0){ const s0 = Math.max(0, L[0]-1);
+    res = { scc:s0, lo:s0, hi:s0, p1:0, p2:null, cen:false };
+  } else {
+    const ll0 = bll(tot, n);
+    let bk = 0, bestll = -Infinity; const valid = [];
+    for (let k = 1; k < n; k++){
+      const b = pre[k], a = tot-b;
+      if (b/k <= 0.5 || a/(n-k) >= 0.5) continue;   // regimes must straddle 1/2
+      const ll = bll(b,k) + bll(a,n-k);
+      valid.push([k,ll]);
+      if (ll > bestll){ bk = k; bestll = ll; }
+    }
+    if (!valid.length || bestll - ll0 <= Math.log(n)){
+      let last = L[0]-1; for (let i = 0; i < n; i++) if (ok[i]) last = L[i];
+      res = { scc:last, lo:last, hi:L[n-1], p1:tot/n, p2:null, cen:true };
+    } else {
+      const ci = valid.filter(([,ll]) => bestll-ll <= 1.9207).map(([k]) => k);
+      res = { scc:L[bk-1], lo:L[Math.min(...ci)-1], hi:L[Math.max(...ci)-1],
+              p1:pre[bk]/bk, p2:(tot-pre[bk])/(n-bk), cen:false };
+    }
+  }
+  r._cp = res; return res;
+}
+const aboveFM = r => { if (r.fm == null) return 0; let n = 0;
+  for (let i = 0; i < r.o.length; i++) if (lenAt(r,i) > r.fm && outcome(r,i) === "correct") n++;
+  return n; };
+
+/* ---- state ------------------------------------------------------------ */
+let view = "landscape", sel = 0, shown = R.slice();
+const state = { q:"", lab:"", variant:"", sort:"cc", xs:"abs", ydef:"cp", thr:.9, win:20, run:5 };
+
+function applyFilters(){
+  const q = state.q.toLowerCase();
+  shown = R.filter(r =>
+    (!q || r.k.toLowerCase().includes(q)) &&
+    (!state.lab || r.lab === state.lab) &&
+    (!state.variant || (state.variant === "-" ? !r.v : r.v === state.variant)));
+  const by = {
+    cc:(a,b) => (b.cc||0)-(a.cc||0), model:(a,b) => a.k.localeCompare(b.k),
+    lab:(a,b) => (a.lab+a.k).localeCompare(b.lab+b.k),
+    date:(a,b) => (b.rd||"").localeCompare(a.rd||""), span:(a,b) => span(b)-span(a),
+  }[state.sort];
+  shown.sort(by);
+  $("#lcount").textContent = shown.length + " of " + R.length + " measurements";
+}
+
+/* ---- landscape -------------------------------------------------------- */
+const LAND = { rowH:5, gap:1, padL:212, padR:16, padT:26, hit:[] };
+function drawLandscape(){
+  const cv = $("#land"), host = cv.parentElement;
+  const W = Math.max(560, host.clientWidth - 2);
+  const H = LAND.padT + shown.length*(LAND.rowH+LAND.gap) + 14;
+  const c = fit(cv, W, H);
+  const plotW = W - LAND.padL - LAND.padR;
+  const maxLen = state.xs === "abs" ? Math.max(...shown.map(span), 1) : 2;
+  const cols = { correct:tok("--ok"), mistake:tok("--warn"), error:tok("--err") };
+  c.fillStyle = tok("--panel"); c.fillRect(0,0,W,H);
+
+  // axis
+  c.font = "500 10px " + tok("--mono").split(",")[0].replace(/"/g,"") + ", monospace";
+  c.fillStyle = tok("--muted"); c.textBaseline = "alphabetic";
+  const ticks = state.xs === "abs"
+    ? [0,.25,.5,.75,1].map(f => Math.round(f*maxLen))
+    : [0,.5,1,1.5,2];
+  ticks.forEach(t => {
+    const x = LAND.padL + (t/maxLen)*plotW;
+    c.fillStyle = tok("--line"); c.fillRect(x, LAND.padT-6, 1, H-LAND.padT-8);
+    c.fillStyle = tok("--muted"); c.textAlign = t === 0 ? "left" : "center";
+    c.fillText(state.xs === "abs" ? t : t+"×", Math.min(x, W-14), LAND.padT-11);
+  });
+  c.textAlign = "left";
+  c.fillText(state.xs === "abs" ? "length" : "length ÷ capacity", 6, LAND.padT-11);
+
+  LAND.hit = [];
+  shown.forEach((r,ri) => {
+    const y = LAND.padT + ri*(LAND.rowH+LAND.gap);
+    LAND.hit.push({ y, r });
+    // label
+    c.fillStyle = tok("--ink-2"); c.textAlign = "left"; c.textBaseline = "middle";
+    c.font = "400 9.5px " + tok("--mono").split(",")[0].replace(/"/g,"") + ", monospace";
+    let lab = r.k.replace(/^[^/]+\//,"");
+    if (lab.length > 30) lab = lab.slice(0,29) + "…";
+    c.fillText(lab, 6, y + LAND.rowH/2 + .5);
+    // strip
+    const denom = state.xs === "abs" ? maxLen : Math.max(ccFirst(r), 1);
+    const unit = plotW / denom;
+    for (let i = 0; i < r.o.length; i++){
+      const o = outcome(r,i); if (!o) continue;
+      const x0 = LAND.padL + ((lenAt(r,i)-1)/denom)*plotW;
+      if (x0 > LAND.padL + plotW) break;
+      c.fillStyle = cols[o];
+      c.fillRect(x0, y, Math.max(unit, .7), LAND.rowH);
+    }
+    // first-mistake rule
+    if (r.fm != null){
+      const x = LAND.padL + ((r.fm-1)/denom)*plotW;
+      if (x <= LAND.padL + plotW){
+        c.fillStyle = tok("--ink"); c.globalAlpha = .55;
+        c.fillRect(x, y-1, 1, LAND.rowH+2); c.globalAlpha = 1;
+      }
+    }
+    const cp = fitCP(r);
+    if (!cp.cen){
+      const x = LAND.padL + (cp.scc/denom)*plotW;
+      if (x <= LAND.padL + plotW){
+        c.fillStyle = tok("--accent"); c.fillRect(x, y-1, 1.4, LAND.rowH+2);
+      }
+    }
+  });
+}
+function landHit(ev){
+  const cv = $("#land"), b = cv.getBoundingClientRect();
+  const y = ev.clientY - b.top, x = ev.clientX - b.left;
+  const i = Math.floor((y - LAND.padT)/(LAND.rowH+LAND.gap));
+  if (i < 0 || i >= shown.length) return null;
+  const r = shown[i];
+  const plotW = cv.clientWidth - LAND.padL - LAND.padR;
+  const denom = state.xs === "abs" ? Math.max(...shown.map(span),1) : Math.max(ccFirst(r),1);
+  const len = Math.round(((x - LAND.padL)/plotW)*denom) + 1;
+  return { r, len };
+}
+
+/* ---- detail ----------------------------------------------------------- */
+function axes(c, W, H, pad, xMax, yMin, yMax, xLab, yLab){
+  const px = pad.l, py = pad.t, pw = W-pad.l-pad.r, ph = H-pad.t-pad.b;
+  c.fillStyle = tok("--panel"); c.fillRect(0,0,W,H);
+  c.strokeStyle = tok("--line-2"); c.lineWidth = 1;
+  c.font = "400 10px ui-monospace, monospace"; c.fillStyle = tok("--muted");
+  for (let i = 0; i <= 4; i++){
+    const y = py + (i/4)*ph, v = yMax - (i/4)*(yMax-yMin);
+    c.beginPath(); c.moveTo(px, Math.round(y)+.5); c.lineTo(px+pw, Math.round(y)+.5); c.stroke();
+    c.textAlign = "right"; c.textBaseline = "middle";
+    c.fillText(Math.abs(v) >= 1000 ? (v/1000).toFixed(1)+"k" : Math.round(v*100)/100, px-7, y);
+  }
+  for (let i = 0; i <= 4; i++){
+    const x = px + (i/4)*pw, v = Math.round((i/4)*xMax);
+    c.textAlign = "center"; c.textBaseline = "top";
+    c.fillText(v, x, py+ph+7);
+  }
+  c.textAlign = "left"; c.fillStyle = tok("--muted");
+  c.fillText(yLab, 2, 2); c.textAlign = "right"; c.fillText(xLab, W-4, py+ph+7);
+  return { px, py, pw, ph, X:v => px+(v/xMax)*pw, Y:v => py+ph-((v-yMin)/(yMax-yMin))*ph };
+}
+function drawDetail(){
+  const r = shown[sel] || shown[0]; if (!r) return;
+  const W = Math.max(420, $("#v-curve .panel").clientWidth - 40);
+  const hi = span(r), cols = { correct:tok("--ok"), mistake:tok("--warn"), error:tok("--err") };
+
+  // 1: asked vs answered
+  {
+    const H = 300, c = fit($("#p1"), W, H);
+    let top = 0; for (let i=0;i<r.o.length;i++){ const a=r.o[i]; if (a!=null&&a>=0) top=Math.max(top,a); }
+    const yMax = Math.max(top, hi) * 1.04 || 1;
+    const A = axes(c, W, H, {l:52,r:14,t:14,b:26}, hi, 0, yMax, "asked", "answered");
+    c.strokeStyle = tok("--muted"); c.globalAlpha = .45; c.setLineDash([4,4]); c.beginPath();
+    c.moveTo(A.X(0), A.Y(0)); c.lineTo(A.X(hi), A.Y(Math.min(hi,yMax))); c.stroke();
+    c.setLineDash([]); c.globalAlpha = 1;
+    for (let i = 0; i < r.o.length; i++){
+      const o = outcome(r,i); if (!o) continue;
+      const x = A.X(lenAt(r,i));
+      if (o === "error"){ c.fillStyle = cols.error; c.fillRect(x-.5, A.py+A.ph-5, 1.6, 5); continue; }
+      c.fillStyle = cols[o]; c.beginPath();
+      c.arc(x, A.Y(Math.min(r.o[i], yMax)), o === "mistake" ? 2.1 : 1.5, 0, 6.284); c.fill();
+    }
+  }
+  // 2: signed error
+  {
+    const H = 200, c = fit($("#p2"), W, H);
+    let lo = 0, hiE = 0;
+    for (let i=0;i<r.o.length;i++){ const o=outcome(r,i); if(!o||o==="error") continue;
+      const e = r.o[i]-lenAt(r,i); lo=Math.min(lo,e); hiE=Math.max(hiE,e); }
+    const pad = Math.max(1, (hiE-lo)*.12);
+    const A = axes(c, W, H, {l:52,r:14,t:14,b:26}, hi, lo-pad, hiE+pad, "asked", "answered − asked");
+    c.strokeStyle = tok("--ink"); c.globalAlpha = .3; c.beginPath();
+    c.moveTo(A.px, A.Y(0)); c.lineTo(A.px+A.pw, A.Y(0)); c.stroke(); c.globalAlpha = 1;
+    for (let i = 0; i < r.o.length; i++){
+      const o = outcome(r,i); if (!o || o === "error") continue;
+      c.fillStyle = cols[o]; const x = A.X(lenAt(r,i)), y = A.Y(r.o[i]-lenAt(r,i));
+      c.fillRect(x-.7, Math.min(y, A.Y(0)), 1.4, Math.max(1, Math.abs(y-A.Y(0))));
+    }
+  }
+  // 3: rolling accuracy
+  {
+    const H = 190, c = fit($("#p3"), W, H);
+    const A = axes(c, W, H, {l:52,r:14,t:14,b:26}, hi, 0, 1, "asked", "accuracy");
+    const W20 = 20; let q = [], hits = 0; c.beginPath(); let started = false;
+    for (let i = 0; i < r.o.length; i++){
+      const o = outcome(r,i); if (!o) continue;
+      const v = o === "correct" ? 1 : 0; q.push(v); hits += v;
+      if (q.length > W20) hits -= q.shift();
+      if (q.length < W20) continue;
+      const x = A.X(lenAt(r,i)), y = A.Y(hits/W20);
+      started ? c.lineTo(x,y) : (c.moveTo(x,y), started = true);
+    }
+    c.strokeStyle = tok("--accent"); c.lineWidth = 1.6; c.stroke();
+    if (r.fm != null){
+      const x = A.X(r.fm);
+      c.strokeStyle = tok("--warn"); c.setLineDash([3,3]); c.lineWidth = 1;
+      c.beginPath(); c.moveTo(x, A.py); c.lineTo(x, A.py+A.ph); c.stroke(); c.setLineDash([]);
+      c.fillStyle = tok("--warn"); c.font = "500 10px ui-monospace, monospace";
+      c.textAlign = x > A.px+A.pw-70 ? "right" : "left"; c.textBaseline = "top";
+      c.fillText(" first mistake", x, A.py+2);
+    }
+    const cp3 = fitCP(r);
+    if (!cp3.cen){
+      c.fillStyle = tok("--accent"); c.globalAlpha = .13;
+      c.fillRect(A.X(cp3.lo), A.py, Math.max(2, A.X(cp3.hi)-A.X(cp3.lo)), A.ph);
+      c.globalAlpha = 1;
+      c.strokeStyle = tok("--accent"); c.lineWidth = 1.4;
+      c.beginPath(); c.moveTo(A.X(cp3.scc), A.py); c.lineTo(A.X(cp3.scc), A.py+A.ph); c.stroke();
+      c.fillStyle = tok("--accent"); c.font = "500 10px ui-monospace, monospace";
+      c.textAlign = A.X(cp3.scc) > A.px+A.pw-90 ? "right" : "left"; c.textBaseline = "bottom";
+      c.fillText(" transition " + cp3.scc, A.X(cp3.scc), A.py+A.ph-3);
+    }
+  }
+  const cpd = fitCP(r);
+  // header + kpis
+  $("#dk").textContent = r.k;
+  const nOK = r.o.filter((_,i) => outcome(r,i) === "correct").length;
+  const nMS = r.o.filter((_,i) => outcome(r,i) === "mistake").length;
+  const nER = r.o.filter((_,i) => outcome(r,i) === "error").length;
+  const chips = [["lab", r.lab, ""], ["variant", r.v || "single", ""], ["effort", r.eff || "n/a", ""],
+    ["bounded by", r.bb, r.bb === "mistake" ? "a" : r.bb === "budget" ? "w" : "e"]];
+  if (r.tl) chips.push(["decoding", "locked", "w"]);
+  if (r.tp) chips.push(["params", r.tp+"B", ""]);
+  if (r.rd) chips.push(["released", r.rd, ""]);
+  $("#dchips").innerHTML = chips.filter(x => x[1]).map(
+    ([k,v,c]) => `<span class="chip ${c}">${k} ${v}</span>`).join("");
+  $("#dkpis").innerHTML = [
+    ["capacity", ccFirst(r)], ["first mistake", r.fm ?? "none"], ["probed to", hi],
+    ["exact", nOK], ["wrong", nMS], ["no answer", nER],
+    ["correct above first mistake", aboveFM(r)],
+    ["fitted transition", (cpd.cen ? "\u2265 " : "") + fmt(cpd.scc)],
+    ["stable-regime accuracy", (cpd.p1*100).toFixed(1) + "%"],
+  ].map(([l,n]) => `<div class="kpi"><span class="n">${fmt(n)}</span><span class="l">${l}</span></div>`).join("");
+  $("#ccount").textContent = (sel+1) + " of " + shown.length;
+}
+
+/* ---- definitions ------------------------------------------------------ */
+function drawDefs(){
+  const rows = shown.map(r => { const cp = fitCP(r);
+    return { r, a:ccFirst(r), cp, w:ccWindow(r, state.thr, state.win), c:ccRun(r, state.run) }; });
+  const pickY = v => state.ydef === "win" ? v.w : state.ydef === "run" ? v.c : v.cp.scc;
+  const yLab = state.ydef === "win" ? "sustained accuracy"
+             : state.ydef === "run" ? "run-based" : "fitted transition";
+  const W = Math.max(420, $("#v-defs .panel").clientWidth - 40), H = 430;
+  const c = fit($("#sc"), W, H);
+  const m = Math.max(10, ...rows.map(v => Math.max(v.a, pickY(v))));
+  const A = axes(c, W, H, {l:56,r:16,t:16,b:30}, m, 0, m, "first mistake − 1", yLab);
+  c.strokeStyle = tok("--muted"); c.globalAlpha = .45; c.setLineDash([4,4]);
+  c.beginPath(); c.moveTo(A.X(0), A.Y(0)); c.lineTo(A.X(m), A.Y(m)); c.stroke();
+  c.setLineDash([]); c.globalAlpha = 1;
+  rows.forEach(v => {
+    const y = pickY(v);
+    c.fillStyle = y > v.a ? tok("--accent") : tok("--warn");
+    c.globalAlpha = .62; c.beginPath(); c.arc(A.X(v.a), A.Y(y), 2.6, 0, 6.284); c.fill();
+  });
+  c.globalAlpha = 1;
+  const med = arr => { const sorted = arr.slice().sort((x,y) => x-y);
+    return sorted.length ? sorted[sorted.length>>1] : 0; };
+  const above = rows.filter(v => pickY(v) > v.a).length;
+  const cen = rows.filter(v => v.cp.cen).length;
+  $("#dstat").textContent = `median ${med(rows.map(v=>v.a))} → ${med(rows.map(pickY))}` +
+    ` · ${above} above first mistake · ${cen} censored (no collapse in range)`;
+  const body = rows.slice().sort((x,y) => (pickY(y)-y.a)-(pickY(x)-x.a)).slice(0,120).map(v => {
+    const d = pickY(v) - v.a;
+    return `<tr data-k="${v.r.k}"><td class="mono">${v.r.k}</td><td class="n">${v.a}</td>
+      <td class="n">${v.cp.cen ? "≥ "+v.cp.scc : v.cp.scc}</td>
+      <td class="n">${v.cp.cen ? "—" : v.cp.lo+"–"+v.cp.hi}</td>
+      <td class="n">${(v.cp.p1*100).toFixed(1)}%</td>
+      <td class="n">${v.w}</td><td class="n">${v.c}</td>
+      <td class="n ${d>0?"delta-up":d<0?"delta-dn":""}">${d>0?"+":""}${d}</td>
+      <td>${v.r.bb}</td></tr>`;
+  }).join("");
+  $("#dtab").tBodies[0].innerHTML = body;
+}
+
+/* ---- chrome ----------------------------------------------------------- */
+function header(){
+  $("#sub").textContent = `${META.models} models · ${META.probes.toLocaleString()} probes · run “${META.run}”`;
+  $("#stats").innerHTML = [
+    ["measurements", META.measurements, ""], ["models", META.models, ""],
+    ["probes", META.probes.toLocaleString(), ""],
+    ["correct above first mistake", META.above + " / " + META.measurements, "flag"],
+  ].map(([l,n,c]) => `<div class="stat ${c}"><span class="n">${n}</span><span class="l">${l}</span></div>`).join("");
+  $("#lab").innerHTML = '<option value="">all</option>' + META.labs.map(l => `<option>${l}</option>`).join("");
+}
+function fillPick(){
+  $("#pick").innerHTML = shown.map((r,i) =>
+    `<option value="${i}">${r.k} — capacity ${ccFirst(r)}</option>`).join("");
+  $("#pick").value = String(Math.min(sel, shown.length-1));
+}
+function render(){
+  if (view === "landscape") drawLandscape();
+  else if (view === "curve"){ fillPick(); drawDetail(); }
+  else drawDefs();
+}
+function setView(v){
+  view = v;
+  document.querySelectorAll("nav button").forEach(b =>
+    b.setAttribute("aria-selected", String(b.dataset.view === v)));
+  ["landscape","curve","defs"].forEach(n => $("#v-"+n).hidden = n !== v);
+  render();
+}
+function refilter(){ applyFilters(); sel = Math.min(sel, Math.max(0, shown.length-1)); render(); }
+
+document.querySelectorAll("nav button").forEach(b =>
+  b.addEventListener("click", () => setView(b.dataset.view)));
+$("#q").addEventListener("input", e => { state.q = e.target.value; refilter(); });
+$("#lab").addEventListener("change", e => { state.lab = e.target.value; refilter(); });
+$("#var").addEventListener("change", e => { state.variant = e.target.value; refilter(); });
+$("#sort").addEventListener("change", e => { state.sort = e.target.value; refilter(); });
+$("#xs").addEventListener("change", e => { state.xs = e.target.value; render(); });
+$("#ydef").addEventListener("change", e => { state.ydef = e.target.value; if (view === "defs") drawDefs(); });
+$("#pick").addEventListener("change", e => { sel = +e.target.value; drawDetail(); });
+$("#prev").addEventListener("click", () => { sel = (sel-1+shown.length)%shown.length; fillPick(); drawDetail(); });
+$("#next").addEventListener("click", () => { sel = (sel+1)%shown.length; fillPick(); drawDetail(); });
+[["thr","thrv",v=>{state.thr=v/100;return v+"%"}],["win","winv",v=>{state.win=v;return v}],
+ ["run","runv",v=>{state.run=v;return v}]].forEach(([id,out,fn]) => {
+  const el = $("#"+id);
+  const sync = () => { $("#"+out).textContent = fn(+el.value); if (view==="defs") drawDefs(); };
+  el.addEventListener("input", sync); sync();
+});
+$("#dtab").addEventListener("click", e => {
+  const tr = e.target.closest("tr[data-k]"); if (!tr) return;
+  const i = shown.findIndex(r => r.k === tr.dataset.k);
+  if (i >= 0){ sel = i; setView("curve"); }
+});
+const tip = $("#tip");
+$("#land").addEventListener("mousemove", e => {
+  const h = landHit(e);
+  if (!h){ tip.style.opacity = 0; return; }
+  const { r, len } = h;
+  const i = len - r.s, o = (i >= 0 && i < r.o.length) ? outcome(r,i) : null;
+  const said = o && o !== "error" ? r.o[i] : null;
+  tip.innerHTML = `<b>${r.k}</b>capacity ${ccFirst(r)} · bounded by ${r.bb}<br>`
+    + (o ? `asked ${len} → ${o === "error" ? "no answer" : "answered " + said}` : `length ${len}: not probed`);
+  tip.style.opacity = 1;
+  const w = tip.offsetWidth, x = Math.min(e.clientX+14, innerWidth-w-10);
+  tip.style.left = x+"px"; tip.style.top = Math.min(e.clientY+14, innerHeight-70)+"px";
+});
+$("#land").addEventListener("mouseleave", () => tip.style.opacity = 0);
+$("#land").addEventListener("click", e => {
+  const h = landHit(e); if (!h) return;
+  sel = shown.indexOf(h.r); setView("curve");
+});
+let t; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(render, 120); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => setTimeout(render, 30));
+
+header(); applyFilters(); setView("landscape");
+</script>

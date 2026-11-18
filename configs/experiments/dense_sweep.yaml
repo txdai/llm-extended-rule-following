@@ -1,0 +1,26 @@
+# Dense sweep across the transition, rather than a ladder to its edge.
+#
+# Use this to resolve the *shape* of the collapse: transition width, the
+# post-collapse attractor distribution, and the full accuracy curve. The grid
+# below is tuned for a model whose SCC is a few hundred; widen `stop` for
+# stronger models and check the cost first:
+#
+#   counting run configs/experiments/dense_sweep.yaml --dry-run
+#
+# Cost is grid_size * samples_per_length requests per model.
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/homogeneous_count.yaml
+  - strategies/dense.yaml
+
+run_name: counting-dense-sweep
+models:
+  - openai/gpt-5.4-mini
+search:
+  start: 32
+  stop: 1024
+  step: 16
+  # Stop once the model has failed four tiers running -- past that the curve is
+  # flat and the trials are wasted. Set to null for the whole grid.
+  stop_after_consecutive_failures: 4

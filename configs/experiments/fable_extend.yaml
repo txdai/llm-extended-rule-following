@@ -1,0 +1,20 @@
+# One-off: extend claude-fable-5's scan to a fixed 480 so its CC=317 sits at
+# two-thirds of the panel-A axis, showing the post-boundary pattern.
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/homogeneous_count.yaml
+  - strategies/scan.yaml
+run_name: counting-data
+models:
+  - {id: "anthropic/claude-fable-5", reasoning_effort: medium, temperature_locked: true}
+max_output_tokens: 8192
+retry_max_output_tokens: 8192
+escalate_output_budget: false
+search:
+  start: 1
+  step: 1
+  stop: 480
+  stop_after_consecutive_errors: 10
+  stop_at_first_mistake_multiple: null
+  stop_when_resolved: false

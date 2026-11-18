@@ -1,0 +1,8 @@
+# Adaptive randomized ladder: double while tiers pass, then bisect the bracket.
+# ~log2(L) + log2(1/step_fraction) tiers. This is what the 126-model sweep used.
+search:
+  strategy: ladder
+  initial_length: 32
+  max_length: 20000
+  step_fraction: 0.1
+  growth_factor: 2.0

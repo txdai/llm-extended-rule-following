@@ -1,0 +1,10 @@
+# Level 3. Heterogeneous nested key-path matching.
+#
+# The target is the number of MATCHING records, not the number of records: the
+# sequence is padded with non-matching distractors so record-counting is not a
+# shortcut.
+task:
+  name: nested_key_path
+  negative_fraction: 0.5
+  negative_bias: 2
+  record_delimiter: " ; "

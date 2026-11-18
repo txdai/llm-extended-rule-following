@@ -1,0 +1,84 @@
+# Which OpenRouter namespaces count as a "top lab" for a formal run.
+#
+# OpenRouter carries ~420 models across ~60 namespaces. Most of the tail is
+# community fine-tunes, roleplay merges, single-product startups, and routing
+# meta-models -- none of which belong in a capability sweep meant to characterise
+# the frontier. This file is the allowlist, kept as data so the decision is
+# reviewable and arguable rather than buried in a script.
+#
+# Used by scripts/fetch_openrouter_models.py:
+#   python scripts/fetch_openrouter_models.py
+#   python scripts/fetch_openrouter_models.py --tiers frontier          # one tier
+#   python scripts/fetch_openrouter_models.py --labs openai anthropic   # explicit
+#   python scripts/fetch_openrouter_models.py --all-labs                # ignore this file
+
+# Tiers included by default. `incumbent` is defined below but not selected: those
+# vendors ship few models on OpenRouter and adding them widens the sweep without
+# adding much architectural variety that the frontier and open-weight tiers do
+# not already cover. Add "incumbent" here to include them.
+select:
+  - frontier
+  - open_weight
+
+labs:
+  # --- frontier proprietary -------------------------------------------------
+  frontier:
+    - openai
+    - anthropic
+    - google
+    - x-ai
+
+  # --- major open-weight labs ----------------------------------------------
+  # Organisations that release competitive open-weight frontier models and are
+  # routinely benchmarked against the proprietary tier.
+  open_weight:
+    - deepseek
+    - qwen              # Alibaba
+    - moonshotai        # Kimi
+    - z-ai              # Zhipu / GLM
+    - minimax
+    - meta-llama
+    - meta
+    - mistralai
+
+  # --- large incumbents -----------------------------------------------------
+  # Big-tech and established vendors shipping their own models. Lower volume on
+  # OpenRouter, but they broaden architecture coverage (which matters here: the
+  # assay is sensitive to architecture, not just scale).
+  incumbent:
+    - microsoft
+    - nvidia
+    - cohere
+    - amazon
+    - bytedance-seed
+    - tencent
+    - baidu
+    - ibm-granite
+    - allenai
+
+# Namespaces deliberately excluded, with the reason. Listed rather than merely
+# omitted so the next person does not have to re-derive the call.
+excluded:
+  aliases:
+    reason: >-
+      Namespaces prefixed with "~" are moving aliases (~openai/gpt-latest ->
+      openai/gpt-5.6-sol). They would double-count a model and silently retarget
+      between runs, so they are dropped regardless of lab.
+  routing:
+    reason: Meta-models that dispatch to other providers rather than being a model.
+    namespaces: [openrouter, stealth]
+  community_finetunes:
+    reason: Community merges, roleplay tunes, and derivative uploads.
+    namespaces:
+      [thedrummer, nousresearch, sao10k, anthracite-org, undi95, gryphe,
+       cognitivecomputations, mancer, aion-labs, dots-studio]
+  small_or_single_product:
+    reason: >-
+      Single-product vendors, inference-side tooling, and small labs. Excluded to
+      keep the sweep interpretable, not as a quality judgement -- add a namespace
+      here to the allowlist above if a run should cover it.
+    namespaces:
+      [xiaomi, meituan, kwaipilot, stepfun, upstage, rekaai, relace, morph,
+       arcee-ai, poolside, inclusionai, perceptron, inception, writer,
+       deepcogito, liquid, sakana, thinkingmachines, nex-agi, perplexity,
+       bytedance, microsoft-phi]

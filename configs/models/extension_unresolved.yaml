@@ -1,0 +1,15 @@
+# Measurements whose sweep does not settle the capacity -- GENERATED.
+#   python scripts/build_extension_roster.py
+#
+# 0 of 296 measurements, selected by the sufficiency column of
+# scc.csv: the fitted transition is either undeclared (the model was still
+# mostly exact when probing stopped) or declared on a tail too thin to
+# establish it. Both are artifacts of stopping at 2x the first mistake, a
+# landmark the fitted criterion does not use.
+#
+# Run with configs/experiments/openrouter_extension.yaml, which drops the
+# multiple rule and stops when the criterion resolves instead. Scans resume
+# from their existing checkpoints, so no probe is paid for twice.
+
+models:
+

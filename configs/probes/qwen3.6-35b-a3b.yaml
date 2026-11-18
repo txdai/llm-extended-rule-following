@@ -1,0 +1,30 @@
+# Qwen 3.6 35B-A3B: successor to the qwen3.5-35b-a3b used in the published
+# replication, same 40-layer / 2048-hidden shape. Measured CC 45 think,
+# 42 nothink. Standard-attention MoE (the hybrid-linear-attention qwen3-next
+# line is deliberately excluded from the core slate).
+probe:
+  name: qwen3.6-35b-a3b
+  label: Qwen3.6-35B-A3B
+  checkpoint: model/qwen3.6-35b-a3b
+  loader: causal_lm
+  tokenizer: auto
+  dtype: bfloat16
+  device: auto
+
+  hooks:
+    resid_post.layer9:
+      module: model.layers.9
+      mode: forward
+      hidden_size: 2048
+    resid_post.layer19:
+      module: model.layers.19
+      mode: forward
+      hidden_size: 2048
+    resid_post.layer29:
+      module: model.layers.29
+      mode: forward
+      hidden_size: 2048
+    resid_post.layer39:
+      module: model.layers.39
+      mode: forward
+      hidden_size: 2048

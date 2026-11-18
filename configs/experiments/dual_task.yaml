@@ -1,0 +1,28 @@
+# Level-4 dual-task interference. One run measures one condition.
+#
+# `plain` runs as-is. Every other condition needs a benchmark manifest, because
+# the controls are token-matched to the real benchmark prompts:
+#
+#   python scripts/build_dual_task_manifest.py --output results/dual-task/manifest.json
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/dual_task.yaml
+  - strategies/dense.yaml
+
+run_name: counting-dual-task
+models:
+  - openai/gpt-5.4-mini
+task:
+  condition: plain
+  # manifest: results/dual-task/manifest.json
+
+search:
+  start: 32
+  stop: 96
+  step: 8
+  samples_per_length: 6
+
+max_output_tokens: 2048
+retry_max_output_tokens: 8192
+seed: 23

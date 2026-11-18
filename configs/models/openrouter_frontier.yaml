@@ -1,0 +1,340 @@
+# OpenRouter roster for formal runs -- GENERATED, do not edit by hand.
+#   python scripts/fetch_openrouter_models.py     (fetched 2026-08-22T17:41:42+00:00)
+#
+# 303 measurements over 208 models: a model whose reasoning
+# can be switched off contributes two, think and nothink.
+# 208 models from the labs allowlisted in configs/models/labs.yaml.
+# Moving aliases (~openai/gpt-latest and friends) are excluded: they would
+# retarget between runs.
+#
+# The full table -- release date, parameter counts, price, context window,
+# reasoning support -- is results/model_catalogue/openrouter_models.csv.
+
+models:
+
+  # --- anthropic ---
+  - {id: "anthropic/claude-3-haiku"}   # 2024-03-13  $0.25/$1.25 per Mtok
+  - {id: "anthropic/claude-opus-4", variant: think, reasoning_effort: medium}   # 2025-05-22  $15/$75 per Mtok
+  - {id: "anthropic/claude-opus-4", variant: nothink, reasoning_effort: none}   # 2025-05-22  $15/$75 per Mtok
+  - {id: "anthropic/claude-sonnet-4", variant: think, reasoning_effort: medium}   # 2025-05-22  $3/$15 per Mtok
+  - {id: "anthropic/claude-sonnet-4", variant: nothink, reasoning_effort: none}   # 2025-05-22  $3/$15 per Mtok
+  - {id: "anthropic/claude-opus-4.1", variant: think, reasoning_effort: medium}   # 2025-08-05  $15/$75 per Mtok
+  - {id: "anthropic/claude-opus-4.1", variant: nothink, reasoning_effort: none}   # 2025-08-05  $15/$75 per Mtok
+  - {id: "anthropic/claude-sonnet-4.5", variant: think, reasoning_effort: medium}   # 2025-09-29  $3/$15 per Mtok
+  - {id: "anthropic/claude-sonnet-4.5", variant: nothink, reasoning_effort: none}   # 2025-09-29  $3/$15 per Mtok
+  - {id: "anthropic/claude-haiku-4.5", variant: think, reasoning_effort: medium}   # 2025-10-15  $1/$5 per Mtok
+  - {id: "anthropic/claude-haiku-4.5", variant: nothink, reasoning_effort: none}   # 2025-10-15  $1/$5 per Mtok
+  - {id: "anthropic/claude-opus-4.5", variant: think, reasoning_effort: medium}   # 2025-11-24  $5/$25 per Mtok
+  - {id: "anthropic/claude-opus-4.5", variant: nothink, reasoning_effort: none}   # 2025-11-24  $5/$25 per Mtok
+  - {id: "anthropic/claude-opus-4.6", variant: think, reasoning_effort: medium}   # 2026-02-04  $5/$25 per Mtok
+  - {id: "anthropic/claude-opus-4.6", variant: nothink, reasoning_effort: none}   # 2026-02-04  $5/$25 per Mtok
+  - {id: "anthropic/claude-sonnet-4.6", variant: think, reasoning_effort: medium}   # 2026-02-17  $3/$15 per Mtok
+  - {id: "anthropic/claude-sonnet-4.6", variant: nothink, reasoning_effort: none}   # 2026-02-17  $3/$15 per Mtok
+  - {id: "anthropic/claude-opus-4.7", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-04-16  $5/$25 per Mtok
+  - {id: "anthropic/claude-opus-4.7", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-04-16  $5/$25 per Mtok
+  - {id: "anthropic/claude-opus-4.8", variant: think, reasoning_effort: medium}   # 2026-05-27  $5/$25 per Mtok
+  - {id: "anthropic/claude-opus-4.8", variant: nothink, reasoning_effort: none}   # 2026-05-27  $5/$25 per Mtok
+  - {id: "anthropic/claude-fable-5", reasoning_effort: medium, temperature_locked: true}   # 2026-06-09  $10/$50 per Mtok
+  - {id: "anthropic/claude-sonnet-5", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-06-30  $2/$10 per Mtok
+  - {id: "anthropic/claude-sonnet-5", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-06-30  $2/$10 per Mtok
+  - {id: "anthropic/claude-opus-5", variant: think, reasoning_effort: medium}   # 2026-07-24  $5/$25 per Mtok
+  - {id: "anthropic/claude-opus-5", variant: nothink, reasoning_effort: none}   # 2026-07-24  $5/$25 per Mtok
+
+  # --- deepseek ---
+  - {id: "deepseek/deepseek-chat"}   # 2024-12-26  684.531B  $0.2574/$1.0287 per Mtok
+  - {id: "deepseek/deepseek-r1"}   # 2025-01-20  684.531B/37B active  $0.7/$2.5 per Mtok
+  - {id: "deepseek/deepseek-r1-distill-llama-70b", variant: think, reasoning_effort: medium}   # 2025-01-23  70.554B  $0.8/$0.8 per Mtok
+  - {id: "deepseek/deepseek-r1-distill-llama-70b", variant: nothink, reasoning_effort: none}   # 2025-01-23  70.554B  $0.8/$0.8 per Mtok
+  - {id: "deepseek/deepseek-chat-v3-0324"}   # 2025-03-24  684.531B  $0.25/$1 per Mtok
+  - {id: "deepseek/deepseek-r1-0528"}   # 2025-05-28  684.531B/37B active  $0.5/$2.15 per Mtok
+  - {id: "deepseek/deepseek-chat-v3.1", variant: think, reasoning_effort: medium}   # 2025-08-21  684.531B/37B active  $0.55/$1.65 per Mtok
+  - {id: "deepseek/deepseek-chat-v3.1", variant: nothink, reasoning_effort: none}   # 2025-08-21  684.531B/37B active  $0.55/$1.65 per Mtok
+  - {id: "deepseek/deepseek-v3.1-terminus", variant: think, reasoning_effort: medium}   # 2025-09-22  684.531B  $0.27/$1 per Mtok
+  - {id: "deepseek/deepseek-v3.1-terminus", variant: nothink, reasoning_effort: none}   # 2025-09-22  684.531B  $0.27/$1 per Mtok
+  - {id: "deepseek/deepseek-v3.2-exp", variant: think, reasoning_effort: medium}   # 2025-09-29  685.397B  $0.27/$0.41 per Mtok
+  - {id: "deepseek/deepseek-v3.2-exp", variant: nothink, reasoning_effort: none}   # 2025-09-29  685.397B  $0.27/$0.41 per Mtok
+  - {id: "deepseek/deepseek-v3.2", variant: think, reasoning_effort: medium}   # 2025-12-01  685.397B  $0.26/$0.38 per Mtok
+  - {id: "deepseek/deepseek-v3.2", variant: nothink, reasoning_effort: none}   # 2025-12-01  685.397B  $0.26/$0.38 per Mtok
+  - {id: "deepseek/deepseek-v4-flash", variant: think, reasoning_effort: high}   # 2026-04-24  290.945B/13B active  $0.06006/$0.12012 per Mtok
+  - {id: "deepseek/deepseek-v4-flash", variant: nothink, reasoning_effort: none}   # 2026-04-24  290.945B/13B active  $0.06006/$0.12012 per Mtok
+  - {id: "deepseek/deepseek-v4-pro", variant: think, reasoning_effort: high}   # 2026-04-24  1598.84B/49B active  $0.413772/$0.827544 per Mtok
+  - {id: "deepseek/deepseek-v4-pro", variant: nothink, reasoning_effort: none}   # 2026-04-24  1598.84B/49B active  $0.413772/$0.827544 per Mtok
+  - {id: "deepseek/deepseek-v4-flash-0731", variant: think, reasoning_effort: high}   # 2026-07-31  304.18B/13B active  $0.08/$0.18 per Mtok
+  - {id: "deepseek/deepseek-v4-flash-0731", variant: nothink, reasoning_effort: none}   # 2026-07-31  304.18B/13B active  $0.08/$0.18 per Mtok
+  - {id: "deepseek/deepseek-v4-pro-0813", variant: think, reasoning_effort: high}   # 2026-08-12  1650.5B  $1.188/$3.564 per Mtok
+  - {id: "deepseek/deepseek-v4-pro-0813", variant: nothink, reasoning_effort: none}   # 2026-08-12  1650.5B  $1.188/$3.564 per Mtok
+  - {id: "deepseek/deepseek-v4-flash-vision-exp", variant: think, reasoning_effort: high}   # 2026-08-21  $0.22/$0.66 per Mtok
+  - {id: "deepseek/deepseek-v4-flash-vision-exp", variant: nothink, reasoning_effort: none}   # 2026-08-21  $0.22/$0.66 per Mtok
+
+  # --- google ---
+  - {id: "google/gemma-2-27b-it"}   # 2024-07-13  27.227B  $0.65/$0.65 per Mtok
+  - {id: "google/gemma-3-27b-it"}   # 2025-03-12  27.432B  $0.08/$0.45 per Mtok
+  - {id: "google/gemma-3-12b-it"}   # 2025-03-13  12.187B  $0.05/$0.15 per Mtok
+  - {id: "google/gemma-3-4b-it"}   # 2025-03-13  4.3B/4B active  $0.05/$0.1 per Mtok
+  - {id: "google/gemini-2.5-pro-preview-05-06"}   # 2025-05-07  $1.25/$10 per Mtok
+  - {id: "google/gemma-3n-e4b-it"}   # 2025-05-20  7.85B/4B active  $0.06/$0.12 per Mtok
+  - {id: "google/gemini-2.5-pro-preview"}   # 2025-06-05  $1.25/$10 per Mtok
+  - {id: "google/gemini-2.5-flash", variant: think, reasoning_effort: medium}   # 2025-06-17  $0.3/$2.5 per Mtok
+  - {id: "google/gemini-2.5-flash", variant: nothink, reasoning_effort: none}   # 2025-06-17  $0.3/$2.5 per Mtok
+  - {id: "google/gemini-2.5-pro"}   # 2025-06-17  $1.25/$10 per Mtok
+  - {id: "google/gemini-2.5-flash-lite", variant: think, reasoning_effort: medium}   # 2025-07-22  $0.1/$0.4 per Mtok
+  - {id: "google/gemini-2.5-flash-lite", variant: nothink, reasoning_effort: none}   # 2025-07-22  $0.1/$0.4 per Mtok
+  - {id: "google/gemini-3-flash-preview", variant: think, reasoning_effort: medium}   # 2025-12-17  $0.5/$3 per Mtok
+  - {id: "google/gemini-3-flash-preview", variant: nothink, reasoning_effort: none}   # 2025-12-17  $0.5/$3 per Mtok
+  - {id: "google/gemini-3.1-pro-preview", reasoning_effort: medium}   # 2026-02-19  $2/$12 per Mtok
+  - {id: "google/gemini-3.1-pro-preview-customtools", reasoning_effort: medium}   # 2026-02-25  $2/$12 per Mtok
+  - {id: "google/gemini-3.1-flash-lite-preview", variant: think, reasoning_effort: medium}   # 2026-03-03  $0.25/$1.5 per Mtok
+  - {id: "google/gemini-3.1-flash-lite-preview", variant: nothink, reasoning_effort: none}   # 2026-03-03  $0.25/$1.5 per Mtok
+  - {id: "google/gemma-4-31b-it", variant: think, reasoning_effort: medium}   # 2026-04-02  31.273B  $0.1/$0.34 per Mtok
+  - {id: "google/gemma-4-31b-it", variant: nothink, reasoning_effort: none}   # 2026-04-02  31.273B  $0.1/$0.34 per Mtok
+  - {id: "google/gemma-4-26b-a4b-it", variant: think, reasoning_effort: medium}   # 2026-04-03  25.806B/4B active  $0.07/$0.34 per Mtok
+  - {id: "google/gemma-4-26b-a4b-it", variant: nothink, reasoning_effort: none}   # 2026-04-03  25.806B/4B active  $0.07/$0.34 per Mtok
+  - {id: "google/gemini-3.1-flash-lite", variant: think, reasoning_effort: medium}   # 2026-05-07  $0.25/$1.5 per Mtok
+  - {id: "google/gemini-3.1-flash-lite", variant: nothink, reasoning_effort: none}   # 2026-05-07  $0.25/$1.5 per Mtok
+  - {id: "google/gemini-3.5-flash", reasoning_effort: medium}   # 2026-05-19  $1.5/$9 per Mtok
+  - {id: "google/gemini-3.5-flash-lite", reasoning_effort: medium}   # 2026-07-21  $0.3/$2.5 per Mtok
+  - {id: "google/gemini-3.6-flash", reasoning_effort: medium}   # 2026-07-21  $0.75/$3.75 per Mtok
+  - {id: "google/gemini-3.7-flash", reasoning_effort: medium}   # 2026-08-13  $0.375/$1.875 per Mtok
+
+  # --- meta ---
+  - {id: "meta/muse-spark-1.1", reasoning_effort: medium}   # 2026-07-16  $1.25/$4.25 per Mtok
+  - {id: "meta/muse-spark-1.2", reasoning_effort: medium}   # 2026-08-05  $1.25/$4.25 per Mtok
+  - {id: "meta/muse-glimmer-30b", reasoning_effort: medium}   # 2026-08-09  29.777B  $0.35/$1.5 per Mtok
+  - {id: "meta/muse-spark-1.2-contributor", reasoning_effort: medium}   # 2026-08-21  $0.1/$0.2 per Mtok
+
+  # --- meta-llama ---
+  - {id: "meta-llama/llama-3.1-70b-instruct"}   # 2024-07-23  70.554B  $0.4/$0.4 per Mtok
+  - {id: "meta-llama/llama-3.1-8b-instruct"}   # 2024-07-23  8.03B  $0.05/$0.08 per Mtok
+  - {id: "meta-llama/llama-3.2-1b-instruct"}   # 2024-09-25  1.236B/1B active  $0.027/$0.201 per Mtok
+  - {id: "meta-llama/llama-3.2-3b-instruct"}   # 2024-09-25  3.213B/3B active  $0.05/$0.33 per Mtok
+  - {id: "meta-llama/llama-3.3-70b-instruct"}   # 2024-12-06  70.554B  $0.1/$0.32 per Mtok
+  - {id: "meta-llama/llama-4-maverick"}   # 2025-04-05  401.584B/17B active  $0.2/$0.8 per Mtok
+  - {id: "meta-llama/llama-4-scout"}   # 2025-04-05  108.642B/17B active  $0.1/$0.3 per Mtok
+
+  # --- minimax ---
+  - {id: "minimax/minimax-01"}   # 2025-01-15  456.09B  $0.2/$1.1 per Mtok
+  - {id: "minimax/minimax-m1", variant: think, reasoning_effort: medium}   # 2025-06-17  $0.55/$2.2 per Mtok
+  - {id: "minimax/minimax-m1", variant: nothink, reasoning_effort: none}   # 2025-06-17  $0.55/$2.2 per Mtok
+  - {id: "minimax/minimax-m2"}   # 2025-10-23  228.69B/10B active  $0.255/$1.02 per Mtok
+  - {id: "minimax/minimax-m2.1"}   # 2025-12-23  228.69B/10B active  $0.3/$1.2 per Mtok
+  - {id: "minimax/minimax-m2-her"}   # 2026-01-23  $0.3/$1.2 per Mtok
+  - {id: "minimax/minimax-m2.5"}   # 2026-02-12  228.704B  $0.27/$1.08 per Mtok
+  - {id: "minimax/minimax-m2.7"}   # 2026-03-18  228.69B  $0.3/$1.2 per Mtok
+  - {id: "minimax/minimax-m3", variant: think, reasoning_effort: medium}   # 2026-05-31  427.04B  $0.3/$1.2 per Mtok
+  - {id: "minimax/minimax-m3", variant: nothink, reasoning_effort: none}   # 2026-05-31  427.04B  $0.3/$1.2 per Mtok
+
+  # --- mistralai ---
+  - {id: "mistralai/mistral-large"}   # 2024-02-26  $2/$6 per Mtok
+  - {id: "mistralai/mixtral-8x22b-instruct"}   # 2024-04-17  140.63B/44B active  $2/$6 per Mtok
+  - {id: "mistralai/mistral-nemo"}   # 2024-07-19  12.248B  $0.019/$0.03 per Mtok
+  - {id: "mistralai/ministral-8b"}   # 2024-10-17  8B  $0.11/$0.11 per Mtok
+  - {id: "mistralai/mistral-large-2407"}   # 2024-11-19  $2/$6 per Mtok
+  - {id: "mistralai/mistral-small-24b-instruct-2501"}   # 2025-01-30  23.572B  $0.05/$0.08 per Mtok
+  - {id: "mistralai/mistral-saba"}   # 2025-02-17  $0.2/$0.6 per Mtok
+  - {id: "mistralai/mistral-medium-3"}   # 2025-05-07  $0.4/$2 per Mtok
+  - {id: "mistralai/mistral-small-3.2-24b-instruct"}   # 2025-06-20  24.011B  $0.075/$0.2 per Mtok
+  - {id: "mistralai/codestral-2508"}   # 2025-08-01  $0.3/$0.9 per Mtok
+  - {id: "mistralai/mistral-medium-3.1"}   # 2025-08-13  $0.4/$2 per Mtok
+  - {id: "mistralai/voxtral-small-24b-2507"}   # 2025-10-30  24.262B  $0.1/$0.3 per Mtok
+  - {id: "mistralai/mistral-large-2512"}   # 2025-12-01  $0.5/$1.5 per Mtok
+  - {id: "mistralai/ministral-14b-2512"}   # 2025-12-02  13.945B  $0.2/$0.2 per Mtok
+  - {id: "mistralai/ministral-3b-2512"}   # 2025-12-02  3.849B/3B active  $0.1/$0.1 per Mtok
+  - {id: "mistralai/ministral-8b-2512"}   # 2025-12-02  8.918B/8B active  $0.15/$0.15 per Mtok
+  - {id: "mistralai/mistral-small-2603", variant: think, reasoning_effort: high}   # 2026-03-16  119.401B  $0.15/$0.6 per Mtok
+  - {id: "mistralai/mistral-small-2603", variant: nothink, reasoning_effort: none}   # 2026-03-16  119.401B  $0.15/$0.6 per Mtok
+  - {id: "mistralai/mistral-medium-3-5", variant: think, reasoning_effort: high}   # 2026-04-30  $1.5/$7.5 per Mtok
+  - {id: "mistralai/mistral-medium-3-5", variant: nothink, reasoning_effort: none}   # 2026-04-30  $1.5/$7.5 per Mtok
+
+  # --- moonshotai ---
+  - {id: "moonshotai/kimi-k2"}   # 2025-07-11  1026.41B/32B active  $0.57/$2.3 per Mtok
+  - {id: "moonshotai/kimi-k2-0905"}   # 2025-09-04  1026.47B  $0.6/$2.5 per Mtok
+  - {id: "moonshotai/kimi-k2-thinking"}   # 2025-11-06  1058.12B  $0.6/$2.5 per Mtok
+  - {id: "moonshotai/kimi-k2.5", variant: think, reasoning_effort: medium}   # 2026-01-27  1026.88B  $0.45/$2.25 per Mtok
+  - {id: "moonshotai/kimi-k2.5", variant: nothink, reasoning_effort: none}   # 2026-01-27  1026.88B  $0.45/$2.25 per Mtok
+  - {id: "moonshotai/kimi-k2.6", variant: think, reasoning_effort: medium}   # 2026-04-20  1026.88B  $0.5415/$2.28 per Mtok
+  - {id: "moonshotai/kimi-k2.6", variant: nothink, reasoning_effort: none}   # 2026-04-20  1026.88B  $0.5415/$2.28 per Mtok
+  - {id: "moonshotai/kimi-k2.7-code"}   # 2026-06-12  1026.88B  $0.67/$3.4 per Mtok
+  - {id: "moonshotai/kimi-k3", variant: think, reasoning_effort: high}   # 2026-07-16  2779.93B  $3/$15 per Mtok
+  - {id: "moonshotai/kimi-k3", variant: nothink, reasoning_effort: none}   # 2026-07-16  2779.93B  $3/$15 per Mtok
+
+  # --- openai ---
+  - {id: "openai/gpt-3.5-turbo"}   # 2023-05-28  20B  $0.5/$1.5 per Mtok
+  - {id: "openai/gpt-4"}   # 2023-05-28  $30/$60 per Mtok
+  - {id: "openai/gpt-3.5-turbo-16k"}   # 2023-08-28  $3/$4 per Mtok
+  - {id: "openai/gpt-3.5-turbo-instruct"}   # 2023-09-28  20B  $1.5/$2 per Mtok
+  - {id: "openai/gpt-3.5-turbo-0613"}   # 2024-01-25  $1/$2 per Mtok
+  - {id: "openai/gpt-4-turbo-preview"}   # 2024-01-25  $10/$30 per Mtok
+  - {id: "openai/gpt-4-turbo"}   # 2024-04-09  $10/$30 per Mtok
+  - {id: "openai/gpt-4o"}   # 2024-05-13  $2.5/$10 per Mtok
+  - {id: "openai/gpt-4o-2024-05-13"}   # 2024-05-13  $5/$15 per Mtok
+  - {id: "openai/gpt-4o-mini"}   # 2024-07-18  $0.15/$0.6 per Mtok
+  - {id: "openai/gpt-4o-mini-2024-07-18"}   # 2024-07-18  $0.15/$0.6 per Mtok
+  - {id: "openai/gpt-4o-2024-08-06"}   # 2024-08-06  $2.5/$10 per Mtok
+  - {id: "openai/gpt-4o-2024-11-20"}   # 2024-11-20  $2.5/$10 per Mtok
+  - {id: "openai/o1", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2024-12-17  $15/$60 per Mtok
+  - {id: "openai/o1", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2024-12-17  $15/$60 per Mtok
+  - {id: "openai/o3-mini", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2025-01-31  $1.1/$4.4 per Mtok
+  - {id: "openai/o3-mini", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2025-01-31  $1.1/$4.4 per Mtok
+  - {id: "openai/o3-mini-high", reasoning_effort: high, temperature_locked: true}   # 2025-02-12  $1.1/$4.4 per Mtok
+  - {id: "openai/gpt-4.1"}   # 2025-04-14  $2/$8 per Mtok
+  - {id: "openai/gpt-4.1-mini"}   # 2025-04-14  $0.4/$1.6 per Mtok
+  - {id: "openai/gpt-4.1-nano"}   # 2025-04-14  $0.1/$0.4 per Mtok
+  - {id: "openai/o3", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2025-04-16  $2/$8 per Mtok
+  - {id: "openai/o3", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2025-04-16  $2/$8 per Mtok
+  - {id: "openai/o4-mini", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2025-04-16  $1.1/$4.4 per Mtok
+  - {id: "openai/o4-mini", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2025-04-16  $1.1/$4.4 per Mtok
+  - {id: "openai/o4-mini-high", reasoning_effort: high, temperature_locked: true}   # 2025-04-16  $1.1/$4.4 per Mtok
+  - {id: "openai/gpt-oss-120b", reasoning_effort: medium}   # 2025-08-05  116.829B  $0.03/$0.17 per Mtok
+  - {id: "openai/gpt-oss-20b", reasoning_effort: medium}   # 2025-08-05  21.512B/20B active  $0.03/$0.13 per Mtok
+  - {id: "openai/gpt-5", reasoning_effort: medium, temperature_locked: true}   # 2025-08-07  $1.25/$10 per Mtok
+  - {id: "openai/gpt-5-mini", reasoning_effort: medium, temperature_locked: true}   # 2025-08-07  $0.25/$2 per Mtok
+  - {id: "openai/gpt-5-nano", reasoning_effort: medium, temperature_locked: true}   # 2025-08-07  $0.05/$0.4 per Mtok
+  - {id: "openai/gpt-oss-safeguard-20b"}   # 2025-10-29  21.512B/20B active  $0.075/$0.3 per Mtok
+  - {id: "openai/gpt-5.1", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2025-11-13  $1.25/$10 per Mtok
+  - {id: "openai/gpt-5.1", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2025-11-13  $1.25/$10 per Mtok
+  - {id: "openai/gpt-5.1-codex", reasoning_effort: medium, temperature_locked: true}   # 2025-11-13  $1.25/$10 per Mtok
+  - {id: "openai/gpt-5.1-codex-mini", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2025-11-13  $0.25/$2 per Mtok
+  - {id: "openai/gpt-5.1-codex-mini", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2025-11-13  $0.25/$2 per Mtok
+  - {id: "openai/gpt-5.1-codex-max", reasoning_effort: medium, temperature_locked: true}   # 2025-12-04  $1.25/$10 per Mtok
+  - {id: "openai/gpt-5.2", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2025-12-10  $1.75/$14 per Mtok
+  - {id: "openai/gpt-5.2", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2025-12-10  $1.75/$14 per Mtok
+  - {id: "openai/gpt-5.2-chat", temperature_locked: true}   # 2025-12-10  $1.75/$14 per Mtok
+  - {id: "openai/gpt-5.2-codex", reasoning_effort: medium, temperature_locked: true}   # 2026-01-14  $1.75/$14 per Mtok
+  - {id: "openai/gpt-5.3-codex", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-02-24  $1.75/$14 per Mtok
+  - {id: "openai/gpt-5.3-codex", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-02-24  $1.75/$14 per Mtok
+  - {id: "openai/gpt-5.4", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-03-05  $2.5/$15 per Mtok
+  - {id: "openai/gpt-5.4", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-03-05  $2.5/$15 per Mtok
+  - {id: "openai/gpt-5.4-mini", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-03-17  $0.75/$4.5 per Mtok
+  - {id: "openai/gpt-5.4-mini", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-03-17  $0.75/$4.5 per Mtok
+  - {id: "openai/gpt-5.4-nano", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-03-17  $0.2/$1.25 per Mtok
+  - {id: "openai/gpt-5.4-nano", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-03-17  $0.2/$1.25 per Mtok
+  - {id: "openai/gpt-5.5", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-04-24  $5/$30 per Mtok
+  - {id: "openai/gpt-5.5", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-04-24  $5/$30 per Mtok
+  - {id: "openai/gpt-chat-latest", temperature_locked: true}   # 2026-05-05  $5/$30 per Mtok
+  - {id: "openai/gpt-5.6-luna", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-07-09  $0.2/$1.2 per Mtok
+  - {id: "openai/gpt-5.6-luna", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-07-09  $0.2/$1.2 per Mtok
+  - {id: "openai/gpt-5.6-luna-pro", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-07-09  $0.2/$1.2 per Mtok
+  - {id: "openai/gpt-5.6-luna-pro", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-07-09  $0.2/$1.2 per Mtok
+  - {id: "openai/gpt-5.6-sol", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-07-09  $2/$10 per Mtok
+  - {id: "openai/gpt-5.6-sol", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-07-09  $2/$10 per Mtok
+  - {id: "openai/gpt-5.6-sol-pro", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-07-09  $2/$10 per Mtok
+  - {id: "openai/gpt-5.6-sol-pro", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-07-09  $2/$10 per Mtok
+  - {id: "openai/gpt-5.6-terra", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-07-09  $2/$12 per Mtok
+  - {id: "openai/gpt-5.6-terra", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-07-09  $2/$12 per Mtok
+  - {id: "openai/gpt-5.6-terra-pro", variant: think, reasoning_effort: medium, temperature_locked: true}   # 2026-07-09  $2/$12 per Mtok
+  - {id: "openai/gpt-5.6-terra-pro", variant: nothink, reasoning_effort: none, temperature_locked: true}   # 2026-07-09  $2/$12 per Mtok
+
+  # --- qwen ---
+  - {id: "qwen/qwen-2.5-72b-instruct"}   # 2024-09-19  72.706B  $0.36/$0.4 per Mtok
+  - {id: "qwen/qwen-2.5-7b-instruct"}   # 2024-10-16  7.616B/7B active  $0.1/$0.2 per Mtok
+  - {id: "qwen/qwen-plus"}   # 2025-02-01  $0.26/$0.78 per Mtok
+  - {id: "qwen/qwen2.5-vl-72b-instruct"}   # 2025-02-01  73.411B  $0.8/$1 per Mtok
+  - {id: "qwen/qwen3-14b", variant: think, reasoning_effort: medium}   # 2025-04-28  14.768B/14B active  $0.12/$0.24 per Mtok
+  - {id: "qwen/qwen3-14b", variant: nothink, reasoning_effort: none}   # 2025-04-28  14.768B/14B active  $0.12/$0.24 per Mtok
+  - {id: "qwen/qwen3-235b-a22b", variant: think, reasoning_effort: medium}   # 2025-04-28  235.094B/22B active  $0.455/$1.82 per Mtok
+  - {id: "qwen/qwen3-235b-a22b", variant: nothink, reasoning_effort: none}   # 2025-04-28  235.094B/22B active  $0.455/$1.82 per Mtok
+  - {id: "qwen/qwen3-30b-a3b", variant: think, reasoning_effort: medium}   # 2025-04-28  30.532B/3B active  $0.13/$0.52 per Mtok
+  - {id: "qwen/qwen3-30b-a3b", variant: nothink, reasoning_effort: none}   # 2025-04-28  30.532B/3B active  $0.13/$0.52 per Mtok
+  - {id: "qwen/qwen3-32b", variant: think, reasoning_effort: medium}   # 2025-04-28  32.762B  $0.08/$0.28 per Mtok
+  - {id: "qwen/qwen3-32b", variant: nothink, reasoning_effort: none}   # 2025-04-28  32.762B  $0.08/$0.28 per Mtok
+  - {id: "qwen/qwen3-8b", variant: think, reasoning_effort: medium}   # 2025-04-28  8.191B  $0.117/$0.455 per Mtok
+  - {id: "qwen/qwen3-8b", variant: nothink, reasoning_effort: none}   # 2025-04-28  8.191B  $0.117/$0.455 per Mtok
+  - {id: "qwen/qwen3-235b-a22b-2507"}   # 2025-07-21  235.094B/22B active  $0.09/$0.55 per Mtok
+  - {id: "qwen/qwen3-coder"}   # 2025-07-23  480.155B/35B active  $0.3/$1 per Mtok
+  - {id: "qwen/qwen3-235b-a22b-thinking-2507"}   # 2025-07-25  235.094B/22B active  $0.23/$2.3 per Mtok
+  - {id: "qwen/qwen3-30b-a3b-instruct-2507"}   # 2025-07-29  30.532B/3B active  $0.04815/$0.19305 per Mtok
+  - {id: "qwen/qwen3-coder-30b-a3b-instruct"}   # 2025-07-31  30.532B/3B active  $0.07/$0.28 per Mtok
+  - {id: "qwen/qwen3-30b-a3b-thinking-2507"}   # 2025-08-28  30.532B/3B active  $0.2/$2.4 per Mtok
+  - {id: "qwen/qwen-plus-2025-07-28", variant: think, reasoning_effort: medium}   # 2025-09-08  $0.26/$0.78 per Mtok
+  - {id: "qwen/qwen-plus-2025-07-28", variant: nothink, reasoning_effort: none}   # 2025-09-08  $0.26/$0.78 per Mtok
+  - {id: "qwen/qwen-plus-2025-07-28:thinking", variant: think, reasoning_effort: medium}   # 2025-09-08  $0.26/$0.78 per Mtok
+  - {id: "qwen/qwen-plus-2025-07-28:thinking", variant: nothink, reasoning_effort: none}   # 2025-09-08  $0.26/$0.78 per Mtok
+  - {id: "qwen/qwen3-next-80b-a3b-instruct"}   # 2025-09-11  81.325B/3B active  $0.1/$1.1 per Mtok
+  - {id: "qwen/qwen3-next-80b-a3b-thinking"}   # 2025-09-11  81.325B/3B active  $0.15/$1.2 per Mtok
+  - {id: "qwen/qwen3-coder-flash"}   # 2025-09-17  $0.195/$0.975 per Mtok
+  - {id: "qwen/qwen3-coder-plus", variant: think, reasoning_effort: medium}   # 2025-09-23  $0.65/$3.25 per Mtok
+  - {id: "qwen/qwen3-coder-plus", variant: nothink, reasoning_effort: none}   # 2025-09-23  $0.65/$3.25 per Mtok
+  - {id: "qwen/qwen3-max", variant: think, reasoning_effort: medium}   # 2025-09-23  1000B  $0.78/$3.9 per Mtok
+  - {id: "qwen/qwen3-max", variant: nothink, reasoning_effort: none}   # 2025-09-23  1000B  $0.78/$3.9 per Mtok
+  - {id: "qwen/qwen3-vl-235b-a22b-instruct"}   # 2025-09-23  235.67B/22B active  $0.21/$1.9 per Mtok
+  - {id: "qwen/qwen3-vl-235b-a22b-thinking"}   # 2025-09-23  235.67B/22B active  $0.4/$4 per Mtok
+  - {id: "qwen/qwen3-vl-30b-a3b-instruct"}   # 2025-10-06  31.071B/3B active  $0.13/$0.52 per Mtok
+  - {id: "qwen/qwen3-vl-30b-a3b-thinking"}   # 2025-10-06  31.071B/3B active  $0.2/$2.4 per Mtok
+  - {id: "qwen/qwen3-vl-8b-instruct"}   # 2025-10-14  8.767B/8B active  $0.117/$0.455 per Mtok
+  - {id: "qwen/qwen3-vl-8b-thinking"}   # 2025-10-14  8.767B/8B active  $0.18/$2.1 per Mtok
+  - {id: "qwen/qwen3-vl-32b-instruct"}   # 2025-10-23  33.357B  $0.104/$0.416 per Mtok
+  - {id: "qwen/qwen3-coder-next"}   # 2026-02-04  79.674B/3B active  $0.12/$0.8 per Mtok
+  - {id: "qwen/qwen3-max-thinking", variant: think, reasoning_effort: medium}   # 2026-02-09  $0.78/$3.9 per Mtok
+  - {id: "qwen/qwen3-max-thinking", variant: nothink, reasoning_effort: none}   # 2026-02-09  $0.78/$3.9 per Mtok
+  - {id: "qwen/qwen3.5-397b-a17b", variant: think, reasoning_effort: medium}   # 2026-02-16  403.398B/17B active  $0.39/$2.34 per Mtok
+  - {id: "qwen/qwen3.5-397b-a17b", variant: nothink, reasoning_effort: none}   # 2026-02-16  403.398B/17B active  $0.39/$2.34 per Mtok
+  - {id: "qwen/qwen3.5-plus-02-15", variant: think, reasoning_effort: medium}   # 2026-02-16  $0.26/$1.56 per Mtok
+  - {id: "qwen/qwen3.5-plus-02-15", variant: nothink, reasoning_effort: none}   # 2026-02-16  $0.26/$1.56 per Mtok
+  - {id: "qwen/qwen3.5-122b-a10b", variant: think, reasoning_effort: medium}   # 2026-02-25  125.086B/10B active  $0.26/$2.08 per Mtok
+  - {id: "qwen/qwen3.5-122b-a10b", variant: nothink, reasoning_effort: none}   # 2026-02-25  125.086B/10B active  $0.26/$2.08 per Mtok
+  - {id: "qwen/qwen3.5-27b", variant: think, reasoning_effort: medium}   # 2026-02-25  27.781B  $0.195/$1.56 per Mtok
+  - {id: "qwen/qwen3.5-27b", variant: nothink, reasoning_effort: none}   # 2026-02-25  27.781B  $0.195/$1.56 per Mtok
+  - {id: "qwen/qwen3.5-35b-a3b", variant: think, reasoning_effort: medium}   # 2026-02-25  35.952B/3B active  $0.25/$1.25 per Mtok
+  - {id: "qwen/qwen3.5-35b-a3b", variant: nothink, reasoning_effort: none}   # 2026-02-25  35.952B/3B active  $0.25/$1.25 per Mtok
+  - {id: "qwen/qwen3.5-flash-02-23", variant: think, reasoning_effort: medium}   # 2026-02-25  $0.065/$0.26 per Mtok
+  - {id: "qwen/qwen3.5-flash-02-23", variant: nothink, reasoning_effort: none}   # 2026-02-25  $0.065/$0.26 per Mtok
+  - {id: "qwen/qwen3.5-9b", variant: think, reasoning_effort: medium}   # 2026-03-10  9.653B/9B active  $0.1/$0.15 per Mtok
+  - {id: "qwen/qwen3.5-9b", variant: nothink, reasoning_effort: none}   # 2026-03-10  9.653B/9B active  $0.1/$0.15 per Mtok
+  - {id: "qwen/qwen3.6-plus", variant: think, reasoning_effort: medium}   # 2026-04-02  $0.325/$1.95 per Mtok
+  - {id: "qwen/qwen3.6-plus", variant: nothink, reasoning_effort: none}   # 2026-04-02  $0.325/$1.95 per Mtok
+  - {id: "qwen/qwen3.5-plus-20260420", variant: think, reasoning_effort: medium}   # 2026-04-27  $0.3/$1.8 per Mtok
+  - {id: "qwen/qwen3.5-plus-20260420", variant: nothink, reasoning_effort: none}   # 2026-04-27  $0.3/$1.8 per Mtok
+  - {id: "qwen/qwen3.6-27b", variant: think, reasoning_effort: medium}   # 2026-04-27  27.781B  $0.6/$3.6 per Mtok
+  - {id: "qwen/qwen3.6-27b", variant: nothink, reasoning_effort: none}   # 2026-04-27  27.781B  $0.6/$3.6 per Mtok
+  - {id: "qwen/qwen3.6-35b-a3b", variant: think, reasoning_effort: medium}   # 2026-04-27  35.952B/3B active  $0.14/$1 per Mtok
+  - {id: "qwen/qwen3.6-35b-a3b", variant: nothink, reasoning_effort: none}   # 2026-04-27  35.952B/3B active  $0.14/$1 per Mtok
+  - {id: "qwen/qwen3.6-flash", variant: think, reasoning_effort: medium}   # 2026-04-27  $0.1875/$1.125 per Mtok
+  - {id: "qwen/qwen3.6-flash", variant: nothink, reasoning_effort: none}   # 2026-04-27  $0.1875/$1.125 per Mtok
+  - {id: "qwen/qwen3.6-max-preview", variant: think, reasoning_effort: medium}   # 2026-04-27  $1.027/$6.162 per Mtok
+  - {id: "qwen/qwen3.6-max-preview", variant: nothink, reasoning_effort: none}   # 2026-04-27  $1.027/$6.162 per Mtok
+  - {id: "qwen/qwen3.7-max", variant: think, reasoning_effort: medium}   # 2026-05-21  $1.475/$4.425 per Mtok
+  - {id: "qwen/qwen3.7-max", variant: nothink, reasoning_effort: none}   # 2026-05-21  $1.475/$4.425 per Mtok
+  - {id: "qwen/qwen3.7-plus", variant: think, reasoning_effort: medium}   # 2026-06-03  $0.32/$1.28 per Mtok
+  - {id: "qwen/qwen3.7-plus", variant: nothink, reasoning_effort: none}   # 2026-06-03  $0.32/$1.28 per Mtok
+  - {id: "qwen/qwen3.7-flash", variant: think, reasoning_effort: medium}   # 2026-07-27  $0.03/$0.13 per Mtok
+  - {id: "qwen/qwen3.7-flash", variant: nothink, reasoning_effort: none}   # 2026-07-27  $0.03/$0.13 per Mtok
+  - {id: "qwen/qwen3.8-max", reasoning_effort: medium}   # 2026-08-03  2400B  $2/$6 per Mtok
+  - {id: "qwen/qwen3.8-2.4t-a95b", reasoning_effort: medium}   # 2026-08-12  2446.18B/95B active  $2/$6 per Mtok
+  - {id: "qwen/qwen3.8-27b", variant: think, reasoning_effort: medium}   # 2026-08-14  27.781B  $0.45/$3.2 per Mtok
+  - {id: "qwen/qwen3.8-27b", variant: nothink, reasoning_effort: none}   # 2026-08-14  27.781B  $0.45/$3.2 per Mtok
+
+  # --- x-ai ---
+  - {id: "x-ai/grok-4.20", variant: think, reasoning_effort: medium}   # 2026-03-31  500B  $1.25/$2.5 per Mtok
+  - {id: "x-ai/grok-4.20", variant: nothink, reasoning_effort: none}   # 2026-03-31  500B  $1.25/$2.5 per Mtok
+  - {id: "x-ai/grok-4.3", variant: think, reasoning_effort: medium}   # 2026-04-30  $1.25/$2.5 per Mtok
+  - {id: "x-ai/grok-4.3", variant: nothink, reasoning_effort: none}   # 2026-04-30  $1.25/$2.5 per Mtok
+  - {id: "x-ai/grok-build-0.1"}   # 2026-05-20  $1/$2 per Mtok
+  - {id: "x-ai/grok-4.5", reasoning_effort: medium}   # 2026-07-08  $2/$6 per Mtok
+  - {id: "x-ai/grok-4.6", reasoning_effort: medium}   # 2026-08-12  $2/$6 per Mtok
+
+  # --- z-ai ---
+  - {id: "z-ai/glm-4.5", variant: think, reasoning_effort: medium}   # 2025-07-25  358.338B  $0.6/$2.2 per Mtok
+  - {id: "z-ai/glm-4.5", variant: nothink, reasoning_effort: none}   # 2025-07-25  358.338B  $0.6/$2.2 per Mtok
+  - {id: "z-ai/glm-4.5-air", variant: think, reasoning_effort: medium}   # 2025-07-25  110.469B  $0.13/$0.85 per Mtok
+  - {id: "z-ai/glm-4.5-air", variant: nothink, reasoning_effort: none}   # 2025-07-25  110.469B  $0.13/$0.85 per Mtok
+  - {id: "z-ai/glm-4.5v", variant: think, reasoning_effort: medium}   # 2025-08-11  107.711B/12B active  $0.6/$1.8 per Mtok
+  - {id: "z-ai/glm-4.5v", variant: nothink, reasoning_effort: none}   # 2025-08-11  107.711B/12B active  $0.6/$1.8 per Mtok
+  - {id: "z-ai/glm-4.6", variant: think, reasoning_effort: medium}   # 2025-09-30  356.786B  $0.5/$2 per Mtok
+  - {id: "z-ai/glm-4.6", variant: nothink, reasoning_effort: none}   # 2025-09-30  356.786B  $0.5/$2 per Mtok
+  - {id: "z-ai/glm-4.6v", variant: think, reasoning_effort: medium}   # 2025-12-08  107.711B  $0.3/$0.9 per Mtok
+  - {id: "z-ai/glm-4.6v", variant: nothink, reasoning_effort: none}   # 2025-12-08  107.711B  $0.3/$0.9 per Mtok
+  - {id: "z-ai/glm-4.7", variant: think, reasoning_effort: medium}   # 2025-12-22  358.338B  $0.4/$1.75 per Mtok
+  - {id: "z-ai/glm-4.7", variant: nothink, reasoning_effort: none}   # 2025-12-22  358.338B  $0.4/$1.75 per Mtok
+  - {id: "z-ai/glm-4.7-flash", variant: think, reasoning_effort: medium}   # 2026-01-19  31.221B  $0.06/$0.4 per Mtok
+  - {id: "z-ai/glm-4.7-flash", variant: nothink, reasoning_effort: none}   # 2026-01-19  31.221B  $0.06/$0.4 per Mtok
+  - {id: "z-ai/glm-5", variant: think, reasoning_effort: medium}   # 2026-02-11  753.864B  $0.6/$1.92 per Mtok
+  - {id: "z-ai/glm-5", variant: nothink, reasoning_effort: none}   # 2026-02-11  753.864B  $0.6/$1.92 per Mtok
+  - {id: "z-ai/glm-5-turbo", variant: think, reasoning_effort: medium}   # 2026-03-15  $1.2/$4 per Mtok
+  - {id: "z-ai/glm-5-turbo", variant: nothink, reasoning_effort: none}   # 2026-03-15  $1.2/$4 per Mtok
+  - {id: "z-ai/glm-5v-turbo", variant: think, reasoning_effort: medium}   # 2026-04-01  $1.2/$4 per Mtok
+  - {id: "z-ai/glm-5v-turbo", variant: nothink, reasoning_effort: none}   # 2026-04-01  $1.2/$4 per Mtok
+  - {id: "z-ai/glm-5.1", variant: think, reasoning_effort: medium}   # 2026-04-07  753.864B  $0.966/$3.036 per Mtok
+  - {id: "z-ai/glm-5.1", variant: nothink, reasoning_effort: none}   # 2026-04-07  753.864B  $0.966/$3.036 per Mtok
+  - {id: "z-ai/glm-5.2", variant: think, reasoning_effort: high}   # 2026-06-16  753.33B  $0.966/$3.036 per Mtok
+  - {id: "z-ai/glm-5.2", variant: nothink, reasoning_effort: none}   # 2026-06-16  753.33B  $0.966/$3.036 per Mtok
+  - {id: "z-ai/glm-5.3", reasoning_effort: high}   # 2026-08-18  744B  $1.4/$4.4 per Mtok

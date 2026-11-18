@@ -1,0 +1,32 @@
+# gpt-oss-20b: OpenAI's open-weight MoE. Measured CC 58 (openrouter sweep).
+#
+# Weights ship in MXFP4; on Apple Silicon transformers dequantizes the packed
+# 4-bit values to bf16 at load, which is a lossless upcast (~42 GB resident).
+# This is the development model for the probe suite: every experiment debugs
+# here before running on the larger slate.
+probe:
+  name: gpt-oss-20b
+  label: gpt-oss-20b
+  checkpoint: model/gpt-oss-20b
+  loader: causal_lm
+  tokenizer: auto
+  dtype: bfloat16
+  device: auto
+
+  hooks:
+    resid_post.layer5:
+      module: model.layers.5
+      mode: forward
+      hidden_size: 2880
+    resid_post.layer11:
+      module: model.layers.11
+      mode: forward
+      hidden_size: 2880
+    resid_post.layer17:
+      module: model.layers.17
+      mode: forward
+      hidden_size: 2880
+    resid_post.layer23:
+      module: model.layers.23
+      mode: forward
+      hidden_size: 2880

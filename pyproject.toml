@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "counting"
+version = "0.2.0"
+description = "Exact state tracking in language models: evaluation harness, mechanistic probes, and paper figures."
+requires-python = ">=3.11"
+dependencies = [
+    "pyyaml>=6.0",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+# OpenRouter is the only backend and is called over plain HTTP, so it needs no
+# SDK extra -- just OPENROUTER_API_KEY in the environment.
+
+# Mechanistic probes on open-weight checkpoints.
+probes = ["torch>=2.2", "transformers>=4.44", "safetensors>=0.4", "huggingface-hub>=0.23"]
+# gpt-oss-120b and other mlx-lm conversions (Apple Silicon).
+mlx = ["mlx-lm>=0.27"]
+
+# Dual-task manifests and token-matched controls.
+dual-task = ["datasets>=2.19", "tiktoken>=0.7"]
+
+# Analysis and figure generation.
+analysis = ["pandas>=2.2", "scipy>=1.11"]
+
+all = ["counting[probes,dual-task,analysis]"]
+
+[project.scripts]
+counting = "counting.cli:main"
+counting-probe = "counting.probes.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+counting = ["py.typed"]

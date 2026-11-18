@@ -1,0 +1,8 @@
+# Level 1. The baseline assay: N copies of "a" joined by ", ".
+#
+# These exact values produced every SCC number in the paper. Change them and you
+# are running the motif variant, not the baseline -- use motif_count.yaml.
+task:
+  name: homogeneous_count
+  item: "a"
+  delimiter: ", "

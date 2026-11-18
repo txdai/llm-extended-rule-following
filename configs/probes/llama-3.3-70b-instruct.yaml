@@ -1,0 +1,34 @@
+# Llama 3.3 70B Instruct: the low-CC anchor of the slate (CC 27) and the
+# second dense model. Downloaded from the ungated unsloth mirror
+# (weight-identical to meta-llama/Llama-3.3-70B-Instruct, which is gated).
+#
+# Hook paths follow the standard Llama layout (80 layers, hidden 8192) and
+# were written before the checkpoint finished downloading -- run
+# `counting-probe check configs/probes/llama-3.3-70b-instruct.yaml` once the
+# download completes to verify every module resolves.
+probe:
+  name: llama-3.3-70b-instruct
+  label: Llama 3.3 70B Instruct
+  checkpoint: model/llama-3.3-70b-instruct
+  loader: causal_lm
+  tokenizer: auto
+  dtype: bfloat16
+  device: auto
+
+  hooks:
+    resid_post.layer19:
+      module: model.layers.19
+      mode: forward
+      hidden_size: 8192
+    resid_post.layer39:
+      module: model.layers.39
+      mode: forward
+      hidden_size: 8192
+    resid_post.layer59:
+      module: model.layers.59
+      mode: forward
+      hidden_size: 8192
+    resid_post.layer79:
+      module: model.layers.79
+      mode: forward
+      hidden_size: 8192

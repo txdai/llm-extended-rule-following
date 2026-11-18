@@ -1,0 +1,53 @@
+# Qwen 3.5 35B-A3B: a sparse mixture-of-experts replication of the Gemma probes.
+#
+# No public SAE dictionary exists for this checkpoint, so `sae_root` is unset and
+# the SAE analyses are skipped. Residual-stream projections, decoder margins, and
+# final-token steering all still run.
+#
+# Attention is hybrid: only the layers in `full_attention_layers` attend over the
+# whole context, so attention analyses at other layers are not comparable to
+# Gemma's and are excluded.
+probe:
+  name: qwen3.5-35b-a3b
+  label: Qwen3.5-35B-A3B
+  checkpoint: Qwen/Qwen3.5-35B-A3B
+  loader: causal_lm
+  tokenizer: auto
+  dtype: bfloat16
+  device: auto
+
+  full_attention_layers: [3, 7, 11, 15, 19, 23, 27, 31, 35, 39]
+
+  hooks:
+    resid_post.layer15:
+      module: model.layers.15
+      mode: forward
+      hidden_size: 2048
+    resid_post.layer23:
+      module: model.layers.23
+      mode: forward
+      hidden_size: 2048
+    resid_post.layer31:
+      module: model.layers.31
+      mode: forward
+      hidden_size: 2048
+    resid_post.layer39:
+      module: model.layers.39
+      mode: forward
+      hidden_size: 2048
+    attn_out.layer31:
+      module: model.layers.31.self_attn.o_proj
+      mode: forward_pre
+      hidden_size: 4096
+    attn_out.layer39:
+      module: model.layers.39.self_attn.o_proj
+      mode: forward_pre
+      hidden_size: 4096
+    mlp_out.layer31:
+      module: model.layers.31.mlp
+      mode: forward
+      hidden_size: 2048
+    mlp_out.layer39:
+      module: model.layers.39.mlp
+      mode: forward
+      hidden_size: 2048

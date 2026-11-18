@@ -1,0 +1,37 @@
+# The formal run: every model through OpenRouter, linear scan from 1, fixed
+# output budget.
+#
+#   python scripts/fetch_openrouter_models.py       # refresh the roster first
+#   counting run configs/experiments/openrouter_formal.yaml --dry-run
+#   counting run configs/experiments/openrouter_formal.yaml
+#
+# Single provider is the point. The earlier sweeps mixed four backends, so a
+# difference between two models could always have been a difference between two
+# serving stacks. Routing everything through OpenRouter removes that confound.
+#
+# The roster is generated, never hand-edited. It carries a reasoning_effort per
+# model; the full table (release date, total/active parameters, price, context
+# window) is results/model_catalogue/openrouter_models.csv.
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/homogeneous_count.yaml
+  - strategies/scan.yaml
+
+run_name: counting-openrouter-formal
+models: {roster: models/openrouter_frontier.yaml}
+
+# --- output budget --------------------------------------------------------
+# Fixed at 8192 tokens for every request. Escalation is off on purpose: doubling
+# the cap for models that overrun would hand verbose models more compute than
+# terse ones at the same nominal budget, and the budget is part of what this run
+# holds constant. A reply truncated at 8192 with no parseable integer counts as
+# an error, recorded as `fixed_budget_exhausted`.
+max_output_tokens: 8192
+retry_max_output_tokens: 8192
+escalate_output_budget: false
+
+search:
+  # Overrides on top of strategies/scan.yaml; see that file for what each does.
+  stop_after_consecutive_errors: 10
+  stop_at_first_mistake_multiple: 2.0

@@ -1,0 +1,17 @@
+# Level 4. Count while carrying, or executing, a second task.
+#
+# `condition` selects one arm of the experiment. Every arm except `plain` needs a
+# benchmark manifest, because the controls are length-matched to the real
+# benchmark prompts -- that matching is the point of the design.
+#
+#   plain            count only (the floor)
+#   irrelevant_code  count + token-matched inert code
+#   irrelevant_text  count + token-matched prose
+#   dual_counting    count "a" markers and a second run of "b" markers
+#   benchmark        count + solve a real BBH / CRUXEval-O / MATH-500 / MMLU-Pro item
+#
+# Build a manifest with: python scripts/build_dual_task_manifest.py
+task:
+  name: dual_task_count
+  condition: plain
+  manifest: null

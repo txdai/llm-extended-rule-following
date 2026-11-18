@@ -1,0 +1,17 @@
+extends: [base.yaml, providers/openrouter.yaml, strategies/scan.yaml]
+models:
+  - id: google/gemini-3.7-flash
+    reasoning_effort: medium
+task:
+  name: grid_rule_execution
+  rule: grow_region
+max_output_tokens: 8192
+retry_max_output_tokens: 8192
+escalate_output_budget: false
+search:
+  start: 10
+  step: 1
+  stop: 700
+  stop_after_consecutive_errors: 10
+  stop_at_first_mistake_multiple: null
+  stop_when_resolved: true

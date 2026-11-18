@@ -1,0 +1,11 @@
+# Level-2 motif perturbation. One run measures one motif; override item and
+# delimiter per run, or drive the full set with scripts/run_motif_sweep.sh.
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/motif_count.yaml
+  - strategies/ladder.yaml
+
+run_name: counting-stable-motif
+models:
+  - openai/gpt-5.4

@@ -1,0 +1,435 @@
+<title>Ladder Scans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F2F4F7; --panel:#FFFFFF; --panel-2:#F8FAFC; --line:#DCE3EB; --line-2:#EDF1F6;
+  --ink:#101720; --ink-2:#3C4854; --muted:#68737F;
+  --accent:#0B6E75; --accent-ink:#08585E; --accent-soft:rgba(11,110,117,.10);
+  /* data marks: validated for protan/deutan/tritan separation against the surface */
+  --hit:#1F6FB2; --miss:#C77A15; --none:#8F9AA6; --rule:#C2CBD4;
+  --shadow:0 1px 2px rgba(16,23,32,.06),0 8px 24px rgba(16,23,32,.06);
+  --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1014; --panel:#141A21; --panel-2:#182028; --line:#242E39; --line-2:#1C242D;
+    --ink:#E4EAF1; --ink-2:#B6C1CD; --muted:#8A97A6;
+    --accent:#37B3BD; --accent-ink:#5FCBD3; --accent-soft:rgba(55,179,189,.14);
+    --hit:#4A97D8; --miss:#BC8129; --none:#7C8794; --rule:#33404D;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.34);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1014; --panel:#141A21; --panel-2:#182028; --line:#242E39; --line-2:#1C242D;
+  --ink:#E4EAF1; --ink-2:#B6C1CD; --muted:#8A97A6;
+  --accent:#37B3BD; --accent-ink:#5FCBD3; --accent-soft:rgba(55,179,189,.14);
+  --hit:#4A97D8; --miss:#BC8129; --none:#7C8794; --rule:#33404D;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.34);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1500px;margin:0 auto;padding:0 22px 72px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+canvas{display:block;max-width:100%}
+
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hbar{max-width:1500px;margin:0 auto;padding:18px 22px 16px;display:flex;flex-wrap:wrap;
+  gap:22px;align-items:flex-end;justify-content:space-between}
+.brand h1{font-size:21px;font-weight:600;letter-spacing:-.015em}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:12.5px}
+.stats{display:flex;gap:26px;flex-wrap:wrap}
+.stat .n{font-family:var(--mono);font-size:19px;font-weight:600;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;display:block}
+.stat .l{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0 12px}
+.controls label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+select,input[type=search]{font:inherit;font-size:13px;color:var(--ink);background:var(--panel);
+  border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+input[type=search]{min-width:200px;font-family:var(--mono);font-size:12.5px}
+.toggle{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-2);
+  background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:5px 10px;cursor:pointer}
+.toggle input{accent-color:var(--accent);margin:0}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+
+.classbar{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.cbtn{appearance:none;font:inherit;font-size:12px;cursor:pointer;background:var(--panel);
+  border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--ink-2);
+  display:inline-flex;gap:7px;align-items:center}
+.cbtn:hover{border-color:var(--accent)}
+.cbtn[aria-pressed="true"]{background:var(--accent-soft);border-color:transparent;color:var(--accent-ink)}
+.cbtn b{font-family:var(--mono);font-weight:600}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(224px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:9px 10px 7px;
+  cursor:pointer;box-shadow:var(--shadow);transition:border-color .12s,transform .12s}
+.card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card h3{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:-.01em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .sub{font-size:10.5px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;
+  margin-top:1px;white-space:nowrap;overflow:hidden}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.02em}
+.tag.resolved{color:var(--hit)} .tag.ceiling-stable{color:var(--accent-ink)}
+.tag.below-start{color:var(--miss)} .tag.unresolved-mixed{color:var(--miss)}
+.tag.blank-dead{color:var(--none)}
+
+.legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--ink-2);margin:14px 2px 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:11px;height:11px;display:inline-block}
+.hint{color:var(--muted);font-size:12px;margin:12px 2px 0;max-width:78ch}
+
+/* detail ---------------------------------------------------------------- */
+.sheet{position:fixed;inset:0;z-index:40;background:rgba(8,12,16,.42);display:none;
+  align-items:flex-start;justify-content:center;padding:28px 18px;overflow:auto}
+.sheet.open{display:flex}
+.dlg{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
+  width:min(1080px,100%);padding:18px 20px 22px}
+.dhead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.dhead h2{font-family:var(--mono);font-size:16px;font-weight:600}
+.dhead p{margin:3px 0 0;color:var(--muted);font-size:12.5px}
+.x{appearance:none;border:1px solid var(--line);background:var(--panel-2);color:var(--ink-2);
+  font:inherit;border-radius:7px;padding:4px 11px;cursor:pointer}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:1px;
+  margin:14px 0 6px;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--line-2)}
+.kpi{background:var(--panel);padding:9px 11px}
+.kpi .l{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.kpi .v{font-family:var(--mono);font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.scroller{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:12.5px;margin-top:6px}
+th,td{text-align:right;padding:4px 9px;border-bottom:1px solid var(--line-2);
+  font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+th{position:sticky;top:0;background:var(--panel);color:var(--muted);font-weight:500;font-size:10.5px;
+  text-transform:uppercase;letter-spacing:.07em}
+td.l,th.l{text-align:left}
+tr.miss td{color:var(--miss)} tr.blank td{color:var(--none)}
+.tablewrap{max-height:280px;overflow:auto;border:1px solid var(--line);border-radius:9px;margin-top:12px}
+#tip{position:fixed;z-index:60;pointer-events:none;background:var(--panel);border:1px solid var(--line);
+  border-radius:8px;box-shadow:var(--shadow);padding:7px 10px;font-family:var(--mono);font-size:11.5px;
+  display:none;white-space:pre}
+</style>
+
+<header>
+  <div class="hbar">
+    <div class="brand">
+      <h1>Ladder scans</h1>
+      <p>Every execution-ladder probe: the true count against the count the model answered.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="n" id="sScans">—</span><span class="l">scans</span></div>
+      <div class="stat"><span class="n" id="sModels">—</span><span class="l">models</span></div>
+      <div class="stat"><span class="n" id="sProbes">—</span><span class="l">probes</span></div>
+      <div class="stat"><span class="n" id="sShown">—</span><span class="l">shown</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="controls">
+    <label for="fTask">Task</label><select id="fTask"></select>
+    <label for="fModel">Model</label><select id="fModel"></select>
+    <label for="fSort">Sort</label>
+    <select id="fSort">
+      <option value="task">task, model</option>
+      <option value="model">model, task</option>
+      <option value="acc">accuracy</option>
+      <option value="rel">boundary / prediction</option>
+      <option value="n">probe count</option>
+    </select>
+    <input type="search" id="fQ" placeholder="filter model or task…" autocomplete="off">
+    <label class="toggle"><input type="checkbox" id="fLog"> log axes</label>
+    <label class="toggle"><input type="checkbox" id="fClip" checked> clip wild answers</label>
+    <span class="count" id="cShown"></span>
+  </div>
+
+  <div class="classbar" id="classbar"></div>
+  <div class="grid" id="grid"></div>
+
+  <div class="legend">
+    <span><i style="background:var(--hit);border-radius:50%"></i> exact — sits on the identity line</span>
+    <span><i style="background:var(--miss);border-radius:50%"></i> wrong integer — stem shows the signed error</span>
+    <span><i style="border:1.5px solid var(--none)"></i> no answer (blank or serving error), drawn in the lane below the axis</span>
+    <span><i style="border:1.5px solid var(--miss);border-radius:50%"></i> ring = output budget exhausted</span>
+  </div>
+  <p class="hint">Click any card for the full scan. The dashed diagonal is a correct answer; the vertical
+  rule is the fitted boundary, the dotted rule is the task floor — the smallest load the generator can
+  build. A scan whose only correct probes sit at the floor is censored by the task, not by the bracket.</p>
+</div>
+
+<div class="sheet" id="sheet"><div class="dlg" id="dlg"></div></div>
+<div id="tip"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const S = DATA.scans, META = DATA.meta;
+
+const $ = s => document.querySelector(s);
+const tok = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt = n => n == null ? "—" : (+n).toLocaleString();
+const CLASSES = ["resolved","below-start","ceiling-stable","unresolved-mixed","blank-dead"];
+const SRC = ["original","lower","upper","pilot"];
+// The outcome class pools scans that differ in kind.  These three predicates
+// split them: a transition sitting on the task floor, a scan that is wrong at
+// every load, and a scan whose accuracy is not decreasing in load at all.
+const SPECIAL = {
+  __floor: ["boundary at task floor", s => s.cls === "below-start" && s.ps === 1],
+  __flat:  ["wrong at every load",    s => s.cls === "below-start" && s.acc <= 0.12],
+  __nm:    ["accuracy rises with load", s => s.nonmono],
+};
+
+function ctx(cv, w, h){
+  const d = Math.min(window.devicePixelRatio || 1, 2);
+  cv.width = w*d; cv.height = h*d; cv.style.width = w+"px"; cv.style.height = h+"px";
+  const c = cv.getContext("2d"); c.setTransform(d,0,0,d,0,0); c.clearRect(0,0,w,h); return c;
+}
+
+/* derived per-scan quantities: correctness, and where the correct probes sit --- */
+for (const s of S){
+  s.hit = s.p.filter(p => p[1] === p[0]).length;
+  s.ans = s.p.filter(p => p[1] !== null).length;
+  s.acc = s.p.length ? s.hit/s.p.length : 0;
+  s.blank = s.p.length - s.ans;
+  s.rel = (s.b && s.pr) ? s.b/s.pr : null;
+  const loads = [...new Set(s.p.map(p => p[0]))].sort((a,b)=>a-b);
+  s.loads = loads;
+  // accuracy in the bottom three loads against the top half: a scan that is
+  // better high than low has no transition to censor.
+  const band = (set) => { const q = s.p.filter(p => set.has(p[0]));
+    return q.length ? q.filter(p => p[1]===p[0]).length/q.length : 0; };
+  s.accLo = band(new Set(loads.slice(0, Math.max(3, Math.ceil(loads.length/5)))));
+  s.accHi = band(new Set(loads.slice(Math.floor(loads.length/2))));
+  s.nonmono = s.accHi > s.accLo + 0.05;
+  s.maxX = Math.max(...loads);
+}
+
+/* ---- state ------------------------------------------------------------- */
+const state = { task:"", model:"", cls:"", q:"", sort:"task", log:false, clip:true };
+let shown = [];
+
+function applyFilters(){
+  const q = state.q.trim().toLowerCase();
+  const sp = SPECIAL[state.cls];
+  shown = S.filter(s =>
+    (!state.task  || s.t === state.task) &&
+    (!state.model || s.m === state.model) &&
+    (sp ? sp[1](s) : (!state.cls || s.cls === state.cls)) &&
+    (!q || (s.m+" "+s.t+" "+(META.tasks[s.t]||"")).toLowerCase().includes(q)));
+  const by = {
+    task:  (a,b) => a.t.localeCompare(b.t) || a.m.localeCompare(b.m),
+    model: (a,b) => a.m.localeCompare(b.m) || a.t.localeCompare(b.t),
+    acc:   (a,b) => a.acc - b.acc || a.m.localeCompare(b.m),
+    rel:   (a,b) => (a.rel ?? Infinity) - (b.rel ?? Infinity),
+    n:     (a,b) => b.p.length - a.p.length,
+  }[state.sort];
+  shown.sort(by);
+  $("#sShown").textContent = fmt(shown.length);
+  $("#cShown").textContent = `${shown.length} of ${S.length} scans · ${fmt(shown.reduce((n,s)=>n+s.p.length,0))} probes`;
+}
+
+/* ---- scatter ----------------------------------------------------------- */
+// y is clipped so one absurd answer cannot flatten the rest; off-scale points
+// are drawn as carets on the top edge and counted in the corner.
+function yDomain(s){
+  const ys = s.p.filter(p => p[1] !== null).map(p => p[1]);
+  const hi = Math.max(s.maxX, 1);
+  if (!ys.length) return [0, hi];
+  const top = state.clip ? Math.min(Math.max(...ys), hi*1.35) : Math.max(...ys);
+  return [0, Math.max(top, hi*1.05)];
+}
+
+function drawScan(cv, s, big){
+  const padL = big ? 54 : 26, padR = big ? 16 : 8, padT = big ? 14 : 8;
+  const lane = big ? 20 : 9;                       // the "no answer" lane
+  const padB = (big ? 34 : 14) + lane;
+  const W = cv.clientWidth || (big ? 900 : 200), H = big ? 420 : 118;
+  const c = ctx(cv, W, H);
+  const [y0, y1] = yDomain(s);
+  const xMax = s.maxX, lg = state.log;
+  const lx = v => Math.log10(Math.max(v, .5)), ly = v => Math.log10(Math.max(v, .5));
+  const X = v => padL + (lg ? (lx(v)-lx(.5))/(lx(xMax)-lx(.5)+1e-9) : v/xMax) * (W-padL-padR);
+  const Y = v => H-padB - (lg ? (ly(v)-ly(.5))/(ly(y1)-ly(.5)+1e-9) : (v-y0)/(y1-y0+1e-9)) * (H-padT-padB);
+
+  const cHit = tok("--hit"), cMiss = tok("--miss"), cNone = tok("--none");
+  c.strokeStyle = tok("--rule"); c.fillStyle = tok("--muted");
+  c.lineWidth = 1;
+  c.beginPath(); c.moveTo(padL, H-padB); c.lineTo(W-padR, H-padB);
+  c.moveTo(padL, padT); c.lineTo(padL, H-padB); c.stroke();
+
+  // identity line: every exact answer lies on it
+  c.save(); c.setLineDash([4,4]); c.strokeStyle = tok("--rule"); c.lineWidth = 1.25;
+  c.beginPath();
+  for (let i=0;i<=40;i++){ const v = (lg? Math.pow(10, lx(.5)+(lx(xMax)-lx(.5))*i/40) : xMax*i/40);
+    const x = X(v), y = Y(v); i ? c.lineTo(x,y) : c.moveTo(x,y); }
+  c.stroke(); c.restore();
+
+  // fitted boundary and task floor
+  const vline = (v, dash, col) => { if (v == null || v > xMax*1.02) return;
+    c.save(); c.setLineDash(dash); c.strokeStyle = col; c.lineWidth = 1.25;
+    c.beginPath(); c.moveTo(X(v), padT); c.lineTo(X(v), H-padB); c.stroke(); c.restore(); };
+  vline(s.fl, [1,3], tok("--muted"));
+  vline(s.b,  [],    tok("--accent"));
+
+  const r = big ? 3.6 : 2.2;
+  let off = 0;
+  for (const [x, y, src, fl] of s.p){
+    const px = X(x);
+    if (y === null){                                    // no answer: lane below the axis
+      const ly0 = H - padB + lane*0.55;
+      c.strokeStyle = cNone; c.lineWidth = 1.2;
+      c.strokeRect(px-r*0.9, ly0-r*0.9, r*1.8, r*1.8);
+      continue;
+    }
+    const exact = y === x;
+    if (!exact && big){                                  // stem to the identity line
+      c.strokeStyle = cMiss; c.globalAlpha = .35; c.lineWidth = 1;
+      c.beginPath(); c.moveTo(px, Y(Math.min(Math.max(y,y0),y1))); c.lineTo(px, Y(x)); c.stroke();
+      c.globalAlpha = 1;
+    }
+    if (y > y1){                                         // off the clipped scale
+      off++; c.fillStyle = cMiss;
+      c.beginPath(); c.moveTo(px, padT-2); c.lineTo(px-3.4, padT+4); c.lineTo(px+3.4, padT+4);
+      c.closePath(); c.fill(); continue;
+    }
+    const py = Y(y);
+    c.fillStyle = exact ? cHit : cMiss;
+    c.beginPath(); c.arc(px, py, r, 0, 6.284); c.fill();
+    if (fl & 1){ c.strokeStyle = exact ? cHit : cMiss; c.lineWidth = 1.1;
+      c.beginPath(); c.arc(px, py, r+2.4, 0, 6.284); c.stroke(); }
+  }
+
+  if (big){
+    c.fillStyle = tok("--muted"); c.font = '11px var(--mono), monospace';
+    c.textAlign = "right";
+    for (const v of [0, y1/2, y1]) c.fillText(Math.round(v).toLocaleString(), padL-7, Y(v)+4);
+    c.textAlign = "center";
+    for (const v of [s.loads[0], Math.round(xMax/2), xMax]) c.fillText(v.toLocaleString(), X(v), H-padB+lane+14);
+    c.textAlign = "left"; c.fillText("no answer", padL+3, H-padB+lane*0.55+4);
+    c.save(); c.translate(13, (H-padB)/2); c.rotate(-Math.PI/2); c.textAlign = "center";
+    c.fillText("answered", 0, 0); c.restore();
+    c.textAlign = "center"; c.fillText("true count", (padL+W-padR)/2, H-6);
+    if (off){ c.textAlign = "right"; c.fillStyle = cMiss;
+      c.fillText(`${off} above scale`, W-padR, padT+12); }
+  }
+  cv._scan = s; cv._map = {X, Y, padL, padR, padT, padB, H, W, y1};
+}
+
+/* ---- overview ---------------------------------------------------------- */
+function renderGrid(){
+  const g = $("#grid"); g.textContent = "";
+  for (const s of shown){
+    const card = document.createElement("div");
+    card.className = "card"; card.tabIndex = 0;
+    card.innerHTML = `<h3>${s.m}</h3>
+      <div class="sub"><span>${META.tasks[s.t] || s.t}</span>
+      <span class="tag ${s.cls}">${s.cls}${s.nonmono ? " ⚠" : ""}</span></div>`;
+    const cv = document.createElement("canvas");
+    card.appendChild(cv);
+    const open = () => openDetail(s);
+    card.onclick = open;
+    card.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } };
+    g.appendChild(card);
+    drawScan(cv, s, false);
+  }
+}
+
+/* ---- detail ------------------------------------------------------------ */
+function openDetail(s){
+  const kpi = (l, v) => `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div></div>`;
+  const ci = (s.cl != null && s.ch != null) ? `[${fmt(s.cl)}, ${fmt(s.ch)}]` : "—";
+  const rows = s.p.map(([x,y,src,fl]) => {
+    const cls = y === null ? "blank" : (y === x ? "" : "miss");
+    return `<tr class="${cls}"><td>${fmt(x)}</td><td>${y === null ? "—" : fmt(y)}</td>
+      <td>${y === null ? "—" : (y-x > 0 ? "+" : "") + fmt(y-x)}</td>
+      <td class="l">${SRC[src]}</td><td class="l">${[(fl&1)&&"budget",(fl&2)&&"preflight",(fl&4)&&"error"].filter(Boolean).join(" ") || "—"}</td></tr>`;
+  }).join("");
+  $("#dlg").innerHTML = `
+    <div class="dhead">
+      <div><h2>${s.m} · ${META.tasks[s.t] || s.t}</h2>
+        <p>${s.cls}${s.cls0 && s.cls0 !== s.cls ? ` (was ${s.cls0} before the extensions)` : ""}${s.nonmono ? " · accuracy is higher at high load than at the floor" : ""}${s.term ? " · truncated: " + s.term : ""}</p></div>
+      <button class="x" id="dClose">close</button>
+    </div>
+    <div class="kpis">
+      ${kpi("probes", fmt(s.p.length))}${kpi("exact", `${fmt(s.hit)} · ${(100*s.acc).toFixed(0)}%`)}
+      ${kpi("no answer", fmt(s.blank))}${kpi("boundary", fmt(s.b))}${kpi("95% CI", ci)}
+      ${kpi("CC", fmt(s.cc))}${kpi("predicted", fmt(s.pr))}${kpi("B / pred", s.rel ? s.rel.toFixed(2) : "—")}
+      ${kpi("floor acc", `${(100*s.accLo).toFixed(0)}%`)}
+      ${kpi("top-half acc", `${(100*s.accHi).toFixed(0)}%`)}
+    </div>
+    <canvas id="dCv"></canvas>
+    <div class="tablewrap"><table>
+      <thead><tr><th>true</th><th>answered</th><th>error</th><th class="l">run</th><th class="l">flags</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>`;
+  $("#sheet").classList.add("open");
+  $("#dClose").onclick = closeDetail;
+  const cv = $("#dCv");
+  cv.style.width = "100%";
+  requestAnimationFrame(() => { drawScan(cv, s, true); attachTip(cv); });
+}
+function closeDetail(){ $("#sheet").classList.remove("open"); $("#tip").style.display = "none"; }
+$("#sheet").onclick = e => { if (e.target.id === "sheet") closeDetail(); };
+addEventListener("keydown", e => { if (e.key === "Escape") closeDetail(); });
+
+function attachTip(cv){
+  const tip = $("#tip");
+  cv.onmousemove = ev => {
+    const s = cv._scan, m = cv._map, b = cv.getBoundingClientRect();
+    const mx = ev.clientX - b.left, my = ev.clientY - b.top;
+    let best = null, bd = 18*18;
+    for (const p of s.p){
+      const px = m.X(p[0]);
+      const py = p[1] === null ? m.H - m.padB + 11 : m.Y(Math.min(p[1], m.y1));
+      const d = (px-mx)**2 + (py-my)**2;
+      if (d < bd){ bd = d; best = p; }
+    }
+    if (!best){ tip.style.display = "none"; return; }
+    const [x,y,src,fl] = best;
+    tip.textContent = `true ${fmt(x)}\nanswered ${y === null ? "no answer" : fmt(y)}`
+      + (y === null ? "" : `\nerror ${(y-x>0?"+":"")}${fmt(y-x)}`)
+      + `\nrun ${SRC[src]}` + ((fl&1) ? "\nbudget exhausted" : "") + ((fl&4) ? "\nserving error" : "");
+    tip.style.display = "block";
+    tip.style.left = Math.min(ev.clientX + 14, innerWidth - 190) + "px";
+    tip.style.top = (ev.clientY + 14) + "px";
+  };
+  cv.onmouseleave = () => { $("#tip").style.display = "none"; };
+}
+
+/* ---- chrome ------------------------------------------------------------ */
+function fillSelect(el, values, label){
+  el.innerHTML = `<option value="">all</option>` +
+    values.map(v => `<option value="${v}">${label ? label(v) : v}</option>`).join("");
+}
+function renderClassbar(){
+  const counts = {};
+  for (const s of S) counts[s.cls] = (counts[s.cls] || 0) + 1;
+  $("#classbar").innerHTML = CLASSES.filter(c => counts[c]).map(c =>
+    `<button class="cbtn" data-cls="${c}" aria-pressed="${state.cls===c}">${c} <b>${counts[c]}</b></button>`).join("")
+    + Object.entries(SPECIAL).map(([k,[label,fn]]) =>
+        `<button class="cbtn" data-cls="${k}" aria-pressed="${state.cls===k}">${label} <b>${S.filter(fn).length}</b></button>`).join("");
+  for (const b of document.querySelectorAll(".cbtn")) b.onclick = () => {
+    const v = b.dataset.cls;
+    state.cls = state.cls === v ? "" : v;
+    refresh();
+  };
+}
+
+function refresh(){ renderClassbar(); applyFilters(); renderGrid(); }
+
+$("#sScans").textContent = fmt(META.scans);
+$("#sModels").textContent = fmt(META.models);
+$("#sProbes").textContent = fmt(META.probes);
+fillSelect($("#fTask"), [...new Set(S.map(s=>s.t))].sort(), t => META.tasks[t] || t);
+fillSelect($("#fModel"), [...new Set(S.map(s=>s.m))].sort());
+$("#fTask").onchange  = e => { state.task  = e.target.value; refresh(); };
+$("#fModel").onchange = e => { state.model = e.target.value; refresh(); };
+$("#fSort").onchange  = e => { state.sort  = e.target.value; refresh(); };
+$("#fQ").oninput      = e => { state.q     = e.target.value; refresh(); };
+$("#fLog").onchange   = e => { state.log   = e.target.checked; renderGrid(); };
+$("#fClip").onchange  = e => { state.clip  = e.target.checked; renderGrid(); };
+let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(renderGrid, 160); });
+refresh();
+</script>

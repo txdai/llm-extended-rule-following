@@ -3,27 +3,26 @@
 Unless otherwise noted, the original data released in this repository are made
 available under the MIT License.
 
-This data license is intended to apply to original release data authored for
-this project, including:
+This data license applies to the original data authored for this project: the
+archives under `data/` and `data/cc_catalogue.csv`, with the two exceptions
+below.
 
-- `data/scc_closed_model_runs/`
-- `data/scc_open_model_runs/`
-- `data/count_scatter_control_runs/`
-- `data/agent_count_disruption_tables/`
-- `data/scc_stimulus_ablation_runs/`
-- `data/scc_nested_key_path_runs/`
-- `data/gemma_counting_mechanistic_analysis/`
-- `data/gemma_motif_invariance_analysis/`
-- `data/gemma_counter_projection_clamping/`
-- `data/gemma_token_anchor_state_analysis/`
-- `data/gemma_assistant_prefix_donor_patching/`
-- `data/gemma_sequence_donor_patching/`
-- `data/gemma_sequence_linear_patching/`
-- `data/qwen_counting_mechanistic_analysis/`
-- `data/qwen_counter_projection_clamping/`
-- `data/evaluated_model_inventory.csv`
+### Data from other sources
 
-MIT License
+`data/benchmark_data.tar.xz` contains benchmark scores from the Epoch AI
+Benchmarking Hub, which are licensed under the Creative Commons Attribution
+4.0 license (https://creativecommons.org/licenses/by/4.0/). The archive
+carries Epoch AI's licensing note and citation in its `README.md`. The tables
+in that archive that match those scores to this project's measurements
+(`counting_benchmark_*`, `robustness.json`) are original to this project.
+
+    Epoch AI, 'AI Benchmarking Hub'. Published online at epoch.ai.
+    Retrieved from 'https://epoch.ai/benchmarks'.
+
+`data/model_catalogue.tar.xz` is a snapshot of the public OpenRouter model
+listing and prices, kept as the source of the model metadata.
+
+### MIT License
 
 Copyright (c) 2026 Tianxiang Dai
 

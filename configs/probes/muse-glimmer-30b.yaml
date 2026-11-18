@@ -1,0 +1,29 @@
+# Muse-Glimmer-30B: the strongest *dense* open-weight model that fits this
+# machine (CC 54). Third vendor in the slate, balancing the MoE-heavy rest.
+# VLM checkpoint; language tower under model.language_model.
+probe:
+  name: muse-glimmer-30b
+  label: Muse-Glimmer-30B
+  checkpoint: model/muse-glimmer-30b
+  loader: conditional_generation
+  tokenizer: processor
+  dtype: bfloat16
+  device: auto
+
+  hooks:
+    resid_post.layer12:
+      module: model.language_model.layers.12
+      mode: forward
+      hidden_size: 6656
+    resid_post.layer25:
+      module: model.language_model.layers.25
+      mode: forward
+      hidden_size: 6656
+    resid_post.layer38:
+      module: model.language_model.layers.38
+      mode: forward
+      hidden_size: 6656
+    resid_post.layer51:
+      module: model.language_model.layers.51
+      mode: forward
+      hidden_size: 6656

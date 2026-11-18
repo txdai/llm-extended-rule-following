@@ -1,0 +1,12 @@
+# Unpacked data (scripts/unpack_data.sh) and run outputs
+results/
+
+# Figure and table outputs
+paper/
+
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.DS_Store

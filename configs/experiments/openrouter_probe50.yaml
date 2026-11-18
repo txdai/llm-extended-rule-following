@@ -1,0 +1,32 @@
+# Initial characterisation probe: every model, lengths 1 to 50.
+#
+#   counting run configs/experiments/openrouter_probe50.yaml --concurrency 12
+#
+# Purpose is coverage, not boundary-finding. Fifty lengths is enough to separate
+# the models that cannot count at all from the ones that will need a full scan,
+# and to give every model a first row of data.
+#
+# The 2x-first-mistake stop is deliberately OFF here. At a ceiling of 50 it would
+# truncate a model that first errs at 3 down to six data points, which defeats
+# the point of a characterisation sweep -- the whole 1..50 curve is what is
+# wanted. The ten-consecutive-errors abort stays on, because a model returning
+# nothing at all has no curve to draw and should not be paid for 50 times.
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/homogeneous_count.yaml
+  - strategies/scan.yaml
+
+run_name: counting-data
+models: {roster: models/openrouter_frontier.yaml}
+
+max_output_tokens: 8192
+retry_max_output_tokens: 8192
+escalate_output_budget: false
+
+search:
+  start: 1
+  step: 1
+  stop: 50
+  stop_after_consecutive_errors: 10
+  stop_at_first_mistake_multiple: null

@@ -1,0 +1,33 @@
+# Gemma 4 26B-A4B-it: Google's MoE successor to the Gemma 3 27B used for the
+# published mechanistic figures. Measured CC 83 nothink (vs 36 for Gemma 3),
+# so the stable regime is ~2.3x longer. VLM checkpoint: the language tower
+# sits under model.language_model, same as Gemma 3.
+#
+# No public GemmaScope release for Gemma 4 as of 2026-08; SAE analyses stay on
+# Gemma 3 until that changes.
+probe:
+  name: gemma-4-26b-a4b-it
+  label: Gemma 4 26B-A4B-it
+  checkpoint: model/gemma-4-26b-a4b-it
+  loader: conditional_generation
+  tokenizer: processor
+  dtype: bfloat16
+  device: auto
+
+  hooks:
+    resid_post.layer7:
+      module: model.language_model.layers.7
+      mode: forward
+      hidden_size: 2816
+    resid_post.layer14:
+      module: model.language_model.layers.14
+      mode: forward
+      hidden_size: 2816
+    resid_post.layer21:
+      module: model.language_model.layers.21
+      mode: forward
+      hidden_size: 2816
+    resid_post.layer29:
+      module: model.language_model.layers.29
+      mode: forward
+      hidden_size: 2816

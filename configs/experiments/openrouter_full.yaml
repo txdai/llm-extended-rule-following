@@ -1,0 +1,41 @@
+# The full run: every measurement scanned from 1 upward until it stops.
+#
+#   python scripts/fetch_openrouter_models.py     # refresh the roster first
+#   counting run configs/experiments/openrouter_full.yaml --concurrency 12
+#
+# Writes into the same directory as the 1..50 characterisation, so the trial
+# checkpoints from that probe are reused: a model already probed to 50 resumes
+# at 51 instead of re-paying for the first fifty lengths. The result is one
+# continuous curve per measurement rather than two overlapping partial ones.
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/homogeneous_count.yaml
+  - strategies/scan.yaml
+
+run_name: counting-data
+models: {roster: models/openrouter_frontier.yaml}
+
+max_output_tokens: 8192
+retry_max_output_tokens: 8192
+escalate_output_budget: false
+
+search:
+  start: 1
+  step: 1
+  stop: 20000
+
+  # Ten unparsed replies in a row. Deliberately not floored: a model returning
+  # nothing has no curve to draw and should cost ten probes, not a hundred.
+  stop_after_consecutive_errors: 10
+
+  # Stop at twice the first mistake, but never below length 100.
+  #
+  # The floor is not cosmetic. In the 1..50 probe, 71 of 295 measurements make an
+  # early isolated slip and then recover; gpt-4.1-nano first errs at length 2 and
+  # answers 37 of the first 50 correctly. Without the floor the bare multiple
+  # would stop it at length 4 and record a capacity of 1, which is not what the
+  # model can do. A hundred lengths is enough curve to separate an isolated slip
+  # from a boundary.
+  stop_at_first_mistake_multiple: 2.0
+  min_stop_length: 100

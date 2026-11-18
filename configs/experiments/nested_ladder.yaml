@@ -1,0 +1,18 @@
+# Level-3 nested key-path assay. `initial_length` is a target number of MATCHES,
+# not a sequence length.
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/nested_key_path.yaml
+  - strategies/ladder.yaml
+
+run_name: counting-stable-nested
+models:
+  - openai/gpt-5.4
+  - openai/gpt-5.4-mini
+  - openai/gpt-5.2
+  - openai/gpt-5.1
+  - openai/gpt-4.1
+  - openai/gpt-4.1-mini
+  - openai/gpt-4o
+  - openai/gpt-4o-mini

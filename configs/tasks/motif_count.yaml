@@ -1,0 +1,23 @@
+# Level 2. Homogeneous counting with the surface form perturbed.
+#
+# One run measures one motif. The eleven motifs from the paper's perturbation
+# sweep are listed below; point `task.item`/`task.delimiter` at the row you want,
+# or drive the whole set from scripts/run_motif_sweep.sh.
+#
+#   id                    item      delimiter
+#   baseline-a-comma      a         ", "
+#   letter-b-comma        b         ", "
+#   letter-x-comma        x         ", "
+#   double-aa-comma       aa        ", "
+#   greek-alpha-comma     alpha     ", "
+#   greek-beta-comma      beta      ", "
+#   chinese-han-comma     han       ", "
+#   chinese-zhong-comma   zhong     ", "
+#   letter-a-space        a         " "
+#   letter-a-pipe         a         " | "
+#   letter-a-section      a         " section "
+task:
+  name: motif_count
+  item: "a"
+  delimiter: ", "
+  delimiter_label: comma

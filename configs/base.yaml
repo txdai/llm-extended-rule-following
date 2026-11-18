@@ -1,0 +1,29 @@
+# Defaults shared by every experiment. Anything here can be overridden by a
+# provider, task, strategy, or experiment file layered on top.
+
+output_dir: results
+
+# RNG seed for target sampling and for any randomness a task draws. Fixed seed +
+# fixed config == reproducible run.
+seed: 7
+
+# Token budget for one response, and the ceiling the runner will escalate to when
+# a reply is truncated before producing a parseable answer.
+max_output_tokens: 4096
+retry_max_output_tokens: 32768
+
+# One cheap trial before the search confirms the model answers at all, so a
+# misnamed or unavailable model costs one request rather than a whole ladder --
+# or, for a dense sweep, hundreds. Set to 0 to skip.
+preflight_length: 8
+
+search:
+  # Trials per tier. K=16 is what bounds the guessing false-positive rate at
+  # ~0.025% (see the paper's Appendix B) -- lowering it weakens the assay.
+  samples_per_length: 16
+  # Targets at tier L are drawn from [0.8L, 1.2L].
+  jitter_fraction: 0.2
+  # A tier is stable when every reply parses and nMAE <= this.
+  tolerance_fraction: 0.05
+  # Concurrent in-flight requests within one tier.
+  parallel_trials_per_batch: 15

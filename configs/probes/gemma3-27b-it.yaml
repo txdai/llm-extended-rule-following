@@ -1,0 +1,67 @@
+# Gemma 3 27B-it with Gemma Scope 2 sparse autoencoders.
+#
+# This is the checkpoint every mechanistic figure in the paper was measured on.
+# Hook module paths are Gemma 3 specific: the language tower sits under
+# `model.language_model`, which is why they differ from a plain causal-LM model.
+#
+# `sae_root` must point at a local Gemma Scope 2 download; each hook's `sae` is a
+# subdirectory of it. The eight hooks below are exactly the `counting-extended`
+# preset, so fetch them with:
+#
+#   python scripts/download_gemmascope.py --preset counting-extended
+#
+# which writes to model/gemma-scope-2-27b-it (gitignored) by default.
+probe:
+  name: gemma3-27b-it
+  label: Gemma 3 27B-it
+  checkpoint: google/gemma-3-27b-it
+  loader: conditional_generation     # Gemma3ForConditionalGeneration
+  tokenizer: processor               # AutoProcessor
+  dtype: bfloat16
+  device: auto
+
+  sae_root: model/gemma-scope-2-27b-it
+
+  hooks:
+    resid_post.layer16:
+      module: model.language_model.layers.16
+      mode: forward
+      hidden_size: 5376
+      sae: resid_post/layer_16_width_65k_l0_medium
+    resid_post.layer31:
+      module: model.language_model.layers.31
+      mode: forward
+      hidden_size: 5376
+      sae: resid_post/layer_31_width_65k_l0_medium
+    resid_post.layer40:
+      module: model.language_model.layers.40
+      mode: forward
+      hidden_size: 5376
+      sae: resid_post/layer_40_width_65k_l0_medium
+    resid_post.layer53:
+      module: model.language_model.layers.53
+      mode: forward
+      hidden_size: 5376
+      sae: resid_post/layer_53_width_65k_l0_medium
+    # attn_out sites read the *input* to o_proj, i.e. the concatenated head
+    # outputs before the output projection -- hence forward_pre.
+    attn_out.layer31:
+      module: model.language_model.layers.31.self_attn.o_proj
+      mode: forward_pre
+      hidden_size: 4096
+      sae: attn_out/layer_31_width_65k_l0_medium
+    attn_out.layer40:
+      module: model.language_model.layers.40.self_attn.o_proj
+      mode: forward_pre
+      hidden_size: 4096
+      sae: attn_out/layer_40_width_65k_l0_medium
+    mlp_out.layer31:
+      module: model.language_model.layers.31.post_feedforward_layernorm
+      mode: forward
+      hidden_size: 5376
+      sae: mlp_out/layer_31_width_65k_l0_medium
+    mlp_out.layer40:
+      module: model.language_model.layers.40.post_feedforward_layernorm
+      mode: forward
+      hidden_size: 5376
+      sae: mlp_out/layer_40_width_65k_l0_medium

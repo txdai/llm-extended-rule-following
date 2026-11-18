@@ -1,0 +1,45 @@
+# Extension sweep: carry the unresolved measurements up to where the criterion
+# settles them.
+#
+#   python scripts/compute_scc.py                    # refresh the sufficiency column
+#   python scripts/build_extension_roster.py         # refresh the roster
+#   counting run configs/experiments/openrouter_extension.yaml --concurrency 12 --force
+#
+# Writes into the same run directory as the main sweep, so each scan resumes
+# from its checkpoint and continues upward -- no probe is paid for twice, and
+# the tables stack rather than fork. --force is required: these measurements
+# already have result files, and without it they would be skipped as complete.
+#
+# The stop rule is the whole difference. The main sweep stopped at 2x the first
+# mistake, which is headroom above a landmark the fitted criterion does not use;
+# that is what censored 25 measurements and left 16 with tails too thin to
+# establish. Here the multiple is off and the scan runs until the fitted
+# transition is declared and the regime above it is significantly below one
+# half -- that is, until the record settles the capacity.
+extends:
+  - base.yaml
+  - providers/openrouter.yaml
+  - tasks/homogeneous_count.yaml
+  - strategies/scan.yaml
+
+run_name: counting-data
+models: {roster: models/extension_unresolved.yaml}
+
+max_output_tokens: 8192
+retry_max_output_tokens: 8192
+escalate_output_budget: false
+
+search:
+  start: 1
+  step: 1
+
+  # Safety ceiling only. The criterion is expected to stop the scan long before
+  # this; a measurement that reaches it is reported as still censored, which is
+  # the honest outcome rather than a fabricated transition.
+  stop: 3000
+
+  stop_after_consecutive_errors: 10
+
+  # Off, in favour of the criterion-native rule below.
+  stop_at_first_mistake_multiple: null
+  stop_when_resolved: true

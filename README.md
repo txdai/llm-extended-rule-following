@@ -1,149 +1,86 @@
-# Language models fail at extended rule following
+# A minimal probe of task modeling in language models
 
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org/downloads/)
+Code and data for the paper *A minimal probe of task modeling in language models* ([arXiv:2605.02028](https://arxiv.org/abs/2605.02028)).
 
-This repository contains the code and data for the study *Language models fail at extended rule following* ([arXiv:2605.02028](https://arxiv.org/abs/2605.02028)).
+The paper asks how far a language model can count. A model is shown a sequence of identical items and asked for the exact number, at every length in ascending order. Its counting capacity (CC) is the length at which the exact answer stops being its majority behavior, fitted to the whole record of right and wrong replies. This repository holds the evaluation harness, the analysis code, and every reply behind the reported numbers: 205 models in 296 configurations, the control experiments, the execution ladder, the object-tracking scans, and the mechanistic probes of six open-weight models.
 
-We study extended rule following through exact counting and related structural tracking tasks. The core benchmark is SCC: models are shown long repeated-token sequences and asked to return the exact count as a single integer. SCC measures CC, the counting capacity, with an adaptive randomized ladder that distinguishes reliable rule execution from coarse length heuristics. The study also covers matched dual-task counting controls, motif-ablation data, a heterogeneous nested key-path matching benchmark for non-homogeneous tracking, cross-benchmark comparison tables, and Gemma 3 / Gemma Scope 2 plus Qwen 3.5 mechanistic analysis outputs.
+## Layout
 
-Project page: [https://txdai.github.io/llm-extended-rule-following/](https://txdai.github.io/llm-extended-rule-following/). The supplementary information is available there, and you can also [try the prompt generator yourself](https://txdai.github.io/llm-extended-rule-following/).
-
-![Opening Visualization](asset/opening.jpeg)
-
-## Repository Layout
-
-- `run_scc_benchmark.py`: SCC benchmark runner for measuring CC across OpenAI, Google GenAI, Anthropic, and OpenRouter backends.
-- `run_count_scatter_controls.py`: matched dual-task counting-control runner with code and dual-count distractor controls.
-- `run_agent_count_disruption.py`: agent-style disruption benchmark testing whether count-heavy prompts destabilize JSON externalization and downstream state tracking.
-- `run_stimulus_ablation.py`: motif / delimiter ablation runner.
-- `run_nested_key_path.py`: heterogeneous nested key-path matching assay for non-homogeneous structural tracking.
-- `analyze_gemma_counting.py`: Gemma 3 27B IT mechanistic counting analysis with Gemma Scope 2 features.
-- `analyze_gemma_motif_invariance.py`: motif-invariance analysis for the Gemma mechanistic study.
-- `analyze_gemma_counter_projection_clamping.py`: targeted causal counter-projection clamping analysis for the Gemma mechanistic study.
-- `analyze_gemma_token_anchor_states.py`: token-anchor comparison across assistant-prefix, last-item, and last-separator states.
-- `analyze_gemma_assistant_prefix_donor_patching.py`: late-token donor-patching study on the assistant-prefix state.
-- `analyze_gemma_sequence_donor_patching.py`: full-sequence donor-patching study across residual layers.
-- `analyze_gemma_sequence_linear_patching.py`: full-sequence linear-trajectory patching study across residual layers.
-- `analyze_qwen_counting.py`: Qwen 3.5 35B A3B mechanistic counting analysis without SAE features.
-- `analyze_qwen_counter_projection_clamping.py`: targeted Qwen counter-projection clamping analysis.
-- `download_gemmascope_subset.py`: helper for downloading the minimal Gemma Scope 2 SAE subset used here.
-- `configs/benchmarks/`: runnable benchmark configurations.
-- `configs/model_lists/`: model catalogs used by the benchmark configs.
-- `data/`: cleaned raw outputs and derived tables needed to reproduce the released data products.
-
-## Included Data
-
-- `data/scc_closed_model_runs/`: closed-model SCC benchmark runs and CC tables.
-- `data/scc_open_model_runs/`: open-model SCC benchmark runs and CC tables.
-- `data/count_scatter_control_runs/`: matched dual-task counting-control runs with seven released conditions.
-- `data/agent_count_disruption_tables/`: released count-level and condition-level summary tables for the agent disruption benchmark.
-- `data/scc_stimulus_ablation_runs/`: motif and delimiter ablation runs.
-- `data/scc_nested_key_path_runs/`: heterogeneous nested key-path runs.
-- `data/gemma_counting_mechanistic_analysis/`: Gemma 3 mechanistic counting payloads.
-- `data/gemma_motif_invariance_analysis/`: Gemma motif-invariance payloads.
-- `data/gemma_counter_projection_clamping/`: causal counter-projection clamping payloads confirming the non-rescue intervention result.
-- `data/gemma_token_anchor_state_analysis/`: anchor-specific Gemma latent-state comparisons.
-- `data/gemma_assistant_prefix_donor_patching/`: assistant-prefix donor-patching payloads.
-- `data/gemma_sequence_donor_patching/`: full-sequence donor-patching payloads.
-- `data/gemma_sequence_linear_patching/`: full-sequence linear patching payloads.
-- `data/qwen_counting_mechanistic_analysis/`: Qwen mechanistic counting payloads.
-- `data/qwen_counter_projection_clamping/`: Qwen counter-projection clamping payloads.
-- `data/evaluated_model_inventory.csv`: consolidated evaluated-model table.
+```
+src/counting/   the package: tasks, the scan harness, capacity estimation, probes, figures
+scripts/        runners and analyses, one file per experiment or table
+configs/        run configurations (every evaluation runs from one YAML file)
+tests/          offline tests, no API key needed
+data/           the result data, one archive per experiment (see data/README.md)
+```
 
 ## Setup
 
-Use Python 3.10 or newer, then create an environment and install the dependencies:
+Python 3.11 or newer.
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+pip install -e .            # the harness
+pip install -e '.[all]'     # plus probes, dual-task data, analysis
 ```
 
-Backend credentials are read from environment variables:
+Evaluations call models through OpenRouter and read `OPENROUTER_API_KEY` from the environment. The analyses below need no key.
 
-- `OPENAI_API_KEY`
-- `GOOGLE_API_KEY` or `GEMINI_API_KEY`
-- `ANTHROPIC_API_KEY`
-- `OPENROUTER_API_KEY`
+## Data
 
-## Reproducing The Data
-
-Run SCC to measure CC:
+The data are packed as `data/*.tar.xz`, about 770 MB unpacked. `data/README.md` lists what each archive holds and where the paper uses it. Unpack them to `results/`, which is where the code reads them:
 
 ```bash
-python3 run_scc_benchmark.py --config configs/benchmarks/scc_closed_openai.json
-python3 run_scc_benchmark.py --config configs/benchmarks/scc_closed_anthropic.json
-python3 run_scc_benchmark.py --config configs/benchmarks/scc_closed_google.json
-python3 run_scc_benchmark.py --config configs/benchmarks/scc_open_openrouter.json
+scripts/unpack_data.sh                  # everything
+scripts/unpack_data.sh counting-data    # or only the named archives
 ```
 
-Run the motif-ablation benchmark:
+`data/cc_catalogue.csv` gives the fitted capacity of every measurement without unpacking anything.
+
+Two changes were made to the records for release. Absolute paths into the authors' checkout are relative to the repository, and OpenRouter generation ids are replaced by a hash of themselves, so records that shared an id still join.
+
+## Reproducing the numbers
+
+With the data unpacked:
+
+| Result | Command |
+|---|---|
+| Fitted CC of every measurement | `python scripts/compute_scc.py results/counting-data` |
+| Coverage of the interval on the boundary (Appendix B) | `python scripts/check_interval_calibration.py` |
+| Decoding replicates (Appendix A.2) | `python scripts/build_replicates_table.py` |
+| Encodings, output formats, concurrent loads, the METR screen (Appendices A.6, A.7, H, J) | `python scripts/analyze_rebuttal.py` |
+| Tasks with a writable running value (Appendix E) | `python scripts/report_anchored_control.py` |
+| Reasoning-trace modes (Appendix G) | `python scripts/report_trace_modes.py` |
+| Execution ladder (Appendix H) | `python scripts/fit_full_ladder.py`, then `python scripts/analyze_ladder_censoring.py` and `python scripts/analyze_ladder_ranks.py` |
+| METR, Balrog, WeirdML against general capability (Appendix J) | `python scripts/analyze_benchmark_robustness.py` |
+| Object tracking (Appendix K) | `python scripts/analyze_tracking.py` |
+
+The figure modules are under `src/counting/analysis/figures/` and run as `python -m counting.analysis.figures.<name>` (`attractors` for Fig. 2, `resources_row` for Fig. 3, `mechanistic_suite` for Fig. 4). They and the table builders write under `paper/`, which is not part of this repository, so create the output folders first:
 
 ```bash
-python3 run_stimulus_ablation.py
+mkdir -p paper/figures paper/generated paper/appendix
 ```
 
-Run the matched dual-task counting controls:
+## Running an evaluation
 
 ```bash
-python3 run_count_scatter_controls.py --config configs/benchmarks/count_scatter_control.json
+python scripts/fetch_openrouter_models.py                 # roster of what OpenRouter serves today
+counting run configs/experiments/openrouter_formal.yaml   # the catalogue scan
 ```
 
-Run the agent disruption benchmark:
+A run writes one folder under `results/` with every probe, a per-model record, and the tables. The other experiments have their own runner in `scripts/`: `run_temperature_replicates.py`, `run_motif_sweep.py`, `run_copy_tool.py`, `run_budget_rerun.py`, `run_state_solo.py`, `run_full_ladder.py`, `run_ladder_extensions.py`, `launch_interference.py`, `scan_tracking.py`, and the `rebuttal_*.py` runners for the encoding panel, the output formats, and the replicated concurrent loads.
 
-```bash
-python3 run_agent_count_disruption.py --config configs/benchmarks/agent_count_disruption.json
-```
+The mechanistic probes run on local open-weight checkpoints through `counting-probe`, with one configuration per model in `configs/probes/`; `scripts/round2_suite.sh` and `scripts/subspace_suite.sh` run the suites of Appendix I for one model.
 
-Run the heterogeneous nested assay:
+## What is not here
 
-```bash
-python3 run_nested_key_path.py
-```
+- The manuscript source, which is on arXiv.
+- The activation caches of the probe suite. They are large and `counting-probe` regenerates them; the records the paper uses are in `data/suite.tar.xz`.
+- The endpoint scans of Appendix A.3. The reseller is not named in the paper and its records are not released. `scripts/fingerprint_endpoint.py` is the protocol.
 
-## Gemma Mechanistic Analysis
+## Earlier versions
 
-The mechanistic analysis targets local `gemma-3-27b-it` weights together with a local Gemma Scope 2 subset. Download the SAE subset with:
-
-```bash
-python3 download_gemmascope_subset.py
-```
-
-Then run:
-
-```bash
-python3 analyze_gemma_counting.py
-python3 analyze_gemma_motif_invariance.py
-python3 analyze_gemma_counter_projection_clamping.py
-python3 analyze_gemma_token_anchor_states.py
-python3 analyze_gemma_assistant_prefix_donor_patching.py
-python3 analyze_gemma_sequence_donor_patching.py
-python3 analyze_gemma_sequence_linear_patching.py
-```
-
-These scripts write JSON, CSV, and NPZ payloads under `data/`. The counter-projection clamping, token-anchor, and donor-patching analyses reproduce the targeted causal interventions reported in the manuscript's Gemma mechanistic section.
-
-## Qwen Mechanistic Analysis
-
-The Qwen mechanistic analysis targets local `Qwen3.5-35B-A3B` weights. Run:
-
-```bash
-python3 analyze_qwen_counting.py
-python3 analyze_qwen_counter_projection_clamping.py
-```
-
-These scripts write cleaned JSON and NPZ payloads under `data/` and mirror the released Qwen mechanistic results.
-
-## Notes
-
-- The repository includes data-generation and data-aggregation code together with the shipped benchmark and analysis outputs.
-- The source snapshot for the agent disruption benchmark did not include the original raw run directory. The bundled `data/agent_count_disruption_tables/` files are machine-readable tables derived from the released markdown summaries in `Counting/results/agent/`.
-- Manuscript files are not included in this repository.
+The first two arXiv versions of this work used a different protocol and estimator. Their code and data are in this repository's history at commit `5271bf3`.
 
 ## License
 
-Code in this repository is released under the Apache License 2.0. See `LICENSE`.
-
-Original project data in this repository are released under MIT terms.
+Code is released under the Apache License 2.0 (`LICENSE`). The data are released under MIT terms, with the exception stated in `DATA_LICENSE.md` for the benchmark scores from Epoch AI.

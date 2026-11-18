@@ -1,0 +1,29 @@
+# Linear scan: one request per length, starting at 1.
+#
+# No tiers, no sampling, no jitter, no tolerance band. Length 1 is asked once,
+# then 2, then 3. Every response is written to trials/<model>.jsonl as it
+# arrives, so an interrupted scan resumes at the next length rather than at 1.
+#
+# Two outcomes are tracked separately because they mean different things:
+#   error    reply contained no parseable integer (ran out of budget, looped,
+#            returned nothing) -- a failure of the harness contract
+#   mistake  reply parsed but the number was wrong -- the thing being measured
+#
+# Counting capacity is first_mistake - 1.
+search:
+  strategy: scan
+  start: 1
+  step: 1
+  # Upper bound, not an expectation: the stop conditions below normally fire
+  # long before this.
+  stop: 100000
+
+  # Ten unparsed replies in a row. Consecutive rather than cumulative so one
+  # transient provider hiccup mid-scan does not end an otherwise healthy run.
+  stop_after_consecutive_errors: 10
+
+  # Stop once the length reaches twice the first mistake. Enough to see the
+  # shape of the collapse and the attractors it falls into, without paying for
+  # the flat tail.
+  stop_at_first_mistake_multiple: 2.0
+

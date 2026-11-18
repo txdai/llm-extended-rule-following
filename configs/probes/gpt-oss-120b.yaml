@@ -1,0 +1,35 @@
+# gpt-oss-120b: OpenAI's 36-layer MoE. Catalogued CC 101 (OpenRouter sweep).
+#
+# Native MXFP4 dequantizes to bf16 under Torch/MPS and does not fit in 192 GB.
+# This config loads the mlx-community MXFP4-Q8 conversion through mlx-lm.
+#
+# Harmony note: forcing the final channel with no analysis makes 120b emit
+# "1." and then start an analysis turn. An empty analysis turn
+# (`<|channel|>analysis<|message|><|end|><|start|>assistant<|channel|>final<|message|>`)
+# is the immediate-answer protocol that still lands on a single integer.
+probe:
+  name: gpt-oss-120b
+  label: gpt-oss-120b
+  checkpoint: model/gpt-oss-120b-mlx
+  loader: mlx
+  tokenizer: auto
+  dtype: bfloat16
+  device: mlx
+
+  hooks:
+    resid_post.layer8:
+      module: model.layers.8
+      mode: forward
+      hidden_size: 2880
+    resid_post.layer17:
+      module: model.layers.17
+      mode: forward
+      hidden_size: 2880
+    resid_post.layer26:
+      module: model.layers.26
+      mode: forward
+      hidden_size: 2880
+    resid_post.layer35:
+      module: model.layers.35
+      mode: forward
+      hidden_size: 2880

@@ -1,0 +1,8 @@
+# OpenRouter. Needs OPENROUTER_API_KEY. Covers most open-weight models.
+provider:
+  name: openrouter
+  temperature: 0.0
+  retry:
+    attempts: 8
+    base_delay_seconds: 2.0
+    max_delay_seconds: 30.0

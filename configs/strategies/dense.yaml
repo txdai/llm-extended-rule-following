@@ -1,0 +1,25 @@
+# Dense sweep: evaluate every point on a grid.
+#
+# Far more expensive than the ladder, and worth it when you want the shape of the
+# failure -- the transition width, the post-collapse attractors, the whole
+# accuracy curve -- rather than just where it starts.
+#
+# Cost is grid_size * samples_per_length requests. The defaults below are
+# 62 tiers * 16 = 992 requests per model.
+search:
+  strategy: dense
+  spacing: linear      # linear | log
+  start: 32
+  stop: 2000
+  step: 32
+
+  # spacing: log uses `num` points geometric from start to stop instead of `step`.
+  num: 32
+
+  # Explicit grids win over `spacing`; uncomment to use one.
+  # points: [32, 48, 64, 96, 128, 192, 256, 384, 512]
+
+  # Guards, both off by default. Set stop_after_consecutive_failures to stop
+  # once the model is reliably past its boundary.
+  stop_after_consecutive_failures: null
+  max_tiers: null
